@@ -1,0 +1,136 @@
+﻿@model PBS.Model.pbsBasicGoodsAdminListResult
+@{
+    ViewBag.Title = "活动列表";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i>活动列表</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>活动列表</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <table id="example" class="table table-bordered data-table">
+                        <thead>
+                            <tr>
+                                <th>活动编号</th>
+                                <th>活动名称</th>
+                                <th>地点</th>
+                                <th>日期</th>
+                                <th>时间</th>
+                                <th>名额</th>
+                                <th>报名人数</th>
+                                <th>站长</th>
+                                <th>状态</th>
+                                <th>是否首页显示</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.List.Count > 0)
+                            {
+                                foreach (var item in Model.List)
+                                {
+                                    <tr>
+                                        <td>@item.GoodsId</td>
+                                        <td>@item.GoodsName</td>
+                                        <td>@item.RegionName</td>
+                                        <td>@item.CreateTime.ToString("yyyy-MM-dd")</td>
+                                        <td>
+                                            <span>
+                                                参加时间1:@Utility.Util.ParseHelper.ToDatetime(item.VisitTime1).ToString("yyyy-MM-dd")
+                                            </span>
+                                            <br/>
+                                            <span>
+                                                 参加时间2:@Utility.Util.ParseHelper.ToDatetime(item.VisitTime2).ToString("yyyy-MM-dd")
+                                            </span>
+                                            <br />
+                                            <span>
+                                                 参加时间3:@Utility.Util.ParseHelper.ToDatetime(item.VisitTime3).ToString("yyyy-MM-dd")
+                                            </span>
+                                            <br />
+                                            <span>
+                                                 参加时间4:@Utility.Util.ParseHelper.ToDatetime(item.VisitTime4).ToString("yyyy-MM-dd")
+                                            </span>
+                                            <br />
+                                            <span>
+                                                 参加时间5:@Utility.Util.ParseHelper.ToDatetime(item.VisitTime5).ToString("yyyy-MM-dd")
+                                            </span>
+                                        </td>
+                                        <td>@item.GoodsCount</td>
+                                        <td>@item.SellCount</td>
+                                        <td>@item.ResponsiblePerson</td>
+                                        <td>
+                                        @if (item.GoodsStatus == 0)
+                                        {
+                                            <span>启用</span>
+                                        }
+                                        else
+                                        {
+                                            <span>停用</span>
+                                        }</td>
+                                        <td>
+                                            @if (item.IsDisplayHome == 1)
+                                            {
+                                                <span>是</span>
+                                            }
+                                            else
+                                            {
+                                                <span>否</span>
+                                            }
+                                        </td>
+                                        <td><a href="/Activity/ActivityAdd?goodsId=@item.GoodsId">编辑</a>|<a href="javascript:void(0)" onclick="deleteGoods(this, @item.GoodsId)">删除</a></td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-main-container-part-->
+<script type="text/javascript">
+    function deleteGoods(obj, goodsId) {
+        $(obj).scojs_confirm({
+            content: "您确定要删除吗?",
+            action: function (e) {
+                $.ajax({
+                    type: "POST",
+                    async: false,
+                    url: "/Activity/ActivityDeleteAjax",
+                    data: { activitysId: goodsId },
+                    success: function (data) {
+                        if (data.Status === 0) {
+                            //成功
+                            $.scojs_message(data.Message, $.scojs_message.TYPE_OK);
+                        } else {
+                            //失败
+                            $.scojs_message(data.Message, $.scojs_message.TYPE_ERROR);
+                            return false;
+                        }
+                        return false;
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        //失败
+                        $.scojs_message(errorThrown, $.scojs_message.TYPE_ERROR);
+                    }
+                });
+            }
+        });
+    }
+</script>

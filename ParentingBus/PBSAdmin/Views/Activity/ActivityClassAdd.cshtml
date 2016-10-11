@@ -1,0 +1,52 @@
+﻿@model PBS.Model.pbs_basic_GoodsClass
+@{
+    ViewBag.Title = ViewBag.PageTitle;
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i> @ViewBag.PageTitle</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-content tab-content">
+                    <div class="widget-box">
+                        <div class="widget-content nopadding">
+                            <form action="#" method="get" class="form-horizontal">
+                                <div class="control-group">
+                                    <label class="control-label">分类名称：</label>
+                                    <div class="controls">
+                                        <input id="GoodsClassName" type="text" class="span11" placeholder="分类名称" value="@Model.GoodsClassName">
+                                    </div>
+                                </div>
+                                <div class="form-actions text-center">
+                                    <button id="saveBtn" type="button" class="btn btn-success">保存</button>
+                                    <a class="btn" href="/Activity/ActivityClassList">返回</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var goodsClassId = "@Model.GoodsClassId";
+    var createTime = "@Model.CreateTime";
+    var updateTime = "@Model.UpdateTime";
+    var creatorId = "@Model.CreatorId";
+    var remark = "@Model.Remark";
+</script>
+<script src="~/js/Activity/ActivityClassAdd.js"></script>
+<!--end-main-container-part-->
+

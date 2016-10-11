@@ -1,0 +1,140 @@
+﻿7/27/2016 6:04:42 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:04:42 PM     传递支付参数：OrderSN=61、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:04:42 PM     WeiPay 页面  sign：3E6FD9D6C8AA5922E5AAF46B09AC9F12
+
+7/27/2016 6:04:42 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[61]]></out_trade_no><nonce_str><![CDATA[55743cc0393b1cb4b8b37d09ae48d097]]></nonce_str><sign><![CDATA[3E6FD9D6C8AA5922E5AAF46B09AC9F12]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:04:43 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:04:43 PM     WeiPay 页面  paySign：04F5A17402392E23107441E1E66AD0C1
+
+7/27/2016 6:08:24 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:08:24 PM     传递支付参数：OrderSN=62、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:08:24 PM     WeiPay 页面  sign：357424884ED2EB0CD3801CB17B543AA9
+
+7/27/2016 6:08:24 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[62]]></out_trade_no><nonce_str><![CDATA[0d0fd7c6e093f7b804fa0150b875b868]]></nonce_str><sign><![CDATA[357424884ED2EB0CD3801CB17B543AA9]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:08:24 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:08:24 PM     WeiPay 页面  paySign：F7A6D55ED083FC6BCD634C2C9764AA38
+
+7/27/2016 6:11:40 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:11:40 PM     传递支付参数：OrderSN=62、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:11:40 PM     WeiPay 页面  sign：2E50299292A5EFB0132B774855BE0978
+
+7/27/2016 6:11:40 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[62]]></out_trade_no><nonce_str><![CDATA[335f5352088d7d9bf74191e006d8e24c]]></nonce_str><sign><![CDATA[2E50299292A5EFB0132B774855BE0978]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:11:41 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:11:41 PM     WeiPay 页面  paySign：07AA5AE63F7B617CFE4B8DAB90C27B5D
+
+7/27/2016 6:12:03 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:12:03 PM     传递支付参数：OrderSN=62、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:12:03 PM     WeiPay 页面  sign：BCF978C48CCEECA34C178223297AA232
+
+7/27/2016 6:12:03 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[62]]></out_trade_no><nonce_str><![CDATA[7e7757b1e12abcb736ab9a754ffb617a]]></nonce_str><sign><![CDATA[BCF978C48CCEECA34C178223297AA232]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:12:03 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:12:03 PM     WeiPay 页面  paySign：73DBD5745BEE6B30F309001DFF0296FA
+
+7/27/2016 6:12:05 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:12:05 PM     传递支付参数：OrderSN=62、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:12:05 PM     WeiPay 页面  sign：5D062FF84A9A80BC6B15C38742F756EE
+
+7/27/2016 6:12:05 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[62]]></out_trade_no><nonce_str><![CDATA[3dd48ab31d016ffcbf3314df2b3cb9ce]]></nonce_str><sign><![CDATA[5D062FF84A9A80BC6B15C38742F756EE]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:12:05 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:12:05 PM     WeiPay 页面  paySign：24DC25A46E366060A4857F73BD86A77F
+
+7/27/2016 6:12:06 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:12:06 PM     传递支付参数：OrderSN=62、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:12:06 PM     WeiPay 页面  sign：1AD4BA56F371D571BA231D76247E4B8D
+
+7/27/2016 6:12:06 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[62]]></out_trade_no><nonce_str><![CDATA[6da37dd3139aa4d9aa55b8d237ec5d4a]]></nonce_str><sign><![CDATA[1AD4BA56F371D571BA231D76247E4B8D]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:12:06 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:12:06 PM     WeiPay 页面  paySign：F72AACA6B5C6B82771349629B03D7996
+
+7/27/2016 6:12:06 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:12:06 PM     传递支付参数：OrderSN=62、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:12:06 PM     WeiPay 页面  sign：6CF1E4109EE175020A35A4419AB20E22
+
+7/27/2016 6:12:06 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[62]]></out_trade_no><nonce_str><![CDATA[9f53d83ec0691550f7d2507d57f4f5a2]]></nonce_str><sign><![CDATA[6CF1E4109EE175020A35A4419AB20E22]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:12:07 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:12:07 PM     WeiPay 页面  paySign：8C39BC8F3C48509EE20F0FAADC95D035
+
+7/27/2016 6:12:07 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:12:07 PM     传递支付参数：OrderSN=62、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:12:07 PM     WeiPay 页面  sign：28633707E83BA2580FB862540CD0F4E6
+
+7/27/2016 6:12:07 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[62]]></out_trade_no><nonce_str><![CDATA[ad13a2a07ca4b7642959dc0c4c740ab6]]></nonce_str><sign><![CDATA[28633707E83BA2580FB862540CD0F4E6]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:12:07 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:12:07 PM     WeiPay 页面  paySign：F00ED334A6F06A49B226795976805234
+
+7/27/2016 6:12:10 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:12:10 PM     传递支付参数：OrderSN=62、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:12:10 PM     WeiPay 页面  sign：0A20F62FD50C54B11675B98207B3CE44
+
+7/27/2016 6:12:10 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[62]]></out_trade_no><nonce_str><![CDATA[eba0dc302bcd9a273f8bbb72be3a687b]]></nonce_str><sign><![CDATA[0A20F62FD50C54B11675B98207B3CE44]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:12:10 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:12:10 PM     WeiPay 页面  paySign：78D6C43D43212ED0D660A895CDD057F2
+
+7/27/2016 6:12:11 PM     ============ 单次支付开始 ===============
+
+7/27/2016 6:12:11 PM     传递支付参数：OrderSN=62、Body=【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）、TotalFee=2100、Attach=、UserOpenId=
+
+7/27/2016 6:12:11 PM     WeiPay 页面  sign：25878577B73B3712821F622EF7074138
+
+7/27/2016 6:12:11 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2100]]></total_fee><out_trade_no><![CDATA[62]]></out_trade_no><nonce_str><![CDATA[4e0cb6fb5fb446d1c92ede2ed8780188]]></nonce_str><sign><![CDATA[25878577B73B3712821F622EF7074138]]></sign><body><![CDATA[【海淀 | 工厂走访系列】之探访养乐多天津行（1元出游）]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+7/27/2016 6:12:12 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+7/27/2016 6:12:12 PM     WeiPay 页面  paySign：64414403E44D2B136C68DDA935D5BF83
+

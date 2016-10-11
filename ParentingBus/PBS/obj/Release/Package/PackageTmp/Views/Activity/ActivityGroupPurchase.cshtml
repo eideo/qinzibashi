@@ -1,0 +1,45 @@
+﻿@using PBS.Model;
+@{
+    Layout = "../Shared/_CommenHome.cshtml";
+    ViewBag.Title = "团购活动";
+    List<pbs_basic_GoodsView> tuangouList = (List<pbs_basic_GoodsView>)ViewData["TuangouList"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+}
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one">
+            @if (tuangouList != null && tuangouList.Count > 0)
+            {
+                foreach (pbs_basic_GoodsView tg in tuangouList)
+                {
+                    var picurl = picSourceHostUrl + tg.GoodsMainImgUrl;
+                    <li>
+                        <a href="/Activity/Activity?Id=@tg.GoodsId">
+                            <section class="ui-placehold-img">
+                                <span style="background-image:url(@picurl)"></span>
+                            </section>
+                            <div class="list_content">
+                                <div class="m_left">
+                                    <div class="m_left_title">@tg.GoodsName</div>
+                                    <div class="m_left_content"><i></i><span>回龙观</span><span>2月4日</span></div>
+                                </div>
+                                <div class="m_right">
+                                    <span class="marketPrice">￥@tg.MarketPrice</span>
+                                    <span class="sellPrice">￥@tg.SellingPrice</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>
+<script src="~/js/lib/zepto.min.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        window.location.href = "/";
+    }
+</script>
+
+

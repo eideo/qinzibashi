@@ -1,0 +1,112 @@
+﻿@using PBS.Model;
+@{
+    ViewBag.Title = "常用成员信息";
+    Layout = "../Shared/_ChoseMember.cshtml";
+    List<pbs_basic_Members> list= (List<pbs_basic_Members>)ViewData["ListMembers"];
+    string goodsId= ViewData["GoodsId"].ToString();
+    string memberId= ViewData["ChoseMemberId"].ToString();
+}
+
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one">
+            @if (list != null && list.Count > 0)
+            {
+                foreach (pbs_basic_Members members in list)
+                {
+                    <li>
+                        <div class="list_content content_Padding border_bottem" style="height:4em">
+                            <div class="m_left">
+                                <div class="m_left_content">
+                                    <a id="@members.MembersId" href="javascript:void(0)" onclick="choseMember(this)">
+                                        @if (memberId == members.MembersId.ToString())
+                                        {
+                                            <i class="r_icon"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="unchose_icon"></i>
+                                        }
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="float:left; margin-left:1em;color:#aaa">
+                                <table>
+                                    <tr>
+                                        <td style="font-size: 18px;font-weight: 600;">@members.MemberName</td>
+                                        <td>
+                                        @{
+                                            if (members.Sex == 0)
+                                            {
+                                                <span>男</span>
+                                            }
+                                            else
+                                            {
+                                                <span>女</span>
+                                            }
+
+                                            int birthday = Utility.Util.ParseHelper.ToDatetime(members.Birthday).Year;
+                                            int now = DateTime.Now.Year;
+                                            if ((now - birthday) > 14)
+                                            {
+                                                <span>成人</span>
+                                            }
+                                            else
+                                            {
+                                                <span>儿童</span>
+                                            }
+                                        }
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>出生日期:&nbsp;&nbsp;</td>
+                                        <td>@Utility.Util.ParseHelper.ToDatetime(members.Birthday).ToString("yyyy-MM-dd")</td>
+                                    </tr>
+                                    <tr>
+                                        <td>身份证号:&nbsp;&nbsp;</td>
+                                        <td>@members.IDNum</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="m_right" style="border-left:1px solid #ccc">
+                                <a href="/User/MyMembersDetail?Id=@members.MembersId">
+                                    <div class="right_position">
+                                        <img src="~/image/edit_icon.png" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>
+<p style="text-align:center">
+    <a href="/Activity/ChoseMyMembersDetail?Id=@goodsId">
+        <img alt="" src="~/image/addMember_icon.png" style="width:15em;height:4em" />
+    </a>
+</p>
+<script src="~/js/lib/zepto.min.js"></script>
+<script type="text/javascript">
+    var memberId = "@memberId";
+    var Id = "@goodsId";
+    function choseMember(obj) {
+        $(".ui-one li a i").attr("class", "unchose_icon");
+        $(obj).children("i").attr("class", "r_icon");
+        memberId = $(obj).attr("id");
+    }
+    function submitMember() {
+        window.location.href = "/Activity/Order?Id=" + Id + "&memberId=" + memberId;
+    }
+
+    function goBack() {
+        history.back();
+    }
+</script>
+
+
+

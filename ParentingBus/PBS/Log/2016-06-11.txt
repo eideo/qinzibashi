@@ -1,0 +1,238 @@
+﻿2016/6/11 14:06:41     ============ 单次支付开始 ===============
+
+2016/6/11 14:06:41     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2016/6/11 14:06:41     WeiPay 页面  sign：A3CA1D0D51A4E074266604826A71AA80
+
+2016/6/11 14:06:41     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee><![CDATA[]]></total_fee><nonce_str><![CDATA[4fac9ba115140ac4f1c22da82aa0bc7f]]></nonce_str><out_trade_no><![CDATA[]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[A3CA1D0D51A4E074266604826A71AA80]]></sign></xml>
+
+2016/6/11 14:06:41     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[out_trade_no参数长度有误]]></return_msg>
+</xml>
+
+2016/6/11 14:06:41     WeiPay 页面  paySign：9294E65D728A045D10A25F94B02E7775
+
+2016/6/11 14:07:48     ============ 单次支付开始 ===============
+
+2016/6/11 14:07:48     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2016/6/11 14:07:48     WeiPay 页面  sign：4015752E92AEC98643F09581CDABEA5E
+
+2016/6/11 14:07:48     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee><![CDATA[]]></total_fee><nonce_str><![CDATA[beb22fb694d513edcf5533cf006dfeae]]></nonce_str><out_trade_no><![CDATA[]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[4015752E92AEC98643F09581CDABEA5E]]></sign></xml>
+
+2016/6/11 14:07:48     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[out_trade_no参数长度有误]]></return_msg>
+</xml>
+
+2016/6/11 14:07:48     WeiPay 页面  paySign：43FD89FABC4AA1A099CC4C504E1562B2
+
+2016/6/11 14:09:11     ============ 单次支付开始 ===============
+
+2016/6/11 14:09:11     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2016/6/11 14:09:11     WeiPay 页面  sign：4260BD065E0271494EA1FAD360043482
+
+2016/6/11 14:09:11     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee><![CDATA[]]></total_fee><nonce_str><![CDATA[6f3ef77ac0e3619e98159e9b6febf557]]></nonce_str><out_trade_no><![CDATA[]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[4260BD065E0271494EA1FAD360043482]]></sign></xml>
+
+2016/6/11 14:09:11     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[out_trade_no参数长度有误]]></return_msg>
+</xml>
+
+2016/6/11 14:09:11     WeiPay 页面  paySign：996B5ED4DDD1A05EF37821C8D4A3245B
+
+2016/6/11 14:09:45     ============ 单次支付开始 ===============
+
+2016/6/11 14:09:45     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2016/6/11 14:09:45     WeiPay 页面  sign：AA20A8C608B8FD6EA54BA0FEB13E2126
+
+2016/6/11 14:09:46     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee><![CDATA[]]></total_fee><nonce_str><![CDATA[fc221309746013ac554571fbd180e1c8]]></nonce_str><out_trade_no><![CDATA[]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[AA20A8C608B8FD6EA54BA0FEB13E2126]]></sign></xml>
+
+2016/6/11 14:09:46     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[out_trade_no参数长度有误]]></return_msg>
+</xml>
+
+2016/6/11 14:09:46     WeiPay 页面  paySign：843B3322753AAA21CABF8D7524BFAEAD
+
+2016/6/11 14:10:41     ============ 单次支付开始 ===============
+
+2016/6/11 14:10:41     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2016/6/11 14:10:41     WeiPay 页面  sign：5F028FA97AF867F081C630D872C92A71
+
+2016/6/11 14:10:41     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee><![CDATA[]]></total_fee><nonce_str><![CDATA[c8ed21db4f678f3b13b9d5ee16489088]]></nonce_str><out_trade_no><![CDATA[]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[5F028FA97AF867F081C630D872C92A71]]></sign></xml>
+
+2016/6/11 14:10:42     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[out_trade_no参数长度有误]]></return_msg>
+</xml>
+
+2016/6/11 14:10:42     WeiPay 页面  paySign：7F7A849B52A8E176C13C25FEA9BB4D5C
+
+2016/6/11 14:10:54     ============ 单次支付开始 ===============
+
+2016/6/11 14:10:54     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2016/6/11 14:10:54     WeiPay 页面  sign：FB4D31631C7CC206B0ED868F27E9E837
+
+2016/6/11 14:10:54     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee><![CDATA[]]></total_fee><nonce_str><![CDATA[b4288d9c0ec0a1841b3b3728321e7088]]></nonce_str><out_trade_no><![CDATA[]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[FB4D31631C7CC206B0ED868F27E9E837]]></sign></xml>
+
+2016/6/11 14:10:54     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[out_trade_no参数长度有误]]></return_msg>
+</xml>
+
+2016/6/11 14:10:54     WeiPay 页面  paySign：5D7D1AECB8608B779604F7C4F7D9B234
+
+2016/6/11 14:35:22     ============ 单次支付开始 ===============
+
+2016/6/11 14:35:22     传递支付参数：OrderSN=16、Body=让你更懂我、TotalFee=0、Attach=、UserOpenId=
+
+2016/6/11 14:35:22     WeiPay 页面  sign：54C8FDDCAD21ED351299E816B09386B6
+
+2016/6/11 14:35:22     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>0</total_fee><nonce_str><![CDATA[81448138f5f163ccdba4acc69819f280]]></nonce_str><out_trade_no><![CDATA[16]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[54C8FDDCAD21ED351299E816B09386B6]]></sign></xml>
+
+2016/6/11 14:35:22     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+2016/6/11 14:35:22     WeiPay 页面  paySign：213ADD66700BC3680B59D8AE6DA02856
+
+2016/6/11 14:35:59     ============ 单次支付开始 ===============
+
+2016/6/11 14:35:59     传递支付参数：OrderSN=16、Body=让你更懂我、TotalFee=0、Attach=、UserOpenId=
+
+2016/6/11 14:35:59     WeiPay 页面  sign：F163AA5896A935B5B9ABE60732075165
+
+2016/6/11 14:35:59     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>0</total_fee><nonce_str><![CDATA[e4da3b7fbbce2345d7772b0674a318d5]]></nonce_str><out_trade_no><![CDATA[16]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[F163AA5896A935B5B9ABE60732075165]]></sign></xml>
+
+2016/6/11 14:35:59     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+2016/6/11 14:35:59     WeiPay 页面  paySign：C594E1B79ACA5A9C696EB3F19DA3DD7E
+
+2016/6/11 14:37:07     ============ 单次支付开始 ===============
+
+2016/6/11 14:37:07     传递支付参数：OrderSN=16、Body=让你更懂我、TotalFee=0、Attach=、UserOpenId=
+
+2016/6/11 14:37:07     WeiPay 页面  sign：1A4B5BA6482D08343DCDDBC6541B4271
+
+2016/6/11 14:37:07     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>0</total_fee><nonce_str><![CDATA[f85454e8279be180185cac7d243c5eb3]]></nonce_str><out_trade_no><![CDATA[16]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[1A4B5BA6482D08343DCDDBC6541B4271]]></sign></xml>
+
+2016/6/11 14:37:07     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+2016/6/11 14:37:08     WeiPay 页面  paySign：C37EBB2607F45CA282A4DB239DC95411
+
+2016/6/11 14:40:09     ============ 单次支付开始 ===============
+
+2016/6/11 14:40:09     传递支付参数：OrderSN=17、Body=让你更懂我、TotalFee=0、Attach=、UserOpenId=
+
+2016/6/11 14:40:09     WeiPay 页面  sign：B1D66789B477A73B6EBFC4009ECA1BA5
+
+2016/6/11 14:40:09     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>0</total_fee><nonce_str><![CDATA[7143d7fbadfa4693b9eec507d9d37443]]></nonce_str><out_trade_no><![CDATA[17]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[B1D66789B477A73B6EBFC4009ECA1BA5]]></sign></xml>
+
+2016/6/11 14:40:09     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+2016/6/11 14:40:09     WeiPay 页面  paySign：78B7CF2978174710D875E307AD674BF5
+
+2016/6/11 14:42:18     ============ 单次支付开始 ===============
+
+2016/6/11 14:42:18     传递支付参数：OrderSN=18、Body=让你更懂我、TotalFee=1、Attach=、UserOpenId=
+
+2016/6/11 14:42:18     WeiPay 页面  sign：E33EC909689B8CA7EA4BC06C53CE43A9
+
+2016/6/11 14:42:18     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>1</total_fee><nonce_str><![CDATA[e2ef524fbf3d9fe611d5a8e90fefdc9c]]></nonce_str><out_trade_no><![CDATA[18]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[E33EC909689B8CA7EA4BC06C53CE43A9]]></sign></xml>
+
+2016/6/11 14:42:19     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+2016/6/11 14:42:19     WeiPay 页面  paySign：F4B2EA6725D1FAD420238F79FCE6ADDC
+
+2016/6/11 14:50:12     ============ 单次支付开始 ===============
+
+2016/6/11 14:50:12     传递支付参数：OrderSN=19、Body=让你更懂我、TotalFee=1、Attach=、UserOpenId=
+
+2016/6/11 14:50:12     WeiPay 页面  sign：4BAAB2749D28B9A5EE258F81D492ECE7
+
+2016/6/11 14:50:12     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>1</total_fee><nonce_str><![CDATA[c9e1074f5b3f9fc8ea15d152add07294]]></nonce_str><out_trade_no><![CDATA[19]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[4BAAB2749D28B9A5EE258F81D492ECE7]]></sign></xml>
+
+2016/6/11 14:50:12     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+2016/6/11 14:50:12     WeiPay 页面  paySign：7978E3B4D9503811D73C7F1EDCA8859A
+
+2016/6/11 14:50:37     ============ 单次支付开始 ===============
+
+2016/6/11 14:50:37     传递支付参数：OrderSN=19、Body=让你更懂我、TotalFee=1、Attach=、UserOpenId=
+
+2016/6/11 14:50:37     WeiPay 页面  sign：5ACDCB86750DBD000D53C9564CF20124
+
+2016/6/11 14:50:38     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>1</total_fee><nonce_str><![CDATA[9dfcd5e558dfa04aaf37f137a1d9d3e5]]></nonce_str><out_trade_no><![CDATA[19]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[5ACDCB86750DBD000D53C9564CF20124]]></sign></xml>
+
+2016/6/11 14:50:38     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+2016/6/11 14:50:38     WeiPay 页面  paySign：B2DF2E731943183D6CB55DA2192A8514
+
+2016/6/11 14:51:24     ============ 单次支付开始 ===============
+
+2016/6/11 14:51:24     传递支付参数：OrderSN=20、Body=让你更懂我、TotalFee=1、Attach=、UserOpenId=
+
+2016/6/11 14:51:24     WeiPay 页面  sign：8457039EA8F4AB773AC1681B7CD562D0
+
+2016/6/11 14:51:24     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>1</total_fee><nonce_str><![CDATA[6364d3f0f495b6ab9dcf8d3b5c6e0b01]]></nonce_str><out_trade_no><![CDATA[20]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[8457039EA8F4AB773AC1681B7CD562D0]]></sign></xml>
+
+2016/6/11 14:51:24     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+2016/6/11 14:51:24     WeiPay 页面  paySign：01EDE874414CB624AA44D49A146E7DF9
+
+2016/6/11 14:53:12     ============ 单次支付开始 ===============
+
+2016/6/11 14:53:12     传递支付参数：OrderSN=20、Body=让你更懂我、TotalFee=1、Attach=、UserOpenId=
+
+2016/6/11 14:53:12     WeiPay 页面  sign：762D5FA9BC1A65689CD1EC0EE78A7748
+
+2016/6/11 14:53:12     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>1</total_fee><nonce_str><![CDATA[185e65bc40581880c4f2c82958de8cfe]]></nonce_str><out_trade_no><![CDATA[20]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[762D5FA9BC1A65689CD1EC0EE78A7748]]></sign></xml>
+
+2016/6/11 14:53:13     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+2016/6/11 14:53:13     WeiPay 页面  paySign：C7BA614524A3F296A8FD626CA5251F0A
+
+2016/6/11 14:55:43     ============ 单次支付开始 ===============
+
+2016/6/11 14:55:43     传递支付参数：OrderSN=20、Body=让你更懂我、TotalFee=1、Attach=、UserOpenId=
+
+2016/6/11 14:55:43     WeiPay 页面  sign：4DC3FD9070F271D68FD1CD77CA509CA9
+
+2016/6/11 14:55:43     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>1</total_fee><nonce_str><![CDATA[89f0fd5c927d466d6ec9a21b9ac34ffa]]></nonce_str><out_trade_no><![CDATA[20]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[4DC3FD9070F271D68FD1CD77CA509CA9]]></sign></xml>
+
+2016/6/11 14:55:43     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+2016/6/11 14:55:43     WeiPay 页面  paySign：126809AADA7296817E792EBBEF8D1591
+
+2016/6/11 14:56:14     ============ 单次支付开始 ===============
+
+2016/6/11 14:56:14     传递支付参数：OrderSN=20、Body=让你更懂我、TotalFee=1、Attach=、UserOpenId=
+
+2016/6/11 14:56:14     WeiPay 页面  sign：605F23B20C0E3DCCD5500C7835CBB2A5
+
+2016/6/11 14:56:14     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.yidt.cn/WeiPay/Notify.aspx]]></notify_url><body><![CDATA[让你更懂我]]></body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>1</total_fee><nonce_str><![CDATA[c399862d3b9d6b76c8436e924a68c45b]]></nonce_str><out_trade_no><![CDATA[20]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[605F23B20C0E3DCCD5500C7835CBB2A5]]></sign></xml>
+
+2016/6/11 14:56:15     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+2016/6/11 14:56:15     WeiPay 页面  paySign：96E64BA6E1AF427349354A1B015B0449
+

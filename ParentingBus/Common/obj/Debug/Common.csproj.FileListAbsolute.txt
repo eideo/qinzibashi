@@ -1,0 +1,72 @@
+D:\项目练习\YDT\Common\bin\Debug\Common.dll
+D:\项目练习\YDT\Common\bin\Debug\Common.pdb
+D:\项目练习\YDT\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\项目练习\YDT\Common\obj\Debug\Common.dll
+D:\项目练习\YDT\Common\obj\Debug\Common.pdb
+E:\YDT\Common\bin\Debug\Common.dll
+E:\YDT\Common\bin\Debug\Common.pdb
+E:\YDT\Common\obj\Debug\Common.dll
+E:\YDT\Common\obj\Debug\Common.pdb
+C:\D盘\YDT\Common\bin\Debug\Common.dll
+C:\D盘\YDT\Common\bin\Debug\Common.pdb
+C:\D盘\YDT\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\D盘\YDT\Common\obj\Debug\Common.dll
+C:\D盘\YDT\Common\obj\Debug\Common.pdb
+D:\YDT\Common\bin\Debug\Common.dll
+D:\YDT\Common\bin\Debug\Common.pdb
+D:\YDT\Common\obj\Debug\Common.dll
+D:\YDT\Common\obj\Debug\Common.pdb
+D:\其他项目\YDT20150525\YDT\Common\bin\Debug\Common.dll
+D:\其他项目\YDT20150525\YDT\Common\bin\Debug\Common.pdb
+D:\其他项目\YDT20150525\YDT\Common\obj\Debug\Common.dll
+D:\其他项目\YDT20150525\YDT\Common\obj\Debug\Common.pdb
+D:\otherProgram\YDT20150525\YDT\Common\bin\Debug\Common.dll
+D:\otherProgram\YDT20150525\YDT\Common\bin\Debug\Common.pdb
+D:\otherProgram\YDT20150525\YDT\Common\obj\Debug\Common.dll
+D:\otherProgram\YDT20150525\YDT\Common\obj\Debug\Common.pdb
+D:\otherProgram\YDT20150525\YDT\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\Common.dll
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\Common.pdb
+D:\项目\ParentingBus\ParentingBus\Common\obj\Debug\Common.dll
+D:\项目\ParentingBus\ParentingBus\Common\obj\Debug\Common.pdb
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\Common.dll.config
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\Antlr3.Runtime.dll
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\Newtonsoft.Json.dll
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\System.Web.Optimization.dll
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\WebGrease.dll
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\Antlr3.Runtime.pdb
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\Newtonsoft.Json.xml
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\System.Web.Optimization.xml
+D:\项目\ParentingBus\ParentingBus\Common\bin\Debug\zh-Hans\System.Web.Optimization.resources.dll
+D:\项目\ParentingBus\ParentingBus\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\Common.dll.config
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\Common.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\Common.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\Antlr3.Runtime.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\Newtonsoft.Json.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\System.Web.Optimization.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\WebGrease.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\Antlr3.Runtime.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\Newtonsoft.Json.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\System.Web.Optimization.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\bin\Debug\zh-Hans\System.Web.Optimization.resources.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\obj\Debug\Common.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\obj\Debug\Common.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\Common.dll.config
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\Common.dll
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\Common.pdb
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\Antlr3.Runtime.dll
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\Newtonsoft.Json.dll
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\System.Web.Optimization.dll
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\WebGrease.dll
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\Antlr3.Runtime.pdb
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\Newtonsoft.Json.xml
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\System.Web.Optimization.xml
+C:\My\My object\pbs\ParentingBus\Common\bin\Debug\zh-Hans\System.Web.Optimization.resources.dll
+C:\My\My object\pbs\ParentingBus\Common\obj\Debug\Common.dll
+C:\My\My object\pbs\ParentingBus\Common\obj\Debug\Common.pdb
+C:\My\My object\pbs\ParentingBus\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

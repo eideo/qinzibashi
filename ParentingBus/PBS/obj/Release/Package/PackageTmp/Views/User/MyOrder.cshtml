@@ -1,0 +1,510 @@
+﻿@using PBS.Model;
+@{
+    ViewBag.Title = "我的订单";
+    Layout = "../Shared/_ActivityDetail.cshtml";
+
+    List<pbs_basic_OrderView> listAllOrder = (List<pbs_basic_OrderView>)ViewData["ListAllOrder"];
+    List<pbs_basic_OrderView> listDFKOrder = (List<pbs_basic_OrderView>)ViewData["ListDFKOrder"];
+    List<pbs_basic_OrderView> listYFKOrder = (List<pbs_basic_OrderView>)ViewData["ListYFKOrder"];
+    List<pbs_basic_OrderView> listTKZOrder = (List<pbs_basic_OrderView>)ViewData["ListTKZOrder"];
+    List<pbs_basic_OrderView> listYWCOrder = (List<pbs_basic_OrderView>)ViewData["ListYWCOrder"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+}
+}
+<link href="~/css/mdialog.css" rel="stylesheet" />
+<style>
+    #a_cpl_btn {
+        display: none;
+    }
+
+    .ui-list > li {
+        padding-bottom: 10px;
+        /* border-bottom: 1px solid #ddd; */
+        padding-top: 10px;
+    }
+
+    .ui-list-link > li:after {
+        display: none;
+    }
+</style>
+
+<div class="field-main ui-tab" style="margin-top: 45px">
+    <ul id="menulist" class="ui-tiled field-menu ui-tab-nav">
+        <li class="current">全部</li>
+        <li>待付款</li>
+        <li>已付款</li>
+        <li>退款中</li>
+        <li>已完成</li>
+    </ul>
+    <div id="fieldList" class="field-conts ui-tab-content" style="width: 500%;">
+        <div class="field-item field-list">
+            <div class="field-detail">
+                @if (listAllOrder != null && listAllOrder.Count > 0)
+                {
+                    foreach (var list in listAllOrder)
+                    {
+                        <div class="uc-order-item">
+                            <div class="uc-order-title">
+                                <h4 class="ui-nowrap">@list.CreateTime.ToString("yyyy-MM-dd")</h4>
+
+                                @switch (list.OrderStatus)
+                                {
+                                    case 1:
+                                        <em class="order-state">待支付</em>
+                                        break;
+                                    case 2:
+                                        <em class="order-state">已付款</em>
+                                        break;
+                                    case 3:
+                                        <em class="order-state">已完成</em>
+                                        break;
+                                    case 4:
+                                        <em class="order-state">退款中</em>
+                                        break;
+                                    case 6:
+                                        <em class="order-state">已结束</em>
+                                        break;
+                                    default:
+                                        <em class="order-state">待支付</em>
+                                        break;
+                                }
+                            </div>
+                            <ul class="ui-list ui-list-link ui-border-tb">
+                                <li>
+                                    @{
+                                        var imgSrc = picSourceHostUrl + list.GoodsMainImgUrl;
+                                        <img class="orderImg" src="@imgSrc" alt="" />
+                                    }
+                                    <a href="javascript:void(0)">
+                                        <dl>
+                                            <dt></dt>
+                                            <dd>
+                                                @list.GoodsName
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>活动时间</dt>
+                                            <dd>
+                                                @list.VisitTime
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>数量</dt>
+                                            <dd>
+                                                @list.Count
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt></dt>
+                                            <dd>
+                                                <span class="listOrderPrice">
+                                                    ￥@list.OrderPrice
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                        @if (list.OrderStatus == 1|| list.OrderStatus==0)
+                                        {
+                                            <span class="tipOrder" onclick="DelOrder(@list.OrderId)">删除</span>
+                                        }
+                                        else if (list.OrderStatus == 2)
+                                        {
+                                            <span class="tipOrder" onclick="ApplyMoney(@list.OrderId)">申请退款</span>
+                                        }
+                                        else if (list.OrderStatus == 3)
+                                        {
+                                            <span class="tipOrder" onclick="ApplyMoney(@list.OrderId)">评价</span>
+                                        }
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div style="text-align: center; margin-top: 2em">
+                                                <img alt="" src="~/image/noOrder.png" />
+                                            </div>
+                                            <p style="text-align: center; margin-top: 1em; color: #aaa">您还没有相关订单</p>
+                                            <p style="text-align: center; margin-top: 1em; color: #aaa">快去找孩子喜爱的活动吧</p>
+                                        }
+            </div>
+        </div>
+        <div class="field-item">
+            <div class="field-detail">
+                <div class="field-detail">
+                    @if (listDFKOrder != null && listDFKOrder.Count > 0)
+                    {
+                        foreach (var list in listDFKOrder)
+                        {
+                            <div class="uc-order-item">
+                                <div class="uc-order-title">
+                                    <h4 class="ui-nowrap">@list.CreateTime.ToString("yyyy-MM-dd")</h4>
+
+                                    @switch (list.OrderStatus)
+                                    {
+                                        case 1:
+                                            <em class="order-state">待支付</em>
+                                            break;
+                                        case 2:
+                                            <em class="order-state">已付款</em>
+                                            break;
+                                        case 3:
+                                            <em class="order-state">已完成</em>
+                                            break;
+                                        case 4:
+                                            <em class="order-state">退款中</em>
+                                            break;
+                                        case 6:
+                                            <em class="order-state">已结束</em>
+                                            break;
+                                        default:
+                                            <em class="order-state">待支付</em>
+                                            break;
+                                    }
+                                </div>
+                                <ul class="ui-list ui-list-link ui-border-tb">
+                                    <li>
+                                        @{
+                                            var imgSrc = picSourceHostUrl + list.GoodsMainImgUrl;
+                                            <img class="orderImg" src="@imgSrc" alt="" />
+                                        }
+                                        <a href="javascript:void(0)">
+                                            <dl>
+                                                <dt></dt>
+                                                <dd>
+                                                    @list.GoodsName
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>活动时间</dt>
+                                                <dd>
+                                                    @list.VisitTime
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>数量</dt>
+                                                <dd>
+                                                    @list.Count
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt></dt>
+                                                <dd>
+                                                    <span class="listOrderPrice">
+                                                        ￥@list.OrderPrice
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                            <span class="tipOrder" onclick="DelOrder(@list.OrderId)">删除</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <div style="text-align: center; margin-top: 2em">
+                                                    <img alt="" src="~/image/noOrder.png" />
+                                                </div>
+                                                <p style="text-align: center; margin-top: 1em; color: #aaa">您还没有相关订单</p>
+                                                <p style="text-align: center; margin-top: 1em; color: #aaa">快去找孩子喜爱的活动吧</p>
+                                            }
+                </div>
+            </div>
+        </div>
+        <div class="field-item">
+            <div class="field-detail">
+                @if (listYFKOrder != null && listYFKOrder.Count > 0)
+                {
+                    foreach (var list in listYFKOrder)
+                    {
+                        <div class="uc-order-item">
+                            <div class="uc-order-title">
+                                <h4 class="ui-nowrap">@list.CreateTime.ToString("yyyy-MM-dd")</h4>
+
+                                @switch (list.OrderStatus)
+                                {
+                                    case 1:
+                                        <em class="order-state">待支付</em>
+                                        break;
+                                    case 2:
+                                        <em class="order-state">已付款</em>
+                                        break;
+                                    case 3:
+                                        <em class="order-state">已完成</em>
+                                        break;
+                                    case 4:
+                                        <em class="order-state">退款中</em>
+                                        break;
+                                    case 6:
+                                        <em class="order-state">已结束</em>
+                                        break;
+                                    default:
+                                        <em class="order-state">待支付</em>
+                                        break;
+                                }
+                            </div>
+                            <ul class="ui-list ui-list-link ui-border-tb">
+                                <li>
+                                    @{
+                                        var imgSrc = picSourceHostUrl + list.GoodsMainImgUrl;
+                                        <img class="orderImg" src="@imgSrc" alt="" />
+                                    }
+                                    <a href="javascript:void(0)">
+                                        <dl>
+                                            <dt></dt>
+                                            <dd>
+                                                @list.GoodsName
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>活动时间</dt>
+                                            <dd>
+                                                @list.VisitTime
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>数量</dt>
+                                            <dd>
+                                                @list.Count
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt></dt>
+                                            <dd>
+                                                <span class="listOrderPrice">
+                                                    ￥@list.OrderPrice
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                        <span class="tipOrder" onclick="ApplyMoney(@list.OrderId)">申请退款</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div style="text-align: center; margin-top: 2em">
+                                                <img alt="" src="~/image/noOrder.png" />
+                                            </div>
+                                            <p style="text-align: center; margin-top: 1em; color: #aaa">您还没有相关订单</p>
+                                            <p style="text-align: center; margin-top: 1em; color: #aaa">快去找孩子喜爱的活动吧</p>
+                                        }
+            </div>
+        </div>
+        <div class="field-item">
+            <div class="field-detail">
+                @if (listTKZOrder != null && listTKZOrder.Count > 0)
+                {
+                    foreach (var list in listTKZOrder)
+                    {
+                        <div class="uc-order-item">
+                            <div class="uc-order-title">
+                                <h4 class="ui-nowrap">@list.CreateTime.ToString("yyyy-MM-dd")</h4>
+
+                                @switch (list.OrderStatus)
+                                {
+                                    case 1:
+                                        <em class="order-state">待支付</em>
+                                        break;
+                                    case 2:
+                                        <em class="order-state">已付款</em>
+                                        break;
+                                    case 3:
+                                        <em class="order-state">已完成</em>
+                                        break;
+                                    case 4:
+                                        <em class="order-state">退款中</em>
+                                        break;
+                                    case 6:
+                                        <em class="order-state">已结束</em>
+                                        break;
+                                    default:
+                                        <em class="order-state">待支付</em>
+                                        break;
+                                }
+                            </div>
+                            <ul class="ui-list ui-list-link ui-border-tb">
+                                <li>
+                                    @{
+                                        var imgSrc = picSourceHostUrl + list.GoodsMainImgUrl;
+                                        <img class="orderImg" src="@imgSrc" alt="" />
+                                    }
+                                    <a href="javascript:void(0)">
+                                        <dl>
+                                            <dt></dt>
+                                            <dd>
+                                                @list.GoodsName
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>活动时间</dt>
+                                            <dd>
+                                                @list.VisitTime
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>数量</dt>
+                                            <dd>
+                                                @list.Count
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt></dt>
+                                            <dd>
+                                                <span class="listOrderPrice">
+                                                    ￥@list.OrderPrice
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div style="text-align: center; margin-top: 2em">
+                                                <img alt="" src="~/image/noOrder.png" />
+                                            </div>
+                                            <p style="text-align: center; margin-top: 1em; color: #aaa">您还没有相关订单</p>
+                                            <p style="text-align: center; margin-top: 1em; color: #aaa">快去找孩子喜爱的活动吧</p>
+                                        }
+            </div>
+        </div>
+        <div class="field-item">
+            <div class="field-detail">
+                @if (listYWCOrder != null && listYWCOrder.Count > 0)
+                {
+                    foreach (var list in listYWCOrder)
+                    {
+                        <div class="uc-order-item">
+                            <div class="uc-order-title">
+                                <h4 class="ui-nowrap">@list.CreateTime.ToString("yyyy-MM-dd")</h4>
+
+                                @switch (list.OrderStatus)
+                                {
+                                    case 1:
+                                        <em class="order-state">待支付</em>
+                                        break;
+                                    case 2:
+                                        <em class="order-state">已付款</em>
+                                        break;
+                                    case 3:
+                                        <em class="order-state">已完成</em>
+                                        break;
+                                    case 4:
+                                        <em class="order-state">退款中</em>
+                                        break;
+                                    case 6:
+                                        <em class="order-state">已结束</em>
+                                        break;
+                                    default:
+                                        <em class="order-state">待支付</em>
+                                        break;
+                                }
+                            </div>
+                            <ul class="ui-list ui-list-link ui-border-tb">
+                                <li>
+                                    @{
+                                        var imgSrc = picSourceHostUrl + list.GoodsMainImgUrl;
+                                        <img class="orderImg" src="@imgSrc" alt="" />
+                                    }
+                                    <a href="javascript:void(0)">
+                                        <dl>
+                                            <dt></dt>
+                                            <dd>
+                                                @list.GoodsName
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>活动时间</dt>
+                                            <dd>
+                                                @list.VisitTime
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>数量</dt>
+                                            <dd>
+                                                @list.Count
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt></dt>
+                                            <dd>
+                                                <span class="listOrderPrice">
+                                                    ￥@list.OrderPrice
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                        <span class="tipOrder" onclick="AssessOrder(@list.OrderId)">评价</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div style="text-align: center; margin-top: 2em">
+                                                <img alt="" src="~/image/noOrder.png" />
+                                            </div>
+                                            <p style="text-align: center; margin-top: 1em; color: #aaa">您还没有相关订单</p>
+                                            <p style="text-align: center; margin-top: 1em; color: #aaa">快去找孩子喜爱的活动吧</p>
+                                        }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/lib/zepto.min.js"></script>
+<script src="~/js/frozen.js"></script>
+<script src="~/js/app.js"></script>
+<script src="~/js/mdialog.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        history.back();
+    }
+
+    function DelOrder(orderId) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "/User/OrderDeleteAjax",
+            data: { orderId: orderId },
+            success: function (data) {
+                if (data.Status === 0) {
+                    //成功
+                    new TipBox({ type: 'success', str: '操作成功', hasBtn: true });
+                    setTimeout(function () {
+                        window.location.href = "/User/MyOrder";
+                    }, 3000);
+                } else {
+                    //失败
+                    new TipBox({ type: 'error', str: '对不起,出错了!', hasBtn: true });
+                    return false;
+                }
+                return false;
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //失败
+                new TipBox({ type: 'error', str: '对不起,出错了!', hasBtn: true });
+            }
+        });
+    }
+
+    function ApplyMoney(orderId) {
+        window.location.href = "/User/ApplyMoney?orderId=" + orderId;
+    }
+
+    function AssessOrder(orderId) {
+        window.location.href = "/User/AssessOrder?orderId=" + orderId;
+    }
+
+</script>

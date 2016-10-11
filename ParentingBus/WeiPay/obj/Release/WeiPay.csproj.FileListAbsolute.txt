@@ -1,0 +1,10 @@
+C:\My\My object\pbs\ParentingBus\WeiPay\bin\Release\WeiPay.dll
+C:\My\My object\pbs\ParentingBus\WeiPay\bin\Release\WeiPay.pdb
+C:\My\My object\pbs\ParentingBus\WeiPay\obj\Release\WeiPay.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\WeiPay\obj\Release\WeiPay.dll
+C:\My\My object\pbs\ParentingBus\WeiPay\obj\Release\WeiPay.pdb
+D:\项目\ParentingBus\ParentingBus\WeiPay\bin\Release\WeiPay.dll
+D:\项目\ParentingBus\ParentingBus\WeiPay\bin\Release\WeiPay.pdb
+D:\项目\ParentingBus\ParentingBus\WeiPay\obj\Release\WeiPay.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus\WeiPay\obj\Release\WeiPay.dll
+D:\项目\ParentingBus\ParentingBus\WeiPay\obj\Release\WeiPay.pdb

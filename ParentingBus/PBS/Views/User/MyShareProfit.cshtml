@@ -1,0 +1,96 @@
+﻿@using PBS.Model;
+@{
+    ViewBag.Title = "我的分享收益";
+    Layout = "../Shared/_Activity.cshtml";
+    List<pbs_basic_MyShareProfit> myShareProfitlist = (List<pbs_basic_MyShareProfit>)ViewData["pbs_basic_MyShareProfitList"];
+    decimal myShareProfit = Utility.Util.ParseHelper.ToDecimal(ViewData["MyShareProfit"]);
+}
+<style type="text/css">
+    .header_top .myPhoto img {
+        width: 6em;
+        height: 6em;
+        background: url("../image/MyPhotoBg.png") no-repeat;
+        background-size: contain;
+        padding: 0.7em;
+        margin-top: 1em;
+    }
+    #myShareProfitList {
+        width:100%;
+    }
+
+        #myShareProfitList tr {
+            border-bottom:1px #ddd solid;
+        }
+    #myShareProfitList td {
+        text-align:center;
+        width:33%;
+        padding:10px 5px;
+    }
+        #myShareProfitList .myShareProfitlistBg {
+            background:#fff;
+        }
+</style>
+<div class="header_top">
+    <a href="/User/Index" class="left" style="position:absolute;z-index:9999"></a>
+    <div class="header_title">我的分享收益</div>
+    <div class="myPhoto">
+        <img class="myPhotoPng" alt="" src="~/image/MyPhotoBg.png" />
+    </div>
+    <div style="height: 13em;">
+        <p style="position: absolute;top: 40%;left:0;right:0;text-align:center;color:rgba(247, 85, 73, 0.7)">累计收益</p>
+        <p style="position: absolute;top: 55%;left:0;right:0;text-align:center;color:rgba(247, 85, 73, 0.7)">￥@myShareProfit</p>
+    </div>
+</div>
+
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            <li>
+                <section class="ui-placehold-img" style="padding-top: 60%;">
+                    <span style="background-image: url('../../image/MyShareProfitBg.jpg'); "></span>
+                </section>
+            </li>
+        </ul>
+    </div>
+</div>
+<table id="myShareProfitList">
+    <tr>
+        <td style="font-weight:600;">时间</td>
+        <td style="font-weight:600;">级别</td>
+        <td style="font-weight:600;">收益</td>
+    </tr>
+    @if (myShareProfitlist != null && myShareProfitlist.Count > 0)
+    {
+        foreach (var item in myShareProfitlist)
+        {
+            <tr class="myShareProfitlistBg">
+                <td>@Utility.Util.ParseHelper.ToDatetime(item.CreateTime).ToString("MM-dd HH:mm")</td>
+                <td>@item.ShareLevel</td>
+                <td style="color:#ff7f0d">@item.Profit</td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="3">
+                <br />
+                <br />
+                <h2 style="text-align:center"><img alt="" src="~/image/pj_icon.png" style="width:50%;height:50%" /></h2>
+                <br />
+                <h2 style="text-align:center">暂时还没有收益</h2>
+            </td>
+        </tr>
+    }
+</table>
+
+<p style="text-align: center;padding: 1em 0;">
+    <a href="javascript:void(0)" style="color: #aaa">请阅读分享收益的《活动规则》</a>
+</p>
+
+<script src="~/js/jquery.1.7.2.min.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        history.back();
+    }
+</script>

@@ -1,0 +1,107 @@
+﻿@using PBS.Model;
+@{
+    ViewBag.Title = "我的优惠券";
+    Layout = "../Shared/_CommenHome.cshtml";
+    List<pbs_basic_MyVoucherView> listMyVoucher = (List<pbs_basic_MyVoucherView>)ViewData["ListMyVoucher"];
+}
+
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one">
+            @if (listMyVoucher != null && listMyVoucher.Count > 0)
+            {
+                foreach (var list in listMyVoucher)
+                {
+                    <li>
+                        <a href="javascript:void(0)">
+                            <section class="ui-placehold-img" style="margin:1em;padding-top: 45%;">
+
+                                @if (Utility.Util.ParseHelper.ToDatetime(list.UseStartTime) < DateTime.Now && Utility.Util.ParseHelper.ToDatetime(list.UseEndTime) > DateTime.Now)
+                                {
+                                    if (list.IsUsed == 0)
+                                    {
+                                        <span style="background-image:url(../../image/voucher.png);color:#fff">
+                                            <span class="voucherTitle">
+                                                <span class="voucherLimit"></span>
+                                                <span class="voucherNowUse">立即使用</span>
+                                            </span>
+                                            <span class="voucherContent">
+                                                <span class="voucher_left">
+                                                    <span class="voucherPrice">
+                                                        ￥@list.VoucherPrice
+                                                    </span>
+                                                    <span class="voucherUseRole">使用条件：@list.UseRole</span>
+                                                </span>
+                                                <span class="voucher_right">
+                                                    <span class="voucherTime">使用期限：@list.UseStartTime-@list.UseEndTime</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span style="background-image:url(../../image/voucherUsed.png);color:#fff">
+                                            <span class="voucherTitle">
+                                                <span class="voucherLimit"></span>
+                                                <span class="voucherNowUse"></span>
+                                            </span>
+                                            <span class="voucherContent">
+                                                <span class="voucher_left">
+                                                    <span class="voucherPrice">
+                                                        ￥@list.VoucherPrice
+                                                    </span>
+                                                    <span class="voucherUseRole">使用条件：@list.UseRole</span>
+                                                </span>
+                                                <span class="voucher_right">
+                                                    <span class="voucherTime">使用期限：@list.UseStartTime-@list.UseEndTime</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span style="background-image:url(../../image/voucherNotUse.png);color:#fff">
+                                        <span class="voucherTitle">
+                                            <span class="voucherLimit"></span>
+                                            <span class="voucherNowUse"></span>
+                                        </span>
+                                        <span class="voucherContent">
+                                            <span class="voucher_left">
+                                                <span class="voucherPrice">
+                                                    ￥@list.VoucherPrice
+                                                </span>
+                                                <span class="voucherUseRole">使用条件：@list.UseRole</span>
+                                            </span>
+                                            <span class="voucher_right">
+                                                <span class="voucherTime">使用期限：@list.UseStartTime-@list.UseEndTime</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                }
+                            </section>
+                        </a>
+                    </li>
+                }
+            }
+            else
+            {
+                <li>
+                    <br />
+                    <br />
+                    <h2 style="text-align:center"><img alt="" src="~/image/pj_icon.png" style="width:50%;height:50%" /></h2>
+                    <br />
+                    <h2 style="text-align:center">暂时还没有优惠券</h2>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<script src="~/js/lib/zepto.min.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        window.location.href = "/User/Index";
+    }
+</script>
+

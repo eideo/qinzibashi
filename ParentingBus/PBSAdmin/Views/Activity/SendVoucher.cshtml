@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "给所有会员发放优惠券";
+    Layout = null;
+    string voucherId = ViewData["VoucherId"].ToString();
+}
+<link rel="stylesheet" href="~/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/scojs.css" />
+<link rel="stylesheet" href="~/css/sco.message.css" />
+<div style="margin:0px auto;text-align:center">
+<button id="saveBtn" type="button" class="btn btn-success" onclick="submitSendVoucher(@voucherId)">确认发放</button>
+</div>
+<script src="~/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="~/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="~/js/sco.modal.js" type="text/javascript" charset="utf-8"></script>
+<script src="~/js/sco.confirm.js" type="text/javascript" charset="utf-8"></script>
+<script src="~/js/sco.message.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    function submitSendVoucher(voucherId)
+    {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "/Activity/SendVoucherAjax",
+            data: { voucherId: voucherId },
+            success: function (data) {
+                if (data.Status === 0) {
+                    //成功
+                    $.scojs_message(data.Message, $.scojs_message.TYPE_OK);
+                } else {
+                    //失败
+                    $.scojs_message(data.Message, $.scojs_message.TYPE_ERROR);
+                    return false;
+                }
+                return false;
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //失败
+                $.scojs_message(errorThrown, $.scojs_message.TYPE_ERROR);
+            }
+        });
+    }
+</script>

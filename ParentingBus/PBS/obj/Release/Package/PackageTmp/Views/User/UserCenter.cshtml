@@ -1,0 +1,429 @@
+﻿@using PBS.Model;
+@{
+    Layout = "../Shared/_CommenHome.cshtml";
+    ViewBag.Title = "个人信息";
+    pbs_basic_Users users = (pbs_basic_Users)ViewData["Users"];
+    string picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PhotoPicSourceHostUrl"].ToString();
+    string userPhoto = "../../image/default_photo.png";
+    if (users != null && !string.IsNullOrWhiteSpace(users.PhotoUrl))
+    {
+        userPhoto = picSourceHostUrl + users.PhotoUrl;
+    }
+    var dadName = ViewData["DadName"];
+    var mumName = ViewData["MumName"];
+    string babySex = string.Empty;
+    if (users != null && !string.IsNullOrWhiteSpace(users.BabySex.ToString()))
+    {
+        if (users.BabySex == 1)
+        {
+            babySex = "女";
+        }
+        else
+        {
+            babySex = "男";
+        }
+    }
+    var babyBirthday = string.Empty;
+    if (users != null && users.BabyBirthday!=null&& !string.IsNullOrWhiteSpace(users.BabyBirthday.ToString()))
+    {
+        babyBirthday = Utility.Util.ParseHelper.ToDatetime(users.BabyBirthday).ToString("yyyy-MM-dd");
+    }
+
+    List<pbs_basic_Region> regionlist = new List<pbs_basic_Region>();
+    regionlist = (List<pbs_basic_Region>)ViewData["RegionList"];
+}
+<link href="~/css/mdialog.css" rel="stylesheet" />
+<link href="~/css/mobiscroll-2.13.2.full.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/css/app.css">
+<style>
+    #Sex_dummy {
+        border: 0;
+        text-align: right;
+    }
+    #RegionList_dummy {
+        border: 0;
+        text-align: right;
+    }
+
+    #submitBtn {
+        display: block;
+    }
+    #userPhoto {
+        display:none;
+    }
+    .m_left {
+        width:20% !important;
+    }
+</style>
+
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            <li>
+                <div class="list_content content_Padding border_bottem height_15">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>头像</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <img id="uploadPreview" alt="" src="@userPhoto" style="width:1.5em; height:1.5em" />
+                        <input id="userPhoto" name="userPhoto" type="file" accept="image/*;capture=camera" onchange="loadImageFile()" style="position:absolute;z-index:-999"/>
+                        <a href="javascript:void(0)" style="float:right" onclick="chosePhoto()">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>昵称</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <input class="choseInput" id="NickName" type="text" value="@users.NickName" readonly="readonly" />
+                        <a href="javascript:void(0)" style="float:right" onclick="choseVal('NickName', '昵称')">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>手机</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <input class="choseInput" id="Phone" type="text" value="@users.Phone" readonly="readonly" />
+                        <a href="javascript:void(0)" style="float:right" onclick="choseVal('Phone', '手机')">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>宝宝性别</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        @*<input class="choseInput" id="BabySex" type="text" value="@babySex" readonly="readonly" />*@
+                        <ul id="Sex" style="display:none">
+                            <li><span>男</span></li>
+                            <li><span>女</span></li>
+                        </ul>
+                        @*<a href="javascript:void(0)" style="float:right" onclick="choseVal('Sex', '宝宝性别')">*@
+                        <a href="javascript:void(0)" style="float:right">
+                            <div>
+                                <img src="/image/next_icon.png" style="display:none">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>宝宝生日</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <input class="choseInput" id="BabyBirthday" type="text" value="@babyBirthday" readonly="readonly" />
+                        <a href="javascript:void(0)" style="float:right">
+                            <div>
+                                <img src="/image/next_icon.png" style="display:none">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>爸爸姓名</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <input class="choseInput" id="dadName" type="text" value="@dadName" readonly="readonly" />
+                        <a href="javascript:void(0)" style="float:right" onclick="choseVal('dadName', '爸爸姓名')">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>妈妈姓名</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <input class="choseInput" id="mumName" type="text" value="@mumName" readonly="readonly" />
+                        <a href="javascript:void(0)" style="float:right" onclick="choseVal('mumName', '妈妈姓名')">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>地区</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <ul id="RegionList" style="display:none">
+                            @if (regionlist != null && regionlist.Count > 0)
+                            {
+                                foreach (var itemParent in regionlist)
+                                {
+                                    <li><span id="@itemParent.RegionId">@itemParent.RegionName</span>
+                                        <ul>
+                                            @if (itemParent.regionChildrenList != null && itemParent.regionChildrenList.Count > 0)
+                                            {
+                                                foreach (var itemChildern in itemParent.regionChildrenList)
+                                                {
+                                                    <li><span id="@itemChildern.RegionId">@itemChildern.RegionName</span></li>
+                                                }
+                                            }
+                                        </ul>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                        <a href="javascript:void(0)" style="float:right">
+                            <div>
+                                <img src="/image/next_icon.png" style="display:none">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="~/js/jquery.1.7.2.min.js"></script>
+<script src="~/js/ajaxfileupload.js"></script>
+<script src="~/js/holder.js"></script>
+<script src="~/js/mobiscroll-2.13.2.full.min.js"></script>
+<script src="~/js/mdialog.js"></script>
+<script type="text/javascript">
+
+    oFReader = new FileReader(), rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i;
+
+    oFReader.onload = function (oFrEvent) {
+        document.getElementById("uploadPreview").src = oFrEvent.target.result;
+    };
+
+    var uploadUrl = "";
+
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt = {};
+        opt.date = { preset: 'date' };
+        opt.datetime = { preset: 'datetime' };
+        opt.time = { preset: 'time' };
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 100, //开始年份
+            endYear: currYear, //结束年份
+            headerText: function (valueText) { return "宝宝生日"; }
+        };
+
+        $("#BabyBirthday").mobiscroll($.extend(opt['date'], opt['default']));
+        var optDateTime = $.extend(opt['datetime'], opt['default']);
+        var optTime = $.extend(opt['time'], opt['default']);
+
+        var i = Math.floor($('#Sex>li').length / 2);
+        $("#Sex").mobiscroll().treelist({
+            theme: "android-ics light",
+            lang: "zh",
+            defaultValue: [i],
+            cancelText: null,
+            headerText: function (valueText) { return "宝宝性别"; },
+            formatResult: function (array) { //返回自定义格式结果
+                return $('#Sex>li').eq(array[0]).children('span').text();
+            }
+        });
+        $("#Sex_dummy").val('@babySex');
+
+        var optRegin = {};
+        opt.tree_list = { preset: 'list', labels: ['Region', 'Country', 'City'] };
+        $('#RegionList').val('').scroller('destroy').scroller($.extend(opt['tree_list'], {
+            theme: 'android-ics light',
+            mode: 'scroller',
+            display: 'bottom',
+            lang: 'zh',
+            formatResult: function (array) {
+                return $('#RegionList>li').eq(array[0]).children('span').text() + ' ' + $('#RegionList>li').eq(array[0]).find('ul li').eq(array[1]).text().trim(' ');
+            }
+        }));
+        $("#RegionList_dummy").val('@users.MyAdress');
+    });
+
+    function choseVal(id, name) {
+        var infoid = id;
+        var valid = "#" + id;
+        var val = $(valid).val();
+        var inputHtml = "<div class='infoTitle'>" + name + "</div><div class='infoContent'><input id='infoValue_" + infoid + "' class='infoValue' type='text' value='" + val + "' /></div>";
+        new TipBox({ type: 'info', str: inputHtml, hasBtn: true, infoId: infoid });
+    }
+
+    function chosePhoto() {
+        return $("#userPhoto").click();
+    }
+
+    function loadImageFile() {
+        if (document.getElementById("userPhoto").files.length === 0) {
+            new TipBox({ type: 'tip', str: '请选择图片', clickDomCancel: true, setTime: 10000500, hasBtn: true });
+            return false;
+        }
+
+        var oFile = document.getElementById("userPhoto").files[0];
+        if (!rFilter.test(oFile.type)) {
+            new TipBox({ type: 'tip', str: '只能选择图片', clickDomCancel: true, setTime: 10000500, hasBtn: true });
+            return false;
+        }
+        else if (oFile.size > 1024 * 1024) {
+            new TipBox({ type: 'tip', str: '图片大小不能超过1M', clickDomCancel: true, setTime: 10000500, hasBtn: true });
+            return false;
+        }
+
+        oFReader.readAsDataURL(oFile);
+        return false;
+    }
+
+    function ajaxFileUpload() {
+        $.ajaxFileUpload
+        (
+            {
+                url: '../../ashx/UploadImg.ashx',
+                secureuri: false,
+                fileElementId: 'userPhoto',
+                dataType: 'json',
+                success: function (data) {
+                    if (data != null && data.Code === "0000") {
+                        var hostUrl = "@picSourceHostUrl";
+                        var src=hostUrl+data.Url;
+                        $("#uploadPreview").attr("src", src);
+                        uploadUrl = data.Url;
+                        UpdateUser();
+
+                    } else {
+                        //alert("error");
+                        new TipBox({ type: 'error', str: '上传图片失败', hasBtn: true });
+                    }
+
+                },
+                error: function () {
+                    //alert("error");
+                    new TipBox({ type: 'error', str: '上传图片失败', hasBtn: true });
+                }
+            }
+        );
+        return false;
+    }
+
+    function submitAll()
+    {
+        //var oFile = document.getElementById("userPhoto").files[0];
+
+        //alert(oFile);
+
+        if (document.getElementById("userPhoto").files.length > 0) {
+            var oFile = document.getElementById("userPhoto").files[0];
+            if (rFilter.test(oFile.type)) {
+                if (oFile.size < 1024 * 1024) {
+                    ajaxFileUpload();
+                    return false;
+                }
+            }
+        }
+
+        UpdateUser();
+        return false;
+
+    }
+
+    function UpdateUser() {
+        var reg1 = /^1[3|4|5|7|8]\d{9}$/;
+        var nickName = $("#NickName").val();
+        var photoUrl = uploadUrl;
+        var phone = $("#Phone").val();
+        var babySex = $("#Sex_dummy").val();
+        var babyBirthday = $("#BabyBirthday").val();
+        var dadName = $("#dadName").val();
+        var mumName = $("#mumName").val();
+        var myAdress = $("#RegionList_dummy").val();
+        
+        if (!reg1.test(phone)) {
+            new TipBox({ type: 'error', str: '手机号码有误，请重填', hasBtn: true });
+            return false;
+        }
+
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "/User/UpdateUserAjax",
+            data: {
+                nickName: nickName,
+                photoUrl: photoUrl,
+                babySex: babySex,
+                phone: phone,
+                babyBirthday: babyBirthday,
+                dadName: dadName,
+                mumName: mumName,
+                myAdress: myAdress
+            },
+            success: function (data) {
+                if (data.Status === 0) {
+                    //成功
+                    new TipBox({ type: 'success', str: '修改成功', hasBtn: true });
+                } else {
+                    //失败
+                    new TipBox({ type: 'error', str: '修改失败', hasBtn: true });
+                    return false;
+                }
+                return false;
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //失败
+                new TipBox({ type: 'error', str: '修改失败', hasBtn: true });
+            }
+        });
+    }
+
+    function goBack() {
+        //history.back();
+        window.location.href = "/User/Index";
+    }
+
+</script>
+

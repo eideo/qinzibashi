@@ -1,0 +1,51 @@
+﻿@model PBS.Model.pbsBasicMembersListResult
+@{
+    ViewBag.Title = "成员列表";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i>成员列表</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>成员列表</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <table id="example" class="table table-bordered data-table">
+                        <thead>
+                            <tr>
+                                <th>成员编号</th>
+                                <th>成员名称</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.List.Count > 0)
+                            {
+                                foreach (var item in Model.List)
+                                {
+                                    <tr>
+                                        <td>@item.MembersId</td>
+                                        <td>@item.MemberName</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-main-container-part-->

@@ -1,0 +1,281 @@
+﻿@using PBS.Model;
+@{
+    Layout = "../Shared/_Home.cshtml";
+    List<pbs_basic_GoodsView> tehuilist = (List<pbs_basic_GoodsView>)ViewData["TehuiList"];
+    List<pbs_basic_GoodsView> benzhoulist = (List<pbs_basic_GoodsView>)ViewData["BenzhouList"];
+    List<pbs_basic_HomePicture> homePictureList = (List<pbs_basic_HomePicture>)ViewData["HomePictureList"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+    ViewBag.Title = "亲子巴士";
+}
+
+<!-- banner slider -->
+<div class="ui-slider">
+    <ul class="ui-slider-content" style="width: 300%">
+        @if (homePictureList != null && homePictureList.Count > 0)
+        {
+            foreach (pbs_basic_HomePicture hp in homePictureList)
+            {
+                var picurl = picSourceHostUrl + hp.Url;
+                <li class="current">
+                    @if (!string.IsNullOrEmpty(hp.LinkUrl))
+                    {
+                        <a href="@hp.LinkUrl">
+                            <span style="background-image:url(@picurl)"></span>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="javascript:void(0)">
+                            <span style="background-image:url(@picurl)"></span>
+                        </a>
+                    }
+                </li>
+            }
+        }
+    </ul>
+</div>
+<!-- nav -->
+<div class="main-nav">
+    <ul class="ui-tiled grid-nav-1">
+        <li>
+            <a href="/Activity/ActivityAll">
+                <em class="nav-icon-bg">
+                    <i class="nav-icon all_activity"></i>
+                </em>
+                <span class="nav-text">全部活动</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Activity/ActivityWeek">
+                <em class="nav-icon-bg">
+                    <i class="nav-icon week_activity"></i>
+                </em>
+                <span class="nav-text">本周活动</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Activity/ActivityBenefit">
+                <em class="nav-icon-bg">
+                    <i class="nav-icon youhui_activity"></i>
+                </em>
+                <span class="nav-text">特惠活动</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="ui-tiled grid-nav-2">
+        <li>
+            <a href="/Activity/ActivitySchedule">
+                <em class="nav-icon-bg">
+                    <i class="nav-icon dangqi_activity"></i>
+                </em>
+                <span class="nav-text">活动档期</span>
+            </a>
+        </li>
+        <li>
+            @*<a href="/Activity/ActivityGroupPurchase">*@
+            <a href="javascript:void(0)">
+                <em class="nav-icon-bg">
+                    <i class="nav-icon tuangou_activity"></i>
+                </em>
+                <span class="nav-text">团购活动</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Activity/ActivityReviewHistory">
+                <em class="nav-icon-bg">
+                    <i class="nav-icon wangqi_activity"></i>
+                </em>
+                <span class="nav-text">往期回顾</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="ui-wrap">
+    <!-- 特惠活动 -->
+    <div class="mod-box">
+        <div class="mod-hd ui-border-b">
+            <h3><i class="home_list_youhui"></i>特惠活动</h3>
+        </div>
+        <div class="mod-bd">
+            <ul class="ui-one">
+                @if (tehuilist != null && tehuilist.Count > 0)
+                {
+                    foreach (pbs_basic_GoodsView th in tehuilist)
+                    {
+                        var picurl = picSourceHostUrl + th.GoodsMainImgUrl;
+                        string[] datetime = { th.VisitTime1, th.VisitTime2, th.VisitTime3, th.VisitTime4, th.VisitTime5 };
+                        bool flag = false;
+                        for (int i = 0; i < 5; i++)
+                        {
+                            if (!string.IsNullOrEmpty(datetime[i]) && Utility.Util.ParseHelper.ToDatetime(datetime[i]) > DateTime.Now)
+                            {
+                                flag = true;
+                            }
+                        }
+                        if (flag)
+                        {
+                            <li>
+                                <a href="/Activity/Activity?Id=@th.GoodsId">
+                                    <section class="ui-placehold-img">
+                                        <span style="background-image:url(@picurl)"></span>
+                                    </section>
+                                    <div class="list_content">
+                                        <div class="m_left">
+                                            <div class="m_left_title">@th.GoodsName</div>
+                                            <div class="m_left_content">
+                                                <i></i><span>@th.Remark</span>
+                                                @{
+                                                    string minTime = "";
+                                                    string maxTime = "";
+                                                    for (int i = 0; i < 5; i++)
+                                                    {
+                                                        if (string.IsNullOrEmpty(minTime))
+                                                        {
+                                                            minTime = datetime[i];
+                                                        }
+                                                        if (string.IsNullOrEmpty(maxTime))
+                                                        {
+                                                            maxTime = datetime[i];
+                                                        }
+                                                        if (Utility.Util.ParseHelper.ToDatetime(datetime[i]) > DateTime.Now)
+                                                        {
+
+                                                            if (minTime != datetime[i] && Utility.Util.ParseHelper.ToDatetime(datetime[i]) < Utility.Util.ParseHelper.ToDatetime(minTime) && !string.IsNullOrEmpty(datetime[i]))
+                                                            {
+                                                                minTime = datetime[i];
+                                                            }
+                                                        }
+
+                                                        if (string.IsNullOrEmpty(minTime))
+                                                        {
+
+                                                            if (maxTime != datetime[i] && Utility.Util.ParseHelper.ToDatetime(datetime[i]) > Utility.Util.ParseHelper.ToDatetime(maxTime))
+                                                            {
+                                                                maxTime = datetime[i];
+                                                            }
+                                                        }
+                                                    }
+                                                    if (string.IsNullOrEmpty(minTime))
+                                                    {
+                                                <span>@Utility.Util.ParseHelper.ToDatetime(minTime).ToString("yyyy-MM-dd")</span>
+                                                    }
+                                                    else
+                                                    {
+                                                <span>@Utility.Util.ParseHelper.ToDatetime(maxTime).ToString("yyyy-MM-dd")</span>
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="m_right">
+                                            <span class="marketPrice">￥@th.MarketPrice</span>
+                                            <span class="sellPrice">￥@th.SellingPrice</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        }
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+    <!-- 本周推荐 -->
+    <div class="mod-box">
+        <div class="mod-hd ui-border-b">
+            <h3><i class="home_list_week"></i>本周推荐</h3>
+        </div>
+        <div class="mod-bd">
+            <ul class="ui-one">
+                @if (benzhoulist != null && benzhoulist.Count > 0)
+                {
+                    foreach (pbs_basic_GoodsView bz in benzhoulist)
+                    {
+                        var picurl = picSourceHostUrl + bz.GoodsMainImgUrl;
+                        string[] datetime = { bz.VisitTime1, bz.VisitTime2, bz.VisitTime3, bz.VisitTime4, bz.VisitTime5 };
+                        bool flag = false;
+                        for (int i = 0; i < 5; i++)
+                        {
+                            if (!string.IsNullOrEmpty(datetime[i]) && Utility.Util.ParseHelper.ToDatetime(datetime[i]) > DateTime.Now)
+                            {
+                                flag = true;
+                            }
+                        }
+                        if (flag)
+                        {
+                            <li>
+                                <a href="/Activity/Activity?Id=@bz.GoodsId">
+                                    <section class="ui-placehold-img">
+                                        <span style="background-image:url(@picurl)"></span>
+                                    </section>
+                                    <div class="list_content">
+                                        <div class="m_left">
+                                            <div class="m_left_title">@bz.GoodsName</div>
+                                            <div class="m_left_content">
+                                                <i></i><span>@bz.Remark</span>
+                                                @{
+                                                    string minTime = "";
+                                                    string maxTime = "";
+                                                    for (int i = 0; i < 5; i++)
+                                                    {
+                                                        if (string.IsNullOrEmpty(minTime))
+                                                        {
+                                                            minTime = datetime[i];
+                                                        }
+                                                        if (string.IsNullOrEmpty(maxTime))
+                                                        {
+                                                            maxTime = datetime[i];
+                                                        }
+                                                        if (Utility.Util.ParseHelper.ToDatetime(datetime[i]) > DateTime.Now)
+                                                        {
+
+                                                            if (minTime != datetime[i] && Utility.Util.ParseHelper.ToDatetime(datetime[i]) < Utility.Util.ParseHelper.ToDatetime(minTime) && !string.IsNullOrEmpty(datetime[i]))
+                                                            {
+                                                                minTime = datetime[i];
+                                                            }
+                                                        }
+
+                                                        if (string.IsNullOrEmpty(minTime))
+                                                        {
+
+                                                            if (maxTime != datetime[i] && Utility.Util.ParseHelper.ToDatetime(datetime[i]) > Utility.Util.ParseHelper.ToDatetime(maxTime))
+                                                            {
+                                                                maxTime = datetime[i];
+                                                            }
+                                                        }
+                                                    }
+                                                    if (string.IsNullOrEmpty(minTime))
+                                                    {
+                                                        <span>@Utility.Util.ParseHelper.ToDatetime(minTime).ToString("yyyy-MM-dd")</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span>@Utility.Util.ParseHelper.ToDatetime(maxTime).ToString("yyyy-MM-dd")</span>
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="m_right">
+                                            <span class="marketPrice">￥@bz.MarketPrice</span>
+                                            <span class="sellPrice">￥@bz.SellingPrice</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        }
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/lib/zepto.min.js"></script>
+<script src="~/js/frozen.js"></script>
+<script src="~/js/app.js"></script>
+<script>
+    function SearchWords() {
+        var keywords = $("#SearchWords").val();
+        window.location.href = "/Activity/ActivityAll?goodsTypeId=-1&ageRangeId=-1&regionId=-1&keyWords=" + keywords;
+    }
+
+</script>

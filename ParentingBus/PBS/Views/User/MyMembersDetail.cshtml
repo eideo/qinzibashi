@@ -1,0 +1,264 @@
+﻿@using PBS.Model;
+@{
+    Layout = "../Shared/_ChoseMember.cshtml";
+    ViewBag.Title = ViewData["ThisTitle"].ToString();
+    pbs_basic_Members members = (pbs_basic_Members)ViewData["Members"];
+    string Sex = string.Empty;
+    if (members != null && !string.IsNullOrEmpty(members.Sex.ToString()))
+    {
+        if (members.Sex == 1)
+        {
+            Sex = "女";
+        }
+        else
+        {
+            Sex = "男";
+        }
+    }
+    string memberBirthday = string.Empty;
+    if (members != null && !string.IsNullOrEmpty(members.Birthday))
+    {
+        memberBirthday = Utility.Util.ParseHelper.ToDatetime(members.Birthday).ToString("yyyy-MM-dd");
+    }
+    string RelationType = "-1";
+    if (members != null && !string.IsNullOrEmpty(members.RelationType.ToString()))
+    {
+        RelationType = members.RelationType.ToString();
+    }
+
+    int membersId = 0;
+
+    if (members != null && !string.IsNullOrEmpty(members.MembersId.ToString()))
+    {
+        membersId = members.MembersId;
+    }
+}
+
+<link href="~/css/mdialog.css" rel="stylesheet" />
+<link href="~/css/mobiscroll-2.13.2.full.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/css/app.css">
+<style>
+    #Sex_dummy {
+        border: 0;
+        text-align: right;
+    }
+
+    #submitBtn {
+        display: block;
+    }
+    .m_left {
+        width:20% !important;
+    }
+</style>
+
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>姓名</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <input class="choseInput" id="MemberName" type="text" value="@members.MemberName" readonly="readonly" />
+                        <a href="javascript:void(0)" style="float:right" onclick="choseVal('MemberName', '姓名')">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>性别</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <ul id="Sex" style="display:none">
+                            <li><span>男</span></li>
+                            <li><span>女</span></li>
+                        </ul>
+                        <a href="javascript:void(0)" style="float:right">
+                            <div>
+                                <img src="/image/next_icon.png" style="display:none">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>生日</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <input class="choseInput" id="memberBirthday" type="text" value="@memberBirthday" readonly="readonly" />
+                        <a href="javascript:void(0)" style="float:right">
+                            <div>
+                                <img src="/image/next_icon.png" style="display:none">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span>身份证</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <input class="choseInput" id="IDNum" type="text" value="@members.IDNum" readonly="readonly" />
+                        <a href="javascript:void(0)" style="float:right" onclick="choseVal('IDNum', '身份证')">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="~/js/jquery.1.7.2.min.js"></script>
+<script src="~/js/mobiscroll-2.13.2.full.min.js"></script>
+<script src="~/js/mdialog.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt = {};
+        opt.date = { preset: 'date' };
+        opt.datetime = { preset: 'datetime' };
+        opt.time = { preset: 'time' };
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 100, //开始年份
+            endYear: currYear, //结束年份
+            headerText: function (valueText) { return "宝宝生日"; }
+        };
+
+        $("#memberBirthday").mobiscroll($.extend(opt['date'], opt['default']));
+        var optDateTime = $.extend(opt['datetime'], opt['default']);
+        var optTime = $.extend(opt['time'], opt['default']);
+
+        var i = Math.floor($('#Sex>li').length / 2);
+        $("#Sex").mobiscroll().treelist({
+            theme: "android-ics light",
+            lang: "zh",
+            defaultValue: [i],
+            cancelText: null,
+            headerText: function (valueText) { return "性别"; },
+            formatResult: function (array) { //返回自定义格式结果
+                return $('#Sex>li').eq(array[0]).children('span').text();
+            }
+        });
+        $("#Sex_dummy").val('@Sex');
+
+    });
+
+    function choseVal(id, name) {
+        var infoid = id;
+        var valid = "#" + id;
+        var val = $(valid).val();
+        var inputHtml = "<div class='infoTitle'>" + name + "</div><div class='infoContent'><input id='infoValue_" + infoid + "' class='infoValue' type='text' value='" + val + "' /></div>";
+        new TipBox({ type: 'info', str: inputHtml, hasBtn: true, infoId: infoid });
+    }
+
+    function submitMember()
+    {
+        var memberName = $("#MemberName").val();
+        var sex = $("#Sex_dummy").val();
+        var birthday = $("#memberBirthday").val();
+        var iDNum = $("#IDNum").val();
+        var relationType = "@RelationType";
+        var membersId="@membersId";
+
+        if (membersId > 0) {
+            //修改
+            $.ajax({
+                type: "POST",
+                async: false,
+                url: "/User/UpdateMembersAjax",
+                data: {
+                    memberName: memberName,
+                    sex: sex,
+                    relationType: relationType,
+                    birthday: birthday,
+                    iDNum: iDNum,
+                    membersId: membersId
+                },
+                success: function (data) {
+                    if (data.Status === 0) {
+                        //成功
+                        new TipBox({ type: 'success', str: '修改成功', hasBtn: true });
+                    } else {
+                        //失败
+                        new TipBox({ type: 'error', str: '修改失败', hasBtn: true });
+                        return false;
+                    }
+                    return false;
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    //失败
+                    new TipBox({ type: 'error', str: '修改失败', hasBtn: true });
+                }
+            });
+        }
+        else {
+            //添加
+            $.ajax({
+                type: "POST",
+                async: false,
+                url: "/User/AddMembersAjax",
+                data: {
+                    memberName: memberName,
+                    sex: sex,
+                    relationType: relationType,
+                    birthday: birthday,
+                    iDNum: iDNum
+                },
+                success: function (data) {
+                    if (data.Status === 0) {
+                        //成功
+                        new TipBox({ type: 'success', str: '添加成功', hasBtn: true });
+                    } else {
+                        //失败
+                        new TipBox({ type: 'error', str: '添加失败', hasBtn: true });
+                        return false;
+                    }
+                    return false;
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    //失败
+                    new TipBox({ type: 'error', str: '添加失败', hasBtn: true });
+                }
+            });
+        }
+        
+    }
+
+    function goBack() {
+        window.location.href = "/User/MyMembers";
+    }
+
+</script>
+
+
+
+

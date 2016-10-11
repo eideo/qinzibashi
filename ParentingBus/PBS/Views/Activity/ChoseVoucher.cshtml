@@ -1,0 +1,139 @@
+﻿@using PBS.Model;
+@{
+    ViewBag.Title = "选择优惠券";
+    Layout = "../Shared/_CommenHome.cshtml";
+    List<pbs_basic_MyVoucherView> listMyVoucher = (List<pbs_basic_MyVoucherView>)ViewData["ListMyVoucher"];
+    string orderPrice = ViewData["OrderPrice"].ToString();
+}
+
+<link href="~/css/mdialog.css" rel="stylesheet" />
+<link href="~/css/mobiscroll-2.13.2.full.min.css" rel="stylesheet" />
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one">
+            @if (listMyVoucher != null && listMyVoucher.Count > 0)
+            {
+                foreach (var list in listMyVoucher)
+                {
+                    <li>
+                        <a href="javascript:void(0)">
+                            <section class="ui-placehold-img" style="margin:1em;padding-top: 45%;">
+
+                                @if (Utility.Util.ParseHelper.ToDatetime(list.UseStartTime) < DateTime.Now && Utility.Util.ParseHelper.ToDatetime(list.UseEndTime) > DateTime.Now)
+                                {
+                                    if (list.IsUsed == 0)
+                                    {
+                                        <span style="background-image:url(../../image/voucher.png);color:#fff" onclick="ChoseVoucher(@list.VoucherId,@orderPrice)">
+                                            <span class="voucherTitle">
+                                                <span class="voucherLimit"></span>
+                                                <span class="voucherNowUse">立即使用</span>
+                                            </span>
+                                            <span class="voucherContent">
+                                                <span class="voucher_left">
+                                                    <span class="voucherPrice">
+                                                        ￥@list.VoucherPrice
+                                                    </span>
+                                                    <span class="voucherUseRole">使用条件：@list.UseRole</span>
+                                                </span>
+                                                <span class="voucher_right">
+                                                    <span class="voucherTime">使用期限：@list.UseStartTime-@list.UseEndTime</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span style="background-image:url(../../image/voucherUsed.png);color:#fff">
+                                            <span class="voucherTitle">
+                                                <span class="voucherLimit"></span>
+                                                <span class="voucherNowUse"></span>
+                                            </span>
+                                            <span class="voucherContent">
+                                                <span class="voucher_left">
+                                                    <span class="voucherPrice">
+                                                        ￥@list.VoucherPrice
+                                                    </span>
+                                                    <span class="voucherUseRole">使用条件：@list.UseRole</span>
+                                                </span>
+                                                <span class="voucher_right">
+                                                    <span class="voucherTime">使用期限：@list.UseStartTime-@list.UseEndTime</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span style="background-image:url(../../image/voucherNotUse.png);color:#fff">
+                                        <span class="voucherTitle">
+                                            <span class="voucherLimit"></span>
+                                            <span class="voucherNowUse"></span>
+                                        </span>
+                                        <span class="voucherContent">
+                                            <span class="voucher_left">
+                                                <span class="voucherPrice">
+                                                    ￥@list.VoucherPrice
+                                                </span>
+                                                <span class="voucherUseRole">使用条件：@list.UseRole</span>
+                                            </span>
+                                            <span class="voucher_right">
+                                                <span class="voucherTime">使用期限：@list.UseStartTime-@list.UseEndTime</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                }
+                            </section>
+                        </a>
+                    </li>
+                }
+            }
+            else
+            {
+            <li>
+                <br />
+                <br />
+                <h2 style="text-align:center"><img alt="" src="~/image/pj_icon.png" style="width:50%;height:50%" /></h2>
+                <br />
+                <h2 style="text-align:center">您没有可用优惠券</h2>
+            </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<script src="~/js/jquery.1.7.2.min.js"></script>
+<script src="~/js/mobiscroll-2.13.2.full.min.js"></script>
+<script src="~/js/mdialog.js"></script>
+<script type="text/javascript">
+
+    function ChoseVoucher(vid,orderPrice) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "/Activity/ChoseVoucherAjax",
+            data: { vid: vid,orderPrice:orderPrice},
+            success: function(data) {
+                if (data.Status === 0) {
+                    //成功
+                    window.location.href = "/WeiPay/WeiPay.aspx/";
+                } else {
+                    //失败
+                    new TipBox({ type: 'error', str: '不符合规则,选择优惠券失败!', hasBtn: true });
+                    return false;
+                }
+                return false;
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                //失败
+                new TipBox({ type: 'error', str: '对不起,出错了!', hasBtn: true });
+            }
+        });
+
+    }
+
+    function goBack() {
+        window.location.href = "/WeiPay/WeiPay.aspx/";
+    }
+</script>
+
+

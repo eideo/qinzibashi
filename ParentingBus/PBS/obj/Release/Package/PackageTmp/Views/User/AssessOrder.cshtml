@@ -1,0 +1,251 @@
+﻿@using PBS.Model;
+@{
+    ViewBag.Title = "发表评价";
+    Layout = "../Shared/_CommenHome.cshtml";
+    pbs_basic_OrderView orderView = (pbs_basic_OrderView)ViewData["pbsBasicOrderView"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+}
+<style>
+    .ui-list-link > li:after {
+        display: none !important;
+    }
+    #Score_dummy {
+        border: 0;
+        text-align: right;
+        width: 50px;
+        text-align: center;
+    }
+    #userPhoto {
+    display: none;
+}
+</style>
+<link href="~/css/mdialog.css" rel="stylesheet" />
+<link href="~/css/mobiscroll-2.13.2.full.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/css/app.css">
+<div class="uc-order-item">
+    <ul class="ui-list ui-list-link ui-border-tb">
+        <li>
+            @{
+                var imgSrc = picSourceHostUrl + orderView.GoodsMainImgUrl;
+                <img class="orderImg" src="@imgSrc" alt="" />
+            }
+            <a href="javascript:void(0)">
+                <dl>
+                    <dt></dt>
+                    <dd style="font-size:16px">
+                        @orderView.GoodsName
+                    </dd>
+                </dl>
+                <dl>
+                    <dt style="color: #FFBA25;">活动时间</dt>
+                    <dd style="color: #FFBA25;">
+                        @orderView.VisitTime
+                    </dd>
+                </dl>
+                <dl>
+                    <dt></dt>
+                    <dd>
+                        <span class="listOrderPrice">
+                            ￥@orderView.OrderPrice
+                        </span>
+                    </dd>
+                </dl>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+    <div class="m_left">
+        <div class="m_left_content">
+            <span>评分</span>
+        </div>
+    </div>
+    <div class="m_right height_15">
+        <ul id="Score" style="display:none">
+            <li><span>1</span></li>
+            <li><span>2</span></li>
+            <li><span>3</span></li>
+            <li><span>4</span></li>
+            <li><span>5</span></li>
+        </ul>
+        <a href="javascript:void(0)" style="float:right">
+            <div>
+                <img src="/image/next_icon.png" style="display:none">
+            </div>
+        </a>
+    </div>
+</div>
+<div class="list_content content_Padding border_bottem height_15">
+    <div class="m_left">
+        <div class="m_left_content">
+            <span>拍照</span>
+        </div>
+    </div>
+    <div class="m_right height_15" style="width:100px;overflow:hidden">
+        <img id="uploadPreview" alt="" style="width:1.5em; height:1.5em" src="../../image/default_photo.png" />
+        <input id="userPhoto" name="userPhoto" type="file" accept="image/*;capture=camera" onchange="loadImageFile()" style="position:absolute;z-index:-999;" />
+        <a href="javascript:void(0)" style="float:right" onclick="chosePhoto()">
+            <div>
+                <img src="/image/next_icon.png">
+            </div>
+        </a>
+    </div>
+</div>
+<p style="margin:0.5em 1.3em;color:#aaa">
+    评价
+</p>
+<p style="border-bottom:1px solid #ddd;width:95%;padding:10px;">
+    <textarea id="CommentContents" placeholder="请输入评价内容" style="width:90%;border:0;border-radius:5px; height:120px;padding: 10px;"></textarea>
+</p>
+<div class="mod-box footer_bottom">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            <li>
+                <div class="list_content content_Padding" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span class="sellPrice"></span>
+                            <span class="marketPrice"></span>
+                        </div>
+                    </div>
+                    <div class="m_right" style="line-height:inherit">
+                        <a href="javascript:void(0)" class="buy_btn" onclick="sumbitAssess()">
+                            发表评价
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="~/js/jquery.1.7.2.min.js"></script>
+<script src="~/js/ajaxfileupload.js"></script>
+<script src="~/js/holder.js"></script>
+<script src="~/js/mobiscroll-2.13.2.full.min.js"></script>
+<script src="~/js/mdialog.js"></script>
+<script type="text/javascript">
+    oFReader = new FileReader(), rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i;
+
+    oFReader.onload = function (oFrEvent) {
+        document.getElementById("uploadPreview").src = oFrEvent.target.result;
+    };
+    function goBack() {
+        history.back();
+    }
+    var uploadUrl = "";
+    $(function () {
+
+        var i = Math.floor($('#Sex>li').length / 2);
+        $("#Score").mobiscroll().treelist({
+            theme: "android-ics light",
+            lang: "zh",
+            defaultValue: [i],
+            cancelText: null,
+            headerText: function (valueText) { return "评分"; },
+            formatResult: function (array) { //返回自定义格式结果
+                return $('#Score>li').eq(array[0]).children('span').text();
+            }
+        });
+
+    });
+
+    function chosePhoto() {
+        return $("#userPhoto").click();
+    }
+
+    function loadImageFile() {
+        if (document.getElementById("userPhoto").files.length === 0) {
+            new TipBox({ type: 'tip', str: '请选择图片', clickDomCancel: true, setTime: 10000500, hasBtn: true });
+            return false;
+        }
+
+        var oFile = document.getElementById("userPhoto").files[0];
+        if (!rFilter.test(oFile.type)) {
+            new TipBox({ type: 'tip', str: '只能选择图片', clickDomCancel: true, setTime: 10000500, hasBtn: true });
+            return false;
+        }
+        else if (oFile.size > 1024 * 1024) {
+            new TipBox({ type: 'tip', str: '图片大小不能超过1M', clickDomCancel: true, setTime: 10000500, hasBtn: true });
+            return false;
+        }
+
+        oFReader.readAsDataURL(oFile);
+        return false;
+    }
+
+    function ajaxFileUpload() {
+        $.ajaxFileUpload
+        (
+            {
+                url: '../../ashx/UploadImg.ashx',
+                secureuri: false,
+                fileElementId: 'userPhoto',
+                dataType: 'json',
+                success: function (data) {
+                    if (data != null && data.Code === "0000") {
+                        var hostUrl = "@picSourceHostUrl";
+                        var src = hostUrl + data.Url;
+                        $("#uploadPreview").attr("src", src);
+                        uploadUrl = data.Url;
+                        updateAssess();
+
+                    } else {
+                        new TipBox({ type: 'error', str: '对不起,出错了!', hasBtn: true });
+                    }
+
+                },
+                error: function () {
+                    new TipBox({ type: 'error', str: '对不起,出错了!', hasBtn: true });
+                }
+            }
+        );
+        return false;
+    }
+
+    function sumbitAssess() {
+        if (document.getElementById("userPhoto").files.length > 0) {
+            var oFile = document.getElementById("userPhoto").files[0];
+            if (rFilter.test(oFile.type)) {
+                if (oFile.size < 1024 * 1024) {
+                    ajaxFileUpload();
+                    return false;
+                }
+            }
+        }
+    }
+
+    function updateAssess() {
+        var goodsId = "@orderView.GoodsId";
+        var commentContents = $("#CommentContents").val();
+        var url1 = uploadUrl;
+        var score = $("#Score_dummy").val();
+        var oId = "@orderView.OrderId";
+
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "/User/AssessOrderAjax",
+            data: { goodsId: goodsId, commentContents: commentContents, url1: url1, score: score, oId: oId },
+            success: function (data) {
+                if (data.Status === 0) {
+                    //成功
+                    new TipBox({ type: 'success', str: '评论成功', hasBtn: true });
+                    setTimeout(function () {
+                        window.location.href = "/User/MyOrder";
+                    }, 3000);
+                } else {
+                    //失败
+                    new TipBox({ type: 'error', str: '对不起,出错了!', hasBtn: true });
+                    return false;
+                }
+                return false;
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //失败
+                new TipBox({ type: 'error', str: '对不起,出错了!', hasBtn: true });
+            }
+        });
+    }
+
+</script>

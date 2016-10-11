@@ -1,0 +1,74 @@
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\PBS.Dao.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\PBS.Dao.pdb
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\Helper.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\PBS.Model.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\Utility.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NLog.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Redis.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Interfaces.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NPOI.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\Newtonsoft.Json.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\Memcached.ClientLibrary.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Common.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Text.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\Helper.pdb
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\PBS.Model.pdb
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\Utility.pdb
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NLog.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Redis.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Interfaces.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Common.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Text.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\obj\Debug\PBS.Dao.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\obj\Debug\PBS.Dao.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Dao\obj\Debug\PBS.Dao.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\PBS.Dao.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\PBS.Dao.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\Helper.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\PBS.Model.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\Utility.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NLog.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NPOI.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Interfaces.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Redis.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\Memcached.ClientLibrary.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\Newtonsoft.Json.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Common.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Text.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\Helper.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\PBS.Model.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\Utility.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NLog.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Interfaces.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Redis.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Common.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Text.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\obj\Debug\PBS.Dao.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\obj\Debug\PBS.Dao.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Dao\obj\Debug\PBS.Dao.pdb
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\PBS.Dao.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\PBS.Dao.pdb
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\Helper.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\PBS.Model.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\Utility.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\DocumentFormat.OpenXml.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NLog.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\Newtonsoft.Json.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NPOI.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Interfaces.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Redis.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\Memcached.ClientLibrary.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Common.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Text.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\Helper.pdb
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\PBS.Model.pdb
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\Utility.pdb
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\DocumentFormat.OpenXml.xml
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NLog.xml
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Interfaces.xml
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Redis.xml
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Common.xml
+C:\My\My object\pbs\ParentingBus\PBS.Dao\bin\Debug\NServiceKit.Text.xml
+C:\My\My object\pbs\ParentingBus\PBS.Dao\obj\Debug\PBS.Dao.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\PBS.Dao\obj\Debug\PBS.Dao.dll
+C:\My\My object\pbs\ParentingBus\PBS.Dao\obj\Debug\PBS.Dao.pdb

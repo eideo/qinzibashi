@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+<div id="loginbox">
+    <form id="loginform" class="form-vertical" action="/Account/Login">
+        <div class="control-group normal_text">
+            <h2>
+                @*<img src="/img/logo.png" alt="Logo" />*@
+                <span>亲子巴士后台管理系统</span>
+            </h2>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <div class="main_input_box">
+                    <span class="add-on bg_lb"><i class="icon-user"></i></span>
+                    <input type="text" id="loginName" placeholder="用户名" />
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <div class="main_input_box">
+                    <span class="add-on bg_lo"><i class="icon-lock"></i></span>
+                    <input type="password" id="loginPassword" placeholder="密码" />
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <div class="main_input_box">
+                    <span class="add-on bg_lh"><i class="icon-cloud"></i></span>
+                    <input type="text" id="Captcha" placeholder="验证码">
+                    <img src="/ashx/VerifyCode.ashx" id="captchaImg" />
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <span class="pull-left" style="display: none"><a href="#" class=" btn btn-warning" id="to-recover">忘记密码?</a></span> <span class="pull-right">
+                <a id="btn-login" href="javascript:void(0);" class="btn btn-success">登录</a>
+            </span>
+        </div>
+    </form>
+    <form id="recoverform" action="#" class="form-vertical">
+        <p class="normal_text">
+            输入注册邮箱，密码将会发放到邮箱里面！</p>
+        <div class="controls">
+            <div class="main_input_box">
+                <span class="add-on bg_lo"><i class="icon-envelope"></i></span>
+                <input type="text" placeholder="邮箱地址" />
+            </div>
+        </div>
+        <div class="form-actions">
+            <span class="pull-left"><a href="#" class=" btn btn-success" id="to-login">
+                                        &laquo; 返回登录</a></span> <span class="pull-right"><a id="btn-findPwd" href="javascript:void(0);" class="btn btn-info">
+    提交
+</a></span>
+        </div>
+    </form>
+</div>

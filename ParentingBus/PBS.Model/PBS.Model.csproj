@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A75FD8C-8E58-4F8B-A9D3-29882122FDC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PBS.Model</RootNamespace>
+    <AssemblyName>PBS.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="pbs_basic_ActivityClass.cs" />
+    <Compile Include="pbs_basic_AgeRange.cs" />
+    <Compile Include="pbs_basic_Comment.cs" />
+    <Compile Include="pbs_basic_CommonSearch.cs" />
+    <Compile Include="pbs_basic_DistributionChannels.cs" />
+    <Compile Include="pbs_basic_GoodsPackage.cs" />
+    <Compile Include="pbs_basic_GoodsType.cs" />
+    <Compile Include="pbs_basic_HomePicture.cs" />
+    <Compile Include="pbs_basic_Members.cs" />
+    <Compile Include="pbs_basic_MyCollection.cs" />
+    <Compile Include="pbs_basic_MyShareProfit.cs" />
+    <Compile Include="pbs_basic_MyVoucher.cs" />
+    <Compile Include="pbs_basic_Navigation.cs" />
+    <Compile Include="pbs_basic_Order.cs" />
+    <Compile Include="pbs_basic_OrderMember.cs" />
+    <Compile Include="pbs_basic_OrderRefund.cs" />
+    <Compile Include="pbs_basic_Region.cs" />
+    <Compile Include="pbs_basic_ReviewHistory.cs" />
+    <Compile Include="pbs_basic_SearchHistory.cs" />
+    <Compile Include="pbs_basic_Users.cs" />
+    <Compile Include="pbs_basic_Voucher.cs" />
+    <Compile Include="pbs_sys_Role.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultInfo.cs" />
+    <Compile Include="ResultModel.cs" />
+    <Compile Include="OrderEnum.cs" />
+    <Compile Include="SysActionLogModel.cs" />
+    <Compile Include="pbs_basic_Goods.cs" />
+    <Compile Include="pbs_basic_GoodsClass.cs" />
+    <Compile Include="pbs_basic_GoodsView.cs" />
+    <Compile Include="pbs_sys_users.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{e7ae50f1-b391-4cda-a3a5-0f4e359a44ac}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

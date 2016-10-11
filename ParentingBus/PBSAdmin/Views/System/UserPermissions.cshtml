@@ -1,0 +1,245 @@
+﻿@model PBSAdmin.Models.MenuModels
+@{
+    ViewBag.Title = ViewBag.PageTitle;
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<style type="text/css">
+    .checker {
+        vertical-align: inherit;
+    }
+    #SaveRole {
+        width: 54px !important;
+    }
+</style>
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i>权限管理</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0">
+            <div class="widget-box">
+                <div class="widget-content tab-content">
+                    <div class="widget-box">
+                        <div class="widget-content nopadding">
+                            <form action="#" method="get" class="form-horizontal">
+                                <div class="control-group">
+                                    <div class="controls" style="float: left; margin-left: 20px;">
+                                        <label id="lblRolelist">
+                                            角色列表:
+                                        </label>
+                                    </div>
+                                    <div class="controls" style="float: left; margin-left: 20px;">
+                                        <select id="RoleCode" name="RoleCode">
+                                        </select>
+                                    </div>
+                                    <div class="controls" style="float: left; margin-left: 20px;">
+                                        <input id="SaveRole" type="submit" value="保存" class="btn btn-success" />
+                                        <input id="UserId" type="hidden" value="@Model.UserId"/>
+                                        @*<input id="CurrentRoleCode" type="hidden" value="@Model.RoleCode"/>*@
+                                    </div>
+                                </div>
+
+                                <table id="tab">
+                                    <tr>
+                                        <td colspan="2">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                @if (Model.ParentItemList != null && Model.ParentItemList.Count > 0)
+                                                {
+                                                    foreach (var pitem in Model.ParentItemList)
+                                                    {
+                                                        <tr>
+                                                            <td style="width: 20px">
+                                                                <img alt="" style="cursor: hand" id="tree_@pitem.NodeId" onclick="treeOpen('@pitem.NodeId')" src="../../Images/TreeClose.gif"/>
+                                                            </td>
+                                                            <td>
+                                                                @if (pitem.IsOrNullExists)
+                                                                {
+                                                                    <input type="checkbox" id="@pitem.NodeId" checked="checked" onclick="doallcheck('@pitem.NodeId')"><a href="#">@pitem.NodeName</a>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <input type="checkbox" id="@pitem.NodeId" onclick="doallcheck('@pitem.NodeId')"><a href="#">@pitem.NodeName</a>
+                                                                }
+                                                            </td>
+                                                        </tr>
+                                                        <tr id="tr_@pitem.NodeId" style="display: none">
+                                                            <td colspan="2">
+                                                                <table style="margin-left: 30px">
+                                                                    @foreach (var bitem in pitem.BrotherList)
+                                                                    {
+                                                                        <tr>
+                                                                            <td style="width: 20px">
+                                                                                <img alt="" style="cursor: hand" id="tree_@bitem.NodeId" onclick="treeOpen('@bitem.NodeId')" src="../../Images/TreeClose.gif" />
+                                                                            </td>
+                                                                            <td>
+                                                                                @if (bitem.IsOrNullExists)
+                                                                                {
+                                                                                    <input type="checkbox" name="@pitem.NodeId" id="@bitem.NodeId" checked="checked">
+                                                                                    <a href="#">@bitem.NodeName</a>
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    <input type="checkbox" name="@pitem.NodeId" id="@bitem.NodeId">
+                                                                                    <a href="#">@bitem.NodeName</a>
+                                                                                }
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr id="tr_@bitem.NodeId" style="display: none">
+                                                                            <td colspan="2">
+                                                                                <table style="margin-left: 30px">
+                                                                                    @foreach (var citem in bitem.ChildrenList)
+                                                                                    {
+                                                                                        <tr>
+                                                                                            <td style="width: 30px"></td>
+                                                                                            <td>
+                                                                                                @if (citem.IsOrNullExists)
+                                                                                                {
+                                                                                                    <input type="checkbox" name="@bitem.NodeId" id="@citem.NodeId" checked="checked">
+                                                                                                    <a href="#">@citem.NodeName</a>
+                                                                                                }
+                                                                                                else
+                                                                                                {
+                                                                                                    <input type="checkbox" name="@bitem.NodeId" id="@citem.NodeId">
+                                                                                                    <a href="#">@citem.NodeName</a>
+                                                                                                }
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    }
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    }
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+        //定义展开和收缩的img对象
+        var Tree_Close = document.createElement("img");
+        Tree_Close.src = "../../Images/TreeClose.gif";
+
+        //点击展开（收缩）的事件
+        function treeOpen(x) {
+            var trx = document.getElementById("tr_" + x);
+            var imgs = document.getElementById("tree_" + x);
+            if (imgs.src === Tree_Close.src) {
+                imgs.src = "../../Images/TreeOpen.gif";
+                trx.style.display = "";
+            }
+            else {
+                imgs.src = "../../Images/TreeClose.gif";
+                trx.style.display = "none";
+            }
+        }
+        function doallcheck(x) {
+            var allche = document.getElementById(x);
+            var che = document.getElementsByName(x);
+            if (allche.checked === true) {
+                for (var i = 0; i < che.length; i++) {
+                    che[i].checked = "checked";
+                }
+            } else {
+                for (var j = 0; j < che.length; j++) {
+                    che[j].checked = false;
+                }
+            }
+        }
+
+</script>
+<script type="text/javascript" language="javascript">
+        $(function () {
+            $("#RoleCode").empty();
+            //var currentRoleCode = $("#CurrentRoleCode").val();
+            var currentRoleCode = "@Model.RoleCode";
+            if (currentRoleCode == "") {
+                currentRoleCode = "1";
+            }
+            $.ajax({
+                url: "/ashx/GetAllRole.ashx",
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (json) {
+                    if (json !== "无") {
+                        $(json).each(function () {
+                            //if (this.RoleId === currentRoleCode) {
+                            //    $("<option value='" + this.RoleId + "' selected='selected'>" + this.RoleName + "</option>").appendTo("#RoleCode");
+                            //}
+                            //else {
+                            //    $("<option value='" + this.RoleId + "'>" + this.RoleName + "</option>").appendTo("#RoleCode");
+                            //}
+                            $("<option value='" + this.RoleId + "'>" + this.RoleName + "</option>").appendTo("#RoleCode");
+                            if (this.RoleId === currentRoleCode) {
+                                $("#RoleCode").select2("val", currentRoleCode);
+                            }
+                            
+                        });
+                    }
+                    else {
+                        $("<option value='0'>无</option>").appendTo("#RoleCode");
+                    }
+                },
+                error: function (x, e) {
+                    alert(e);
+                }
+
+            });
+
+            $("#RoleCode").change(function () {
+                var roleCode = $("#RoleCode").val();
+                window.location.href = "/System/UserPermissions?roleCode=" + roleCode;
+
+            });
+
+            $("#SaveRole").click(function () {
+                var userId = $("#UserId").val();
+                var nodeId = "";
+                var allNodeId = "";
+                var roleCode = $("#RoleCode").find('option:selected').val();
+                $("input:checked").each(function() {
+                    nodeId = $(this).attr("id") + ",";
+                    allNodeId = allNodeId + nodeId;
+                });
+
+                $.ajax({
+                    type: "POST",
+                    url: "/ashx/UpdateUserPermissions.ashx?AllNodeId=" + allNodeId + "&RoleCode=" + roleCode + "&UserId=" + userId,
+                    dataType: 'text',
+                    async: false,
+                    success: function (data) {
+                        if (data === "True") {
+                            alert("保存成功！重新登录生效！");
+                        }
+                        else {
+                            alert("保存失败！");
+                        }
+                    },
+                    error: function () {
+                        alert("保存失败！");
+                    }
+                });
+
+            });
+
+        });
+</script>

@@ -1,0 +1,20 @@
+﻿08/08/2016 16:30:56     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziH6aou-TwMf8MBs1G-_CDmnrhAFsHMKCn25Teru5xBucQ
+
+08/08/2016 16:30:56     First TimeStamp：1470645056
+
+08/08/2016 16:30:56     First NonceStr：A86C450B76FB8C371AFEAD6410D55534
+
+08/08/2016 16:30:56     First SigNature：c36f5f0d8e79554335b90f2088c8995891db6c5b
+
+08/08/2016 16:30:56     Request Url：http://localhost:28055/Activity/Activity?Id=54
+
+08/08/2016 16:54:21     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziH6aou-TwMf8MBs1G-_CDmnrhAFsHMKCn25Teru5xBucQ
+
+08/08/2016 16:54:21     First TimeStamp：1470646459
+
+08/08/2016 16:54:21     First NonceStr：FCCB3CDC9ACC14A6E70A12F74560C026
+
+08/08/2016 16:54:21     First SigNature：1621b763dd0d72591ad71aec816be4a055a512c3
+
+08/08/2016 16:54:21     Request Url：http://localhost:28055/Activity/Activity
+

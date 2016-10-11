@@ -1,0 +1,60 @@
+﻿@model PBSAdmin.Models.MenuModels
+@{
+    ViewBag.Title = "Left";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+<!--Header-part-->
+<div id="header">
+    <h4>
+        亲子巴士后台管理系统
+    </h4>
+</div>
+<!--close-Header-part-->
+<!--sidebar-menu-->
+<div id="sidebar">
+    @*<a href="#" class="visible-phone"><i class="icon icon-home"></i>Dashboard</a>*@
+    <ul style="display: block;">
+        <li  class="active">
+            <a id="rtnHomeBtn" href="javascript:void(0)" target="mainFrame" onclick="Gohome(this)"><i class="icon icon-home"></i><span>首页</span></a>
+        </li>
+        @if(Model.ParentItemList!=null&&Model.ParentItemList.Count>0){
+            foreach (var pitem in Model.ParentItemList)
+            { 
+                <li class="submenu">
+                    <a href="javascript:void(0);">
+                        <i class="icon icon-@pitem.NodeGroup"></i>
+                        <span>@pitem.NodeName</span>
+                    </a>
+                    <ul>
+                        @if (pitem.BrotherList != null && pitem.BrotherList.Count > 0)
+                        {
+                            foreach (var bitem in pitem.BrotherList)
+                            {
+                                <li class="subsecondmenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="icon icon-secondmenu-list"></i>
+                                        <span>@bitem.NodeName</span>
+                                    </a>
+                                    <ul>
+                                        @if(bitem.ChildrenList!=null&&bitem.ChildrenList.Count>0){
+                                            foreach (var citem in bitem.ChildrenList)
+                                            {
+                                                <li>
+                                                    <a href="@citem.NodeUrl" target="mainFrame">
+                                                        <i class="icon icon-thirdmenu-list"></i>
+                                                        <span>@citem.NodeName</span>
+                                                    </a>
+                                                </li>
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </li>
+            }
+        }
+    </ul>
+</div>
+<!--sidebar-menu-->

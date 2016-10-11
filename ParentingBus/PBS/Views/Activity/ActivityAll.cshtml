@@ -1,0 +1,225 @@
+﻿@using PBS.Model;
+@{
+    ViewBag.Title = "全部活动";
+    Layout = "../Shared/_CommenHome.cshtml";
+    List<pbs_basic_Region> listBeijingRegion = (List<pbs_basic_Region>)ViewData["ListBeijingRegion"];
+    List<pbs_basic_AgeRange> listAgeRange = (List<pbs_basic_AgeRange>)ViewData["ListAge"];
+    //List<pbs_basic_GoodsType> listType = (List<pbs_basic_GoodsType>)ViewData["ListType"];
+    List<pbs_basic_ActivityClass> listFilterClass = (List<pbs_basic_ActivityClass>)ViewData["ListFilterClass"];
+    List<pbs_basic_GoodsView> listGoods = (List<pbs_basic_GoodsView>)ViewData["ListGoods"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+}
+
+<link href="~/css/filterActivity.css" rel="stylesheet" />
+<script src="~/js/jquery.1.7.2.min.js"></script>
+@*<script src="~/js/filterActivity.js"></script>*@
+
+<div class="screening">
+    <ul>
+        <li class="Regional">区域</li>
+        <li class="Age">年龄</li>
+        <li class="Type">类型</li>
+    </ul>
+</div>
+
+<div class="grade-eject RegionalList">
+    <ul class="grade-w" id="gradew">
+        @if (listBeijingRegion!=null&& listBeijingRegion.Count>0) {
+            foreach (var item in listBeijingRegion) {
+                <li id="@item.RegionId">@item.RegionName</li>
+            }
+        }
+    </ul>
+    <ul class="grade-t" id="gradet"></ul>
+
+</div>
+
+<div class="grade-eject AgeList">
+    <ul class="grade-w" id="gradew">
+        @if (listAgeRange != null && listAgeRange.Count > 0)
+        {
+            foreach (var item in listAgeRange)
+            {
+                <li id="@item.AgeRangeId" onclick="filterByAge(this)">@item.AgeRangeName</li>
+            }
+        }
+    </ul>
+
+</div>
+
+<div class="grade-eject TypeList">
+    <ul class="grade-w" id="gradew">
+        @if (listFilterClass != null && listFilterClass.Count > 0)
+        {
+            foreach (var item in listFilterClass)
+            {
+                <li id="@item.ActivityClassId" onclick="filterByFilterClass(this)">@item.ActivityClassName</li>
+            }
+        }
+    </ul>
+
+</div>
+
+<div class="mod-box" style="margin-top:3em">
+    <div class="mod-bd">
+        <ul class="ui-one">
+            @if (listGoods != null && listGoods.Count > 0)
+            {
+                bool allFlag = false;
+                foreach (pbs_basic_GoodsView th in listGoods)
+                {
+                    var picurl = picSourceHostUrl + th.GoodsMainImgUrl;
+                    string[] datetime = { th.VisitTime1, th.VisitTime2, th.VisitTime3, th.VisitTime4, th.VisitTime5 };
+                    bool flag = false;
+                    for (int i = 0; i < 5; i++)
+                    {
+                        if (!string.IsNullOrEmpty(datetime[i]) && Utility.Util.ParseHelper.ToDatetime(datetime[i]) > DateTime.Now)
+                        {
+                            flag = true;
+                            allFlag = true;
+                        }
+                    }
+                    if (flag)
+                    {
+                        <li>
+                            <a href="/Activity/Activity?Id=@th.GoodsId">
+                                <section class="ui-placehold-img">
+                                    <span style="background-image:url(@picurl)"></span>
+                                </section>
+                                <div class="list_content">
+                                    <div class="m_left">
+                                        <div class="m_left_title">@th.GoodsName</div>
+                                        <div class="m_left_content">
+                                            <i></i><span>@th.Remark</span>
+                                            @{
+                                                string minTime = "";
+                                                string maxTime = "";
+                                                for (int i = 0; i < 5; i++)
+                                                {
+                                                    if (string.IsNullOrEmpty(minTime))
+                                                    {
+                                                        minTime = datetime[i];
+                                                    }
+                                                    if (string.IsNullOrEmpty(maxTime))
+                                                    {
+                                                        maxTime = datetime[i];
+                                                    }
+                                                    if (Utility.Util.ParseHelper.ToDatetime(datetime[i]) > DateTime.Now)
+                                                    {
+
+                                                        if (minTime != datetime[i] && Utility.Util.ParseHelper.ToDatetime(datetime[i]) < Utility.Util.ParseHelper.ToDatetime(minTime) && !string.IsNullOrEmpty(datetime[i]))
+                                                        {
+                                                            minTime = datetime[i];
+                                                        }
+                                                    }
+
+                                                    if (string.IsNullOrEmpty(minTime))
+                                                    {
+
+                                                        if (maxTime != datetime[i] && Utility.Util.ParseHelper.ToDatetime(datetime[i]) > Utility.Util.ParseHelper.ToDatetime(maxTime))
+                                                        {
+                                                            maxTime = datetime[i];
+                                                        }
+                                                    }
+                                                }
+                                                if (string.IsNullOrEmpty(minTime))
+                                                {
+                                                    <span>@Utility.Util.ParseHelper.ToDatetime(minTime).ToString("yyyy-MM-dd")</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>@Utility.Util.ParseHelper.ToDatetime(maxTime).ToString("yyyy-MM-dd")</span>
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="m_right">
+                                        <span class="marketPrice">￥@th.MarketPrice</span>
+                                        <span class="sellPrice">￥@th.SellingPrice</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                                                    }
+                                                }
+                                                if (!allFlag)
+                                                {
+                                                    <li>
+                                                        <br />
+                                                        <br />
+                                                        <h2 style="text-align:center"><img alt="" src="~/image/pj_icon.png" style="width:50%;height:50%" /></h2>
+                                                        <br />
+                                                        <h2 style="text-align:center">暂时还没有活动档期</h2>
+                                                    </li>
+                                                    }
+                                                }
+                                                else
+                                                {
+                <li>
+                    <div style="text-align: center; padding-top: 5em;height:100%">
+                        <img alt="" src="~/image/pj_icon.png" />
+                    </div>
+                    <p style="text-align: center; margin-top: 1em;color: #aaa">没有查询到内容</p>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".screening li").click(function () {
+            $(".grade-eject").removeClass('grade-w-roll');
+            var val = $(this).attr("class") + "List";
+            $("." + val).addClass('grade-w-roll');
+        });
+
+        $("#gradew>li").click(function () {
+            $(".grade-w>li").css("background", "");
+            $(this).css("background", "#eee");
+            $(".grade-t").css("left", "50%");
+
+            var parentId = $(this).attr("id");
+
+            $.ajax({
+                type: "POST",
+                async: false,
+                url: "/Activity/GetAreaByParentId",
+                data: { parentId: parentId },
+                success: function (data) {
+                    $("#gradet").html("");
+                    $(data).each(function () {
+                        $("#gradet").append("<li id='" + this.RegionId + "' onclick='filterByRegional(this)'>" + this.RegionName + "</li>");
+                    });
+                    return false;
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+            });
+
+        });
+    });
+
+    function filterByRegional(obj) {
+        var id = $(obj).attr("id");
+        window.location.href = "/Activity/ActivityAll?activityClassId=-1&ageRangeId=-1&regionId=" + id + "&keyWords=";
+    }
+
+    function filterByAge(obj) {
+        var id = $(obj).attr("id");
+        window.location.href = "/Activity/ActivityAll?activityClassId=-1&ageRangeId=" + id + "&regionId=-1&keyWords=";
+    }
+
+    function filterByFilterClass(obj) {
+        var id = $(obj).attr("id");
+        window.location.href = "/Activity/ActivityAll?activityClassId=" + id + "&ageRangeId=-1&regionId=-1&keyWords=";
+    }
+
+    function goBack() {
+        window.location.href = "/";
+    }
+
+</script>

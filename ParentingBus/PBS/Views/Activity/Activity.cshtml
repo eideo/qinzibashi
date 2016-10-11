@@ -1,0 +1,230 @@
+﻿@using PBS.Model;
+@model pbs_basic_GoodsView
+@{
+    ViewBag.Title = "活动信息";
+    Layout = "../Shared/_Activity.cshtml";
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+    var picurl = picSourceHostUrl + Model.GoodsMainImgUrl;
+    var link = ViewData["Link"].ToString();
+}
+<link href="~/css/mdialog.css" rel="stylesheet" />
+<div class="header_top">
+    <a href="/" class="left"></a>
+    <a href="javascript:void(0)" class="right" onclick="AddMyCollection(@Model.GoodsId)"></a>
+</div>
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            @if (Model != null)
+            {
+                <li>
+                    <section class="ui-placehold-img">
+                        <span style="background-image: url(@picurl)"></span>
+                    </section>
+                    <div class="list_content content_Padding border_bottem">
+                        <div class="m_left" style="width:70%; display:inline-block">
+                            <div class="m_left_title">@Model.GoodsName</div>
+                        </div>
+                        <div class="m_right left_line" style="display:inline-block">
+                            <a id="onMenuShareAppMessage" href="javascript:void(0)" class="orange_color">
+                                <div>
+                                    <img src="~/image/share_icon.png" />
+                                </div>
+                                <div>
+                                    分享
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list_content content_Padding border_bottem">
+                        <div class="m_left">
+                            <div class="m_left_content">
+                                <i class="position_icon"></i>
+                                <span>@Model.Remark</span>
+                            </div>
+                        </div>
+                        <div class="m_right">
+                            <a href="/Activity/ActivityPosition?Id=@Model.GoodsId">
+                                <div class="right_position">
+                                    <img src="~/image/next_icon.png" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list_content content_Padding border_bottem" style="height: 1.5em">
+                        <div class="m_left">
+                            <div class="m_left_content">
+                                <i class="age_icon"></i>
+                                <span>适 龄：@Model.AgeRangeName</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list_content content_Padding border_bottem" style="height: 6.5em">
+                        <div class="m_left" style="height: 2em;width: auto;">
+                            <div class="m_left_content">
+                                <i class="position_icon"></i>
+                                <span>时 间：</span>
+
+                            </div>
+                        </div>
+                        <div style="overflow: hidden" class="right_time">
+                            @if (!string.IsNullOrEmpty(Model.VisitTime1)&& Utility.Util.ParseHelper.ToDatetime(Model.VisitTime1) > DateTime.Now)
+                            {
+                                <a href="javascript:void(0)">@Utility.Util.ParseHelper.ToDatetime(Model.VisitTime1).ToString("yyyy-MM-dd")</a>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.VisitTime2) && Utility.Util.ParseHelper.ToDatetime(Model.VisitTime2) > DateTime.Now)
+                            {
+                                <a href="javascript:void(0)">@Utility.Util.ParseHelper.ToDatetime(Model.VisitTime2).ToString("yyyy-MM-dd")</a>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.VisitTime3) && Utility.Util.ParseHelper.ToDatetime(Model.VisitTime3) > DateTime.Now)
+                            {
+                                <a href="javascript:void(0)">@Utility.Util.ParseHelper.ToDatetime(Model.VisitTime3).ToString("yyyy-MM-dd")</a>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.VisitTime4) && Utility.Util.ParseHelper.ToDatetime(Model.VisitTime4) > DateTime.Now)
+                            {
+                                <a href="javascript:void(0)">@Utility.Util.ParseHelper.ToDatetime(Model.VisitTime4).ToString("yyyy-MM-dd")</a>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.VisitTime5) && Utility.Util.ParseHelper.ToDatetime(Model.VisitTime5) > DateTime.Now)
+                            {
+                                <a href="javascript:void(0)">@Utility.Util.ParseHelper.ToDatetime(Model.VisitTime5).ToString("yyyy-MM-dd")</a>
+                            }
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list_content content_Padding border_bottem" style="height: 1.5em">
+                        <div style="float: right; width: 11em; color: #0dd60d">
+                            <span><img src="~/image/r_icon.png" /></span><span style="margin-right: 1em">可退款</span><span><img src="~/image/r_icon.png" /></span><span>免预约</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list_content content_Padding" style="height: 1.5em">
+                        <div class="m_left">
+                            <div class="m_left_content">
+                                <span>已报名：</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+<p style="text-align: center;padding: 1em 0;">
+    <a href="/Activity/ActivityDetail?Id=@Model.GoodsId" style="color: #ccc">查看更多活动详情</a>
+</p>
+<p style="height:5em">
+</p>
+<div class="mod-box footer_bottom">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            <li>
+                <div class="list_content content_Padding" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span class="sellPrice">@Model.SellingPrice 元</span>
+                            <span class="marketPrice">@Model.MarketPrice 元</span>
+                        </div>
+                    </div>
+                    <div class="m_right" style="line-height:inherit">
+                        <a href="/Activity/Order?Id=@Model.GoodsId" class="buy_btn">
+                            我要买
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+@*<div id="leaf" class="leaf"><img src="../../image/shares-man.png">
+</div>*@
+<script src="~/js/jquery.1.7.2.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="~/js/holder.js"></script>
+<script src="~/js/mdialog.js"></script>
+<script type="text/javascript">
+    function AddMyCollection(goodsId) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "/Activity/AddMyCollectionAjax",
+            data: {
+                goodsId: goodsId
+            },
+            success: function(data) {
+                if (data.Status === 0) {
+                    //成功
+                    new TipBox({ type: 'success', str: '添加收藏成功', hasBtn: true });
+                } else {
+                    //失败
+                    new TipBox({ type: 'error', str: '添加收藏失败', hasBtn: true });
+                    return false;
+                }
+                return false;
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                //失败
+                new TipBox({ type: 'error', str: '添加收藏失败', hasBtn: true });
+            }
+        });
+    }
+</script>
+<script>
+    wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: '@ViewData["AppId"]', // 必填，公众号的唯一标识
+        timestamp: '@ViewData["Timestamp"]', // 必填，生成签名的时间戳
+        nonceStr: '@ViewData["NonceStr"]', // 必填，生成签名的随机串
+        signature: '@ViewData["Signature"]',// 必填，签名
+        jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage'
+        ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2。详见：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+    });
+
+    wx.error(function (res) {
+        console.log(res);
+        alert('wx.error: ' + JSON.stringify(res));
+    });
+
+    wx.ready(function () {
+        var link = '@link';
+        link = link.replace("amp;", "");
+
+        wx.onMenuShareTimeline({
+            title: '@Model.GoodsName',
+            link: link,
+            imgUrl: '@picurl',
+            success: function () {
+                alert('分享成功！');
+            },
+            cancel: function () {
+                alert('分享失败！');
+            }
+        });
+
+        wx.onMenuShareAppMessage({
+            title: '@Model.GoodsName',
+            desc: '亲子巴士活动转发给朋友送积分',
+            link: link,
+            imgUrl: '@picurl',
+            success: function () {
+                alert('分享成功！');
+            },
+            cancel: function () {
+                alert('分享失败！');
+            }
+        });
+
+    });
+
+
+</script>

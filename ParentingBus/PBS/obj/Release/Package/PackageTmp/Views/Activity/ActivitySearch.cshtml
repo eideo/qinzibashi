@@ -1,0 +1,64 @@
+﻿@using PBS.Model;
+@{
+    List<pbs_basic_CommonSearch> listCommonSearch = (List<pbs_basic_CommonSearch>)ViewData["ListCommonSearch"];
+    List<pbs_basic_SearchHistoryView> listSearchHistoryView = (List<pbs_basic_SearchHistoryView>)ViewData["ListSearchHistory"];
+    Layout = "../Shared/_ActivitySearchHome.cshtml";
+}
+<style>
+    #SearchWords {
+        width:70%;
+    }
+</style>
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            <li>
+                <div class="list_content content_Padding border_bottem" style="height: 6.5em">
+                    <div class="m_left" style="height: 2em;width: auto;">
+                        <div class="m_left_content">
+                            <span>大家都在玩：</span>
+
+                        </div>
+                    </div>
+                    <div style="overflow: hidden;clear:both; margin-left:1em" class="right_time">
+                        @if (listCommonSearch != null && listCommonSearch.Count > 0)
+                        {
+                            foreach (var item in listCommonSearch) {
+                                <a href="/Activity/Activity?Id=@item.GoodsId">@item.SearchNickName</a>
+                            }
+                        }
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list_content content_Padding border_bottem" style="height: 6.5em">
+                    <div class="m_left" style="height: 2em;width: auto;">
+                        <div class="m_left_content">
+                            <span>搜索历史：</span>
+
+                        </div>
+                    </div>
+                    <div style="overflow: hidden;clear:both; margin-left:1em" class="right_time">
+                        @if (listSearchHistoryView != null && listSearchHistoryView.Count > 0)
+                        {
+                            foreach (var item in listSearchHistoryView)
+                            {
+                                <a href="/Activity/Activity?Id=@item.">@item.SearchNickName</a>
+                            }
+                        }
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<br />
+<p style="text-align:center"><a href="/" style="background-color:#FFBA25;color:#ffffff;padding:5px;border-radius:3px">返回首页</a></p>
+<script src="~/js/jquery.1.7.2.min.js"></script>
+<script type="text/javascript">
+    function searchKeyWords()
+    {
+        var keyWords = $("#SearchWords").val();
+        window.location.href = "/Activity/ActivityAll?activityClassId=-1&ageRangeId=-1&regionId=-1&keyWords=" + keyWords;
+    }
+</script>

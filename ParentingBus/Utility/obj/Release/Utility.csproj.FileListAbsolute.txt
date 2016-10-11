@@ -1,0 +1,46 @@
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\Utility.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\Utility.pdb
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\Memcached.ClientLibrary.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\Newtonsoft.Json.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NLog.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NLog.Web.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NPOI.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NPOI.OOXML.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NPOI.OpenXml4Net.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NPOI.OpenXmlFormats.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NServiceKit.Common.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NServiceKit.Interfaces.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NServiceKit.Redis.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NServiceKit.Text.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NLog.xml
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NServiceKit.Common.xml
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NServiceKit.Interfaces.xml
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NServiceKit.Redis.xml
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Release\NServiceKit.Text.xml
+D:\otherProgram\YDT20150525\YDT\Utility\obj\Release\Utility.csprojResolveAssemblyReference.cache
+D:\otherProgram\YDT20150525\YDT\Utility\obj\Release\Utility.dll
+D:\otherProgram\YDT20150525\YDT\Utility\obj\Release\Utility.pdb
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\Utility.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\Utility.pdb
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\Memcached.ClientLibrary.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\Newtonsoft.Json.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NLog.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NLog.Web.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NPOI.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NPOI.OOXML.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NPOI.OpenXml4Net.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NPOI.OpenXmlFormats.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NServiceKit.Common.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NServiceKit.Interfaces.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NServiceKit.Redis.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NServiceKit.Text.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NLog.xml
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NServiceKit.Common.xml
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NServiceKit.Interfaces.xml
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NServiceKit.Redis.xml
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\NServiceKit.Text.xml
+C:\My\My object\pbs\ParentingBus\Utility\obj\Release\Utility.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\Utility\obj\Release\Utility.dll
+C:\My\My object\pbs\ParentingBus\Utility\obj\Release\Utility.pdb
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\DocumentFormat.OpenXml.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Release\DocumentFormat.OpenXml.xml

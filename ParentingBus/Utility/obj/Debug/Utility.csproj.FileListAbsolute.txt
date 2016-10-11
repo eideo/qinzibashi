@@ -1,0 +1,101 @@
+D:\项目练习\YDT\Utility\bin\Debug\Utility.dll
+D:\项目练习\YDT\Utility\bin\Debug\Utility.pdb
+D:\项目练习\YDT\Utility\obj\Debug\ResolveAssemblyReference.cache
+D:\项目练习\YDT\Utility\obj\Debug\Utility.dll
+D:\项目练习\YDT\Utility\obj\Debug\Utility.pdb
+E:\YDT\Utility\bin\Debug\Utility.dll
+E:\YDT\Utility\bin\Debug\Utility.pdb
+E:\YDT\Utility\obj\Debug\Utility.dll
+E:\YDT\Utility\obj\Debug\Utility.pdb
+E:\YDT\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+C:\D盘\YDT\Utility\bin\Debug\Utility.dll
+C:\D盘\YDT\Utility\bin\Debug\Utility.pdb
+C:\D盘\YDT\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+C:\D盘\YDT\Utility\obj\Debug\Utility.dll
+C:\D盘\YDT\Utility\obj\Debug\Utility.pdb
+D:\YDT\Utility\bin\Debug\Utility.dll
+D:\YDT\Utility\bin\Debug\Utility.pdb
+D:\YDT\Utility\obj\Debug\Utility.dll
+D:\YDT\Utility\obj\Debug\Utility.pdb
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\Utility.dll
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\Utility.pdb
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NLog.dll
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NLog.Web.dll
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Common.dll
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Interfaces.dll
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Redis.dll
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Text.dll
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NLog.xml
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Common.xml
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Interfaces.xml
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Redis.xml
+D:\其他项目\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Text.xml
+D:\其他项目\YDT20150525\YDT\Utility\obj\Debug\Utility.dll
+D:\其他项目\YDT20150525\YDT\Utility\obj\Debug\Utility.pdb
+D:\其他项目\YDT20150525\YDT\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\Utility.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\Utility.pdb
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NLog.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NLog.Web.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Common.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Interfaces.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Redis.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Text.dll
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NLog.xml
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Common.xml
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Interfaces.xml
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Redis.xml
+D:\otherProgram\YDT20150525\YDT\Utility\bin\Debug\NServiceKit.Text.xml
+D:\otherProgram\YDT20150525\YDT\Utility\obj\Debug\Utility.dll
+D:\otherProgram\YDT20150525\YDT\Utility\obj\Debug\Utility.pdb
+D:\otherProgram\YDT20150525\YDT\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\Utility.dll
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\Utility.pdb
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NLog.dll
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NLog.Web.dll
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NServiceKit.Common.dll
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NServiceKit.Interfaces.dll
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NServiceKit.Redis.dll
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NServiceKit.Text.dll
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NLog.xml
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NServiceKit.Common.xml
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NServiceKit.Interfaces.xml
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NServiceKit.Redis.xml
+D:\项目\ParentingBus\ParentingBus\Utility\bin\Debug\NServiceKit.Text.xml
+D:\项目\ParentingBus\ParentingBus\Utility\obj\Debug\Utility.dll
+D:\项目\ParentingBus\ParentingBus\Utility\obj\Debug\Utility.pdb
+D:\项目\ParentingBus\ParentingBus\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\Utility.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\Utility.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NLog.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NLog.Web.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NServiceKit.Common.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NServiceKit.Interfaces.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NServiceKit.Redis.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NServiceKit.Text.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NLog.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NServiceKit.Common.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NServiceKit.Interfaces.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NServiceKit.Redis.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\bin\Debug\NServiceKit.Text.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\obj\Debug\Utility.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\obj\Debug\Utility.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\Utility.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\Utility.pdb
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\DocumentFormat.OpenXml.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NLog.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NLog.Web.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NServiceKit.Common.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NServiceKit.Interfaces.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NServiceKit.Redis.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NServiceKit.Text.dll
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\DocumentFormat.OpenXml.xml
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NLog.xml
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NServiceKit.Common.xml
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NServiceKit.Interfaces.xml
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NServiceKit.Redis.xml
+C:\My\My object\pbs\ParentingBus\Utility\bin\Debug\NServiceKit.Text.xml
+C:\My\My object\pbs\ParentingBus\Utility\obj\Debug\Utility.dll
+C:\My\My object\pbs\ParentingBus\Utility\obj\Debug\Utility.pdb
+C:\My\My object\pbs\ParentingBus\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache

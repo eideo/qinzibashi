@@ -1,0 +1,55 @@
+﻿@model PBS.Model.pbsBasicUsersListResult
+@{
+    ViewBag.Title = "会员列表";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i>会员列表</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>会员列表</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <table id="example" class="table table-bordered data-table">
+                        <thead>
+                            <tr>
+                                <th>会员编号</th>
+                                <th>会员登录名称</th>
+                                <th>地址</th>
+                                <th>成员</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.List.Count > 0)
+                            {
+                                foreach (var item in Model.List)
+                                {
+                                    <tr>
+                                        <td>@item.UserId</td>
+                                        <td>@item.LoginName</td>
+                                        <td>@item.MyAdress</td>
+                                        <td><a href="/Member/MemberFamilyList?userId=@item.UserId">查看成员</a></td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-main-container-part-->

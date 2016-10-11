@@ -1,0 +1,50 @@
+﻿@using PBS.Model;
+@{
+    Layout = "../Shared/_CommenHome.cshtml";
+    ViewBag.Title = "往期回顾";
+    List<pbs_basic_ReviewHistory> reviewHistoryList = (List<pbs_basic_ReviewHistory>)ViewData["ReviewHistoryList"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+}
+
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one">
+            @if (reviewHistoryList != null && reviewHistoryList.Count > 0)
+            {
+                foreach (pbs_basic_ReviewHistory rh in reviewHistoryList)
+                {
+                    var picurl = picSourceHostUrl + rh.ReviewUrl;
+                    <li>
+                        <a href="/Activity/ActivityReviewHistoryDetail?Id=@rh.ReviewId">
+                            <section class="ui-placehold-img">
+                                <span style="background-image:url(@picurl)"></span>
+                            </section>
+                            <div class="list_content">
+                                <div class="m_left">
+                                    <div class="m_left_title">@rh.ReviewTitle</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                }
+            }
+            else
+            {
+                <li>
+                    <br />
+                    <br />
+                    <h2 style="text-align:center"><img alt="" src="~/image/pj_icon.png" style="width:50%;height:50%" /></h2>
+                    <br />
+                    <h2 style="text-align:center">暂时还没有往期回顾</h2>
+                </li>
+            } 
+        </ul>
+    </div>
+</div>
+<script src="~/js/lib/zepto.min.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        window.location.href = "/";
+    }
+</script>
+

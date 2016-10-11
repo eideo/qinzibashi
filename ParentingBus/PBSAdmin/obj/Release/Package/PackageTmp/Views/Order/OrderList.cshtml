@@ -1,0 +1,152 @@
+﻿@using PBS.Model
+@{
+    ViewBag.Title = "订单查询列表";
+    Layout = "~/Views/Shared/_Home.cshtml";
+    List<pbs_basic_OrderView> pbsBasicOrderViewList = (List<pbs_basic_OrderView>)ViewData["pbsBasicOrderViewList"];
+}
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i>订单查询列表</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>订单查询列表</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <form action="#" method="get" class="form-horizontal">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input id="StartTime" class="span11" readonly type="text" placeholder="开始时间" value="" />-
+                            </div>
+                            <div class="controls">
+                                -<input id="EndTime" type="text" class="span11" readonly placeholder="结束时间" value="" />
+                            </div>
+                            <div class="controls">
+                                <button id="saveBtn" type="button" class="btn btn-success" onclick="exportExcel()">导出excel</button>
+                            </div>
+                        </div>
+                    </form>
+                    <table id="example" class="table table-bordered data-table">
+                        <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>活动编号</th>
+                                <th>活动名称</th>
+                                <th>数量</th>
+                                <th>参加时间</th>
+                                <th>用户编号</th>
+                                <th>订单成员编号</th>
+                                <th>订单价格</th>
+                                <th>优惠券编号</th>
+                                <th>订单状态</th>
+                                <th>出行人姓名</th>
+                                <th>电话</th>
+                                <th>下单时间</th>
+                                @*<th>操作</th>*@
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (pbsBasicOrderViewList != null && pbsBasicOrderViewList.Count > 0)
+                            {
+                                foreach (var item in pbsBasicOrderViewList)
+                                {
+                            <tr>
+                                <td>@item.OrderId</td>
+                                <td>@item.GoodsId</td>
+                                <td>@item.GoodsName</td>
+                                <td>@item.Count</td>
+                                <td>@item.VisitTime</td>
+                                <td>@item.UserId</td>
+                                <td>@item.OrderMemberId</td>
+                                <td>@item.OrderPrice</td>
+                                <td>@item.VoucherId</td>
+                                <td>
+                                    @switch (item.OrderStatus)
+                                            {
+                                                case 1:
+                                            <span>待支付</span>
+                                                    break;
+                                                case 2:
+                                            <span>已付款</span>
+                                                    break;
+                                                case 3:
+                                            <span>已完成</span>
+                                                    break;
+                                                case 4:
+                                            <span>退款中</span>
+                                                    break;
+                                                case 5:
+                                            <span>已取消</span>
+                                                    break;
+                                                default:
+                                            <span>待支付</span>
+                                                    break;
+                                            }
+                                </td>
+                                <td>@item.UserName</td>
+                                <td>@item.Phone</td>
+                                <td>@item.CreateTime</td>
+                                @*<td><a href="/Activity/AgeRangeAdd?ageRangeId=@item.AgeRangeId">编辑</a>|<a href="javascript:void(0)" onclick="deleteAgeRange(this, @item.AgeRangeId)">删除</a></td>*@
+                            </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript">
+    $("#StartTime,#EndTime").datetimepicker({
+        format: 'yyyy-mm-dd',
+        weekStart: 1,
+        autoclose: true,
+        startView: 2,
+        minView: 4,
+        forceParse: false,
+        language: 'zh-CN'
+    });
+</script>
+<script type="text/javascript">
+    function exportExcel() {
+        var startTime = $("#StartTime").val();
+        var endTime = $("#EndTime").val();
+        var url = "@Url.Action("ExportExcelAjax", "Order")";
+        $.ajax({
+            url: url,
+            data: { startTime: startTime, endTime: endTime},
+            type: 'POST',
+            dataType: 'json',
+            success: function (result) {
+                var data = $.parseJSON(result);
+                if (data != null && data.Code === "0000") {
+                    //$.messager.alert('Message', 'Success!');
+                    window.location = data.Url;
+                } else {
+                    $.scojs_message(data.Message, $.scojs_message.TYPE_ERROR);
+                    return false;
+                }
+                return false;
+            },
+            error: function (xhr) {
+                //alert('error\nstatus：' + xhr.status + '\nresponseText：' + xhr.responseText)
+                $.scojs_message(errorThrown, $.scojs_message.TYPE_ERROR);
+            }
+        });
+        return false;
+    }
+</script>

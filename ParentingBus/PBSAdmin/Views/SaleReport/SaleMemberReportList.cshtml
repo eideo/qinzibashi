@@ -1,0 +1,71 @@
+﻿@using PBS.Model
+@{
+    ViewBag.Title = "消费金额统计";
+    Layout = "~/Views/Shared/_Home.cshtml";
+    List<SaleMemberReport> saleMemberReportList = (List<SaleMemberReport>)ViewData["SaleMemberReportList"];
+}
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i>消费金额统计</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>消费金额统计</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <table id="example" class="table table-bordered data-table">
+                        <thead>
+                            <tr>
+                                <th>活动名称</th>
+                                <th>单人活动价格</th>
+                                <th>单人活动成本</th>
+                                <th>单人活动毛利</th>
+                                <th>分销渠道分成一级</th>
+                                <th>分销渠道分成二级</th>
+                                <th>分销渠道分成三级</th>
+                                <th>剩余利润</th>
+                                <th>本次活动付款人数</th>
+                                <th>带队负责人提成</th>
+                                <th>最终毛利</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (saleMemberReportList != null && saleMemberReportList.Count > 0)
+                            {
+                                foreach (var item in saleMemberReportList)
+                                {
+                                    <tr>
+                                        <td>@item.GoodsName</td>
+                                        <td>@item.OrderPrice</td>
+                                        <td>@item.OrderCost</td>
+                                        <td>@item.ActivityGrossProfit</td>
+                                        <td>@item.DC1</td>
+                                        <td>@item.DC2</td>
+                                        <td>@item.DC3</td>
+                                        <td>@item.SurplusProfit</td>
+                                        <td>@item.PayCount</td>
+                                        <td>@item.ResponsiblePersonProfit</td>
+                                        <td>@item.FinalGrossProfit</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

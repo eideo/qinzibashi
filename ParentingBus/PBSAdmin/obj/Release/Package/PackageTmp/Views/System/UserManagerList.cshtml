@@ -1,0 +1,87 @@
+﻿@model PBS.Model.pbsSysUserViewListResult
+@{
+    ViewBag.Title = "管理员列表";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i>管理员列表</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>管理员列表</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <table id="example" class="table table-bordered data-table">
+                        <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>登录名</th>
+                                <th>昵称</th>
+                                <th>角色</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.sysUsersViewList.Count > 0)
+                            {
+                                foreach (var item in Model.sysUsersViewList)
+                                {
+                                    <tr>
+                                        <td>@item.id</td>
+                                        <td>@item.loginId</td>
+                                        <td>@item.nickName</td>
+                                        <td>@item.RoleName</td>
+                                        <td><a href="/System/UserManagerAdd?id=@item.id">编辑</a>|<a href="javascript:void(0)" onclick="deleteSysUser(this, @item.id)">删除</a></td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-main-container-part-->
+<script type="text/javascript">
+    function deleteSysUser(obj, id) {
+        $(obj).scojs_confirm({
+            content: "您确定要删除吗?",
+            action: function (e) {
+                $.ajax({
+                    type: "POST",
+                    async: false,
+                    url: "/System/SysUserDeleteAjax",
+                    data: { id: id },
+                    success: function (data) {
+                        if (data.Status === 0) {
+                            //成功
+                            $.scojs_message(data.Message, $.scojs_message.TYPE_OK);
+                        } else {
+                            //失败
+                            $.scojs_message(data.Message, $.scojs_message.TYPE_ERROR);
+                            return false;
+                        }
+                        return false;
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        //失败
+                        $.scojs_message(errorThrown, $.scojs_message.TYPE_ERROR);
+                    }
+                });
+            }
+        });
+    }
+</script>

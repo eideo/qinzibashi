@@ -1,0 +1,25 @@
+E:\zou\Project\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\obj\Debug\ResolveAssemblyReference.cache
+E:\zou\Project\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\bin\Debug\WeiPay.dll
+E:\zou\Project\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\bin\Debug\WeiPay.pdb
+E:\zou\Project\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\obj\Debug\WeiPay.dll
+E:\zou\Project\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\obj\Debug\WeiPay.pdb
+C:\Users\apple\Desktop\微信支付代码示例\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\bin\Debug\WeiPay.dll
+C:\Users\apple\Desktop\微信支付代码示例\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\bin\Debug\WeiPay.pdb
+C:\Users\apple\Desktop\微信支付代码示例\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\obj\Debug\WeiPay.csprojResolveAssemblyReference.cache
+C:\Users\apple\Desktop\微信支付代码示例\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\obj\Debug\WeiPay.dll
+C:\Users\apple\Desktop\微信支付代码示例\微信支付代码示例\完整版本（邹学典）\Code\WeiPayDemo\WeiPay\obj\Debug\WeiPay.pdb
+D:\项目\ParentingBus\ParentingBus\WeiPay\bin\Debug\WeiPay.dll
+D:\项目\ParentingBus\ParentingBus\WeiPay\bin\Debug\WeiPay.pdb
+D:\项目\ParentingBus\ParentingBus\WeiPay\obj\Debug\WeiPay.dll
+D:\项目\ParentingBus\ParentingBus\WeiPay\obj\Debug\WeiPay.pdb
+D:\项目\ParentingBus\ParentingBus\WeiPay\obj\Debug\WeiPay.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\WeiPay\bin\Debug\WeiPay.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\WeiPay\bin\Debug\WeiPay.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\WeiPay\obj\Debug\WeiPay.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\WeiPay\obj\Debug\WeiPay.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\WeiPay\obj\Debug\WeiPay.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\WeiPay\bin\Debug\WeiPay.dll
+C:\My\My object\pbs\ParentingBus\WeiPay\bin\Debug\WeiPay.pdb
+C:\My\My object\pbs\ParentingBus\WeiPay\obj\Debug\WeiPay.dll
+C:\My\My object\pbs\ParentingBus\WeiPay\obj\Debug\WeiPay.pdb
+C:\My\My object\pbs\ParentingBus\WeiPay\obj\Debug\WeiPay.csprojResolveAssemblyReference.cache

@@ -1,0 +1,16 @@
+﻿@using PBS.Model;
+@{
+    Layout = "../Shared/_CommenHome.cshtml";
+    ViewBag.Title = "往期回顾";
+    pbs_basic_ReviewHistory reviewHistory = (pbs_basic_ReviewHistory)ViewData["ReviewHistory"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+}
+
+@Html.Raw(reviewHistory.ReviewContent)
+
+<script src="~/js/lib/zepto.min.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        history.back();
+    }
+</script>

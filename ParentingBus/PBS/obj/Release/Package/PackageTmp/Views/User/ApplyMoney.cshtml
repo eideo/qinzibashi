@@ -1,0 +1,103 @@
+﻿@using PBS.Model;
+@{
+    ViewBag.Title = "申请退款";
+    Layout = "../Shared/_CommenHome.cshtml";
+    pbs_basic_OrderView orderView = (pbs_basic_OrderView)ViewData["pbsBasicOrderView"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+    string goodsPackageName = ViewData["GoodsPackageName"].ToString();
+}
+<style>
+    .ui-list-link > li:after {
+        display: none;
+    }
+</style>
+<link href="~/css/mdialog.css" rel="stylesheet" />
+<div class="uc-order-item">
+    <ul class="ui-list ui-list-link ui-border-tb">
+        <li>
+            @{
+                var imgSrc = picSourceHostUrl + orderView.GoodsMainImgUrl;
+                <img class="orderImg" src="@imgSrc" alt="" />
+            }
+            <a href="javascript:void(0)">
+                <dl>
+                    <dt></dt>
+                    <dd style="font-size:16px">
+                        @orderView.GoodsName
+                    </dd>
+                </dl>
+                <dl>
+                    <dt style="color: #FFBA25;">活动时间</dt>
+                    <dd style="color: #FFBA25;">
+                        @orderView.VisitTime
+                    </dd>
+                </dl>
+                <p style="border-top: 1px solid #ddd;">
+                    <span style="display:inline-block;height:30px;line-height:30px;margin-right:5px">套餐:@goodsPackageName</span>
+                    <span style="display:inline-block;height:30px;line-height:30px;margin-right:5px">数量:@orderView.Count</span>
+                    <span style="display:inline-block;height:30px;line-height:30px;margin-right:5px">出行人:@orderView.UserName</span>
+                </p>
+            </a>
+        </li>
+    </ul>
+</div>
+<p style="font-size:12px; margin-left:10px">
+    退款理由
+</p>
+<p style="border-bottom:1px solid #ddd;width:95%;padding:10px;font-size:12px">
+    <textarea id="Reason" placeholder="请输入申请退款的理由" style="width:90%;border:0;border-radius:5px; height:200px;padding: 10px;"></textarea>
+</p>
+<div class="mod-box footer_bottom">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            <li>
+                <div class="list_content content_Padding" style="height: 1.5em">
+                    <div class="m_right" style="line-height:inherit">
+                        <a href="javascript:void(0)" class="buy_btn" onclick="sumbitApply()">
+                            确定
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="~/js/lib/zepto.min.js"></script>
+<script src="~/js/frozen.js"></script>
+<script src="~/js/app.js"></script>
+<script src="~/js/mdialog.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        history.back();
+    }
+
+    function sumbitApply() {
+        var orderId = "@orderView.OrderId";
+        var reason = $("#Reason").val();
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "/User/ApplyMoneyAjax",
+            data: { orderId: orderId, reason: reason },
+            success: function (data) {
+                if (data.Status === 0) {
+                    //成功
+                    new TipBox({ type: 'success', str: '操作成功', hasBtn: true });
+                    setTimeout(function () {
+                        window.location.href = "/User/MyOrder";
+                    }, 3000);
+                } else {
+                    //失败
+                    new TipBox({ type: 'error', str: '对不起,出错了!', hasBtn: true });
+                    return false;
+                }
+                return false;
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                //失败
+                new TipBox({ type: 'error', str: '对不起,出错了!', hasBtn: true });
+            }
+        });
+    }
+
+</script>

@@ -1,0 +1,34 @@
+﻿html {
+    font-size: 100px;
+}
+body {
+    font-size: 0.14rem;/*实际相当于14px*/
+}
+body{
+    padding:0;
+    margin:0;
+}
+.header {
+    width: 100%;
+    height: 88px;
+    line-height: 88px;
+    background-color: #ffbe32;
+    color: #fff;
+    padding: 17px 30px;
+    overflow: hidden
+}
+.header_left {
+    background: url('../image/position.png') no-repeat;
+    float: left;
+    padding-left: 40px;
+}
+.header_middle {
+    float: left;
+}
+.header_right {
+    float: left;
+    background: url('../image/person.png') no-repeat;
+    width: 43px;
+    height: 50px;
+   
+}

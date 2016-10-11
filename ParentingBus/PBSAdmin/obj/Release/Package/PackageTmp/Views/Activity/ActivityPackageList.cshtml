@@ -1,0 +1,87 @@
+﻿@model PBS.Model.pbsBasicGoodsPackageViewListResult
+@{
+    ViewBag.Title = "套餐列表";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i>套餐列表</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>套餐列表</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <table id="example" class="table table-bordered data-table">
+                        <thead>
+                            <tr>
+                                <th>套餐编号</th>
+                                <th>套餐名称</th>
+                                <th>套餐价格</th>
+                                <th>活动类型</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.list.Count > 0)
+                            {
+                                foreach (var item in Model.list)
+                                {
+                                    <tr>
+                                        <td>@item.GoodsPackageId</td>
+                                        <td>@item.GoodsPackageName</td>
+                                        <td>@item.GoodsPackagePrice</td>
+                                        <td>@item.GoodsTypeName</td>
+                                        <td><a href="/Activity/ActivityPackageAdd?activitysPackageId=@item.GoodsPackageId">编辑</a>|<a href="javascript:void(0)" onclick="deleteGoodsPackage(this, @item.GoodsPackageId)">删除</a></td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-main-container-part-->
+<script type="text/javascript">
+    function deleteGoodsPackage(obj, goodsPackageId) {
+        $(obj).scojs_confirm({
+            content: "您确定要删除吗?",
+            action: function(e) {
+                $.ajax({
+                    type: "POST",
+                    async: false,
+                    url: "/Activity/ActivityPackageDeleteAjax",
+                    data: { activitysPackageId: goodsPackageId },
+                    success: function (data) {
+                        if (data.Status === 0) {
+                            //成功
+                            $.scojs_message(data.Message, $.scojs_message.TYPE_OK);
+                        } else {
+                            //失败
+                            $.scojs_message(data.Message, $.scojs_message.TYPE_ERROR);
+                            return false;
+                        }
+                        return false;
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        //失败
+                        $.scojs_message(errorThrown, $.scojs_message.TYPE_ERROR);
+                    }
+                });
+            }
+        });
+    }
+</script>

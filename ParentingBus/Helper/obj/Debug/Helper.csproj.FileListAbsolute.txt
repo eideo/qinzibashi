@@ -1,0 +1,43 @@
+D:\项目练习\YDT\Helper\bin\Debug\Helper.dll
+D:\项目练习\YDT\Helper\bin\Debug\Helper.pdb
+D:\项目练习\YDT\Helper\obj\Debug\ResolveAssemblyReference.cache
+D:\项目练习\YDT\Helper\obj\Debug\Helper.dll
+D:\项目练习\YDT\Helper\obj\Debug\Helper.pdb
+E:\YDT\Helper\bin\Debug\Helper.dll
+E:\YDT\Helper\bin\Debug\Helper.pdb
+E:\YDT\Helper\obj\Debug\Helper.dll
+E:\YDT\Helper\obj\Debug\Helper.pdb
+E:\YDT\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\D盘\YDT\Helper\bin\Debug\Helper.dll
+C:\D盘\YDT\Helper\bin\Debug\Helper.pdb
+C:\D盘\YDT\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\D盘\YDT\Helper\obj\Debug\Helper.dll
+C:\D盘\YDT\Helper\obj\Debug\Helper.pdb
+D:\YDT\Helper\bin\Debug\Helper.dll
+D:\YDT\Helper\bin\Debug\Helper.pdb
+D:\YDT\Helper\obj\Debug\Helper.dll
+D:\YDT\Helper\obj\Debug\Helper.pdb
+D:\其他项目\YDT20150525\YDT\Helper\bin\Debug\Helper.dll
+D:\其他项目\YDT20150525\YDT\Helper\bin\Debug\Helper.pdb
+D:\其他项目\YDT20150525\YDT\Helper\obj\Debug\Helper.dll
+D:\其他项目\YDT20150525\YDT\Helper\obj\Debug\Helper.pdb
+D:\其他项目\YDT20150525\YDT\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+D:\otherProgram\YDT20150525\YDT\Helper\bin\Debug\Helper.dll
+D:\otherProgram\YDT20150525\YDT\Helper\bin\Debug\Helper.pdb
+D:\otherProgram\YDT20150525\YDT\Helper\obj\Debug\Helper.dll
+D:\otherProgram\YDT20150525\YDT\Helper\obj\Debug\Helper.pdb
+D:\otherProgram\YDT20150525\YDT\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus\Helper\bin\Debug\Helper.dll
+D:\项目\ParentingBus\ParentingBus\Helper\bin\Debug\Helper.pdb
+D:\项目\ParentingBus\ParentingBus\Helper\obj\Debug\Helper.dll
+D:\项目\ParentingBus\ParentingBus\Helper\obj\Debug\Helper.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Helper\bin\Debug\Helper.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Helper\bin\Debug\Helper.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Helper\obj\Debug\Helper.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Helper\obj\Debug\Helper.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\Helper\bin\Debug\Helper.dll
+C:\My\My object\pbs\ParentingBus\Helper\bin\Debug\Helper.pdb
+C:\My\My object\pbs\ParentingBus\Helper\obj\Debug\Helper.dll
+C:\My\My object\pbs\ParentingBus\Helper\obj\Debug\Helper.pdb
+C:\My\My object\pbs\ParentingBus\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache

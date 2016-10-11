@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3414C0FB-38B8-4E1D-B27D-01F85C2AB9A4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PBS</RootNamespace>
+    <AssemblyName>PBS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorGenerator.Mvc.2.4.2\lib\net40\RazorGenerator.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.1.2\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.1.2\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.1.2\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\mobiscroll-2.13.2.full.min.css" />
+    <Content Include="Content\mobiscroll.animation-2.13.2.css" />
+    <Content Include="Content\mobiscroll.icons-2.13.2.css" />
+    <Content Include="Content\mobiscroll.scroller-2.13.2.css" />
+    <Content Include="Content\mobiscroll.scroller.android-2.13.2.css" />
+    <Content Include="Content\mobiscroll.scroller.android-holo-2.13.2.css" />
+    <Content Include="Content\mobiscroll.scroller.ios-2.13.2.css" />
+    <Content Include="Content\mobiscroll.scroller.ios7-2.13.2.css" />
+    <Content Include="Content\mobiscroll.scroller.jqm-2.13.2.css" />
+    <Content Include="Content\mobiscroll.scroller.sense-ui-2.13.2.css" />
+    <Content Include="Content\mobiscroll.scroller.wp-2.13.2.css" />
+    <Content Include="Content\mobiscroll.widget-2.13.2.css" />
+    <Content Include="Content\mobiscroll.widget.android-2.13.2.css" />
+    <Content Include="Content\mobiscroll.widget.android-holo-2.13.2.css" />
+    <Content Include="Content\mobiscroll.widget.ios-2.13.2.css" />
+    <Content Include="Content\mobiscroll.widget.ios7-2.13.2.css" />
+    <Content Include="Content\mobiscroll.widget.jqm-2.13.2.css" />
+    <Content Include="Content\mobiscroll.widget.sense-ui-2.13.2.css" />
+    <Content Include="Content\mobiscroll.widget.wp-2.13.2.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="css\app.css" />
+    <Content Include="css\base\icon-full.css" />
+    <Content Include="css\base\icon.css" />
+    <Content Include="css\base\mixin.css" />
+    <Content Include="css\base\rem.css" />
+    <Content Include="css\base\reset.css" />
+    <Content Include="css\base\type.css" />
+    <Content Include="css\base\variable.css" />
+    <Content Include="css\basic.css" />
+    <Content Include="css\common.css" />
+    <Content Include="css\component\actionsheet.css" />
+    <Content Include="css\component\avatar.css" />
+    <Content Include="css\component\badge.css" />
+    <Content Include="css\component\btn-group.css" />
+    <Content Include="css\component\btn-progress.css" />
+    <Content Include="css\component\btn.css" />
+    <Content Include="css\component\checkbox.css" />
+    <Content Include="css\component\dialog.css" />
+    <Content Include="css\component\form.css" />
+    <Content Include="css\component\input.css" />
+    <Content Include="css\component\label.css" />
+    <Content Include="css\component\list.css" />
+    <Content Include="css\component\loading.css" />
+    <Content Include="css\component\newstips.css" />
+    <Content Include="css\component\notice.css" />
+    <Content Include="css\component\panel.css" />
+    <Content Include="css\component\poptips.css" />
+    <Content Include="css\component\progress.css" />
+    <Content Include="css\component\radio.css" />
+    <Content Include="css\component\reddot.css" />
+    <Content Include="css\component\searchbar.css" />
+    <Content Include="css\component\select.css" />
+    <Content Include="css\component\selector.css" />
+    <Content Include="css\component\slider.css" />
+    <Content Include="css\component\switch.css" />
+    <Content Include="css\component\tab.css" />
+    <Content Include="css\component\table.css" />
+    <Content Include="css\component\tag.css" />
+    <Content Include="css\component\tips.css" />
+    <Content Include="css\component\tooltips.css" />
+    <Content Include="css\custom\qinzibashi.css" />
+    <Content Include="css\custom\sunflower.css" />
+    <Content Include="css\filterActivity.css" />
+    <Content Include="css\full.css" />
+    <Content Include="css\global.css" />
+    <Content Include="css\mdialog.css" />
+    <Content Include="css\mobiscroll-2.13.2.full.min.css" />
+    <Content Include="css\util\arrowlink.css" />
+    <Content Include="css\util\border.css" />
+    <Content Include="css\util\grid.css" />
+    <Content Include="css\util\justify.css" />
+    <Content Include="css\util\layout.css" />
+    <Content Include="css\util\nowrap.css" />
+    <Content Include="css\util\placehold.css" />
+    <Content Include="css\util\whitespace.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="image\0.png" />
+    <Content Include="image\addMember_icon.png" />
+    <Content Include="image\age_icon.png" />
+    <Content Include="image\all_activity.png" />
+    <Content Include="image\back_icon.png" />
+    <Content Include="image\chose_icon.png" />
+    <Content Include="image\collectGoods_icon.png" />
+    <Content Include="image\collect_icon.png" />
+    <Content Include="image\dangqi_activity.png" />
+    <Content Include="image\default_photo.png" />
+    <Content Include="image\edit_icon.png" />
+    <Content Include="image\mShare_icon.png" />
+    <Content Include="image\myCollect.png" />
+    <Content Include="image\myGrowth_icon.png" />
+    <Content Include="image\myMember_icon.png" />
+    <Content Include="image\myOrder_icon.png" />
+    <Content Include="image\MyPhotoBg.png" />
+    <Content Include="image\mySell.png" />
+    <Content Include="image\MyShareProfitBg.jpg" />
+    <Content Include="image\myVoucher_icon.png" />
+    <Content Include="image\next_icon.png" />
+    <Content Include="image\noOrder.png" />
+    <Content Include="image\pathLine.png" />
+    <Content Include="image\person.png" />
+    <Content Include="image\photo_icon.png" />
+    <Content Include="image\pj_icon.png" />
+    <Content Include="image\plus_icon.png" />
+    <Content Include="image\position.png" />
+    <Content Include="image\position_icon.png" />
+    <Content Include="image\qrcode.png" />
+    <Content Include="image\reduce_icon.png" />
+    <Content Include="image\r_icon.png" />
+    <Content Include="image\score1_icon.png" />
+    <Content Include="image\score2_icon.png" />
+    <Content Include="image\score3_icon.png" />
+    <Content Include="image\search.png" />
+    <Content Include="image\home_list_week.png" />
+    <Content Include="image\home_list_youhui.png" />
+    <Content Include="image\share_icon.png" />
+    <Content Include="image\time_icon.png" />
+    <Content Include="image\tuangou_activity.png" />
+    <Content Include="image\uncollectGoods_icon.png" />
+    <Content Include="image\uncollect_icon.png" />
+    <Content Include="image\unchose_icon.png" />
+    <Content Include="image\UserCenterBg.jpg" />
+    <Content Include="image\voucher.png" />
+    <Content Include="image\voucherNotUse.png" />
+    <Content Include="image\voucherUsed.png" />
+    <Content Include="image\wangqi_activity.png" />
+    <Content Include="image\week_activity.png" />
+    <Content Include="image\wx_icon.png" />
+    <Content Include="image\youhui_activity.png" />
+    <Content Include="image\dingwei.png" />
+    <Content Include="image\zan_icon.png" />
+    <Content Include="js\ajaxfileupload.js" />
+    <Content Include="js\app.js" />
+    <Content Include="js\component\dialog.js" />
+    <Content Include="js\component\loading.js" />
+    <Content Include="js\component\scroll.js" />
+    <Content Include="js\component\tips.js" />
+    <Content Include="js\core\core.js" />
+    <Content Include="js\effect\cover.js" />
+    <Content Include="js\effect\parallax.js" />
+    <Content Include="js\filterActivity.js" />
+    <Content Include="js\frozen.js" />
+    <Content Include="js\holder.js" />
+    <Content Include="js\jquery.1.7.2.min.js" />
+    <Content Include="js\lib\zepto.min.js" />
+    <Content Include="js\lib\zeptojs\ajax.js" />
+    <Content Include="js\lib\zeptojs\assets.js" />
+    <Content Include="js\lib\zeptojs\callbacks.js" />
+    <Content Include="js\lib\zeptojs\data.js" />
+    <Content Include="js\lib\zeptojs\deferred.js" />
+    <Content Include="js\lib\zeptojs\detect.js" />
+    <Content Include="js\lib\zeptojs\event.js" />
+    <Content Include="js\lib\zeptojs\form.js" />
+    <Content Include="js\lib\zeptojs\fx.js" />
+    <Content Include="js\lib\zeptojs\fx_methods.js" />
+    <Content Include="js\lib\zeptojs\gesture.js" />
+    <Content Include="js\lib\zeptojs\ie.js" />
+    <Content Include="js\lib\zeptojs\ios3.js" />
+    <Content Include="js\lib\zeptojs\selector.js" />
+    <Content Include="js\lib\zeptojs\stack.js" />
+    <Content Include="js\lib\zeptojs\touch.js" />
+    <Content Include="js\lib\zeptojs\zepto.js" />
+    <Content Include="js\mdialog.js" />
+    <Content Include="js\mobiscroll-2.13.2.full.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\mobiscroll-2.13.2.full.min.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-cs.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-de.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-en-UK.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-es.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-fa.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-fr.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-hu.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-it.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-ja.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-nl.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-no.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-pl.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-pt-BR.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-pt-PT.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-ro.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-ru-UA.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-ru.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-sk.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-sv.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-tr.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2-zh.js" />
+    <Content Include="Scripts\mobiscroll.core-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.datetime-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.list-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.scroller-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.select-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.util.datetime-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.widget-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.widget.android-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.widget.android-holo-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.widget.ios-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.widget.ios7-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.widget.jqm-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.widget.sense-ui-2.13.2.js" />
+    <Content Include="Scripts\mobiscroll.widget.wp-2.13.2.js" />
+    <Content Include="WeiPay\Notify.aspx" />
+    <Content Include="WeiPay\Send.aspx" />
+    <Content Include="WeiPay\WeiPay.aspx" />
+    <Content Include="ashx\UploadImg.ashx" />
+    <None Include="Properties\PublishProfiles\PbsPublish.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ashx\UploadImg.ashx.cs">
+      <DependentUpon>UploadImg.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ActivityController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeiPay\Notify.aspx.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeiPay\Notify.aspx.designer.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiPay\Send.aspx.cs">
+      <DependentUpon>Send.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeiPay\Send.aspx.designer.cs">
+      <DependentUpon>Send.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiPay\WeiPay.aspx.cs">
+      <DependentUpon>WeiPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeiPay\WeiPay.aspx.designer.cs">
+      <DependentUpon>WeiPay.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Home.cshtml" />
+    <Content Include="Views\Shared\_HeaderHome.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header1.cshtml" />
+    <Content Include="font\iconfont-full.ttf" />
+    <Content Include="font\iconfont.ttf" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\maps\app.css.map" />
+    <Content Include="css\maps\base\icon-full.css.map" />
+    <Content Include="css\maps\base\icon.css.map" />
+    <Content Include="css\maps\base\mixin.css.map" />
+    <Content Include="css\maps\base\rem.css.map" />
+    <Content Include="css\maps\base\reset.css.map" />
+    <Content Include="css\maps\base\type.css.map" />
+    <Content Include="css\maps\base\variable.css.map" />
+    <Content Include="css\maps\basic.css.map" />
+    <Content Include="css\maps\component\actionsheet.css.map" />
+    <Content Include="css\maps\component\avatar.css.map" />
+    <Content Include="css\maps\component\badge.css.map" />
+    <Content Include="css\maps\component\btn-group.css.map" />
+    <Content Include="css\maps\component\btn-progress.css.map" />
+    <Content Include="css\maps\component\btn.css.map" />
+    <Content Include="css\maps\component\checkbox.css.map" />
+    <Content Include="css\maps\component\dialog.css.map" />
+    <Content Include="css\maps\component\form.css.map" />
+    <Content Include="css\maps\component\input.css.map" />
+    <Content Include="css\maps\component\label.css.map" />
+    <Content Include="css\maps\component\list.css.map" />
+    <Content Include="css\maps\component\loading.css.map" />
+    <Content Include="css\maps\component\newstips.css.map" />
+    <Content Include="css\maps\component\notice.css.map" />
+    <Content Include="css\maps\component\panel.css.map" />
+    <Content Include="css\maps\component\poptips.css.map" />
+    <Content Include="css\maps\component\progress.css.map" />
+    <Content Include="css\maps\component\radio.css.map" />
+    <Content Include="css\maps\component\reddot.css.map" />
+    <Content Include="css\maps\component\searchbar.css.map" />
+    <Content Include="css\maps\component\select.css.map" />
+    <Content Include="css\maps\component\selector.css.map" />
+    <Content Include="css\maps\component\slider.css.map" />
+    <Content Include="css\maps\component\switch.css.map" />
+    <Content Include="css\maps\component\tab.css.map" />
+    <Content Include="css\maps\component\table.css.map" />
+    <Content Include="css\maps\component\tag.css.map" />
+    <Content Include="css\maps\component\tips.css.map" />
+    <Content Include="css\maps\component\tooltips.css.map" />
+    <Content Include="css\maps\custom\skiing.css.map" />
+    <Content Include="css\maps\custom\sunflower.css.map" />
+    <Content Include="css\maps\full.css.map" />
+    <Content Include="css\maps\global.css.map" />
+    <Content Include="css\maps\util\arrowlink.css.map" />
+    <Content Include="css\maps\util\border.css.map" />
+    <Content Include="css\maps\util\grid.css.map" />
+    <Content Include="css\maps\util\justify.css.map" />
+    <Content Include="css\maps\util\layout.css.map" />
+    <Content Include="css\maps\util\nowrap.css.map" />
+    <Content Include="css\maps\util\placehold.css.map" />
+    <Content Include="css\maps\util\whitespace.css.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Activity\ActivityDetail.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Activity\Activity.cshtml" />
+    <Content Include="Views\Shared\_Activity.cshtml" />
+    <Content Include="Views\Activity\ActivitySearch.cshtml" />
+    <Content Include="Views\Activity\ActivityReviewHistory.cshtml" />
+    <Content Include="Views\User\UserCenter.cshtml" />
+    <Content Include="Views\User\MyOrder.cshtml" />
+    <Content Include="Views\Activity\Order.cshtml" />
+    <Content Include="Views\User\MyMembers.cshtml" />
+    <Content Include="Views\User\MyMembersDetail.cshtml" />
+    <Content Include="Views\User\MyVoucher.cshtml" />
+    <Content Include="Views\User\MyGrowthProcess.cshtml" />
+    <Content Include="Views\User\MyShareProfit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Activity\ActivityPosition.cshtml" />
+    <Content Include="Views\Shared\_ActivityDetail.cshtml" />
+    <Content Include="Views\Shared\_HeaderActivityDetail.cshtml" />
+    <Content Include="Views\Shared\_CommenHeader.cshtml" />
+    <Content Include="Views\Shared\_CommenHome.cshtml" />
+    <Content Include="Views\Activity\ChoseMember.cshtml" />
+    <Content Include="Views\Shared\_ChoseMember.cshtml" />
+    <Content Include="Views\Shared\_ChoseMemberHeader.cshtml" />
+    <Content Include="Views\Activity\Buy.cshtml" />
+    <Content Include="Views\Activity\PaySuccess.cshtml" />
+    <Content Include="Views\Activity\PayError.cshtml" />
+    <Content Include="Views\Activity\ActivitySchedule.cshtml" />
+    <Content Include="Views\Activity\ActivityAll.cshtml" />
+    <Content Include="Views\Activity\ActivityWeek.cshtml" />
+    <Content Include="Views\Activity\ActivityBenefit.cshtml" />
+    <Content Include="Views\Activity\ActivityGroupPurchase.cshtml" />
+    <Content Include="Views\Activity\ActivityReviewHistoryDetail.cshtml" />
+    <Content Include="Views\Shared\_ActivitySearchHeader.cshtml" />
+    <Content Include="Views\Shared\_ActivitySearchHome.cshtml" />
+    <Content Include="Views\Activity\ChoseVoucher.cshtml" />
+    <Content Include="Views\User\ApplyMoney.cshtml" />
+    <Content Include="Views\User\AssessOrder.cshtml" />
+    <Content Include="Views\User\MyCollection.cshtml" />
+    <Content Include="Views\Activity\TestShare.cshtml" />
+    <Content Include="Views\Activity\ChoseMyMembersDetail.cshtml" />
+    <Content Include="Views\Activity\UserNotice.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="img\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PBS.Model\PBS.Model.csproj">
+      <Project>{6a75fd8c-8e58-4f8b-a9d3-29882122fdc5}</Project>
+      <Name>PBS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PBS.Server\PBS.Server.csproj">
+      <Project>{48fdbbe3-4195-45ec-9223-97519a18c386}</Project>
+      <Name>PBS.Server</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{e7ae50f1-b391-4cda-a3a5-0f4e359a44ac}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeiPay\WeiPay.csproj">
+      <Project>{8bd73d13-5eff-45ce-9b9c-355056711fa0}</Project>
+      <Name>WeiPay</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18603</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:28055/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

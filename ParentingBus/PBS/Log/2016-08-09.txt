@@ -1,0 +1,52 @@
+﻿09/08/2016 11:33:07     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziFJdbArSSn4b6AmwylqCrn6UZqjOiSXQczFGOeOVN6bMQ
+
+09/08/2016 11:33:07     First TimeStamp：1470713588
+
+09/08/2016 11:33:07     First NonceStr：FE131D7F5A6B38B23CC967316C13DAE2
+
+09/08/2016 11:33:07     First SigNature：ae6d8c6805b402da706eb75c4bb125768d95645a
+
+09/08/2016 11:33:07     Request Url：http://localhost:28055/Activity/Activity
+
+09/08/2016 11:35:17     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziFJdbArSSn4b6AmwylqCrn6UZqjOiSXQczFGOeOVN6bMQ
+
+09/08/2016 11:35:17     First TimeStamp：1470713718
+
+09/08/2016 11:35:17     First NonceStr：B1A59B315FC9A3002CE38BBE070EC3F5
+
+09/08/2016 11:35:17     First SigNature：1ff3f087edf7f379cef016940522c4637c47380c
+
+09/08/2016 11:35:17     Request Url：http://localhost:28055/Activity/Activity
+
+09/08/2016 11:36:57     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziFJdbArSSn4b6AmwylqCrn6UZqjOiSXQczFGOeOVN6bMQ
+
+09/08/2016 11:36:57     First TimeStamp：1470713818
+
+09/08/2016 11:36:57     First NonceStr：7750CA3559E5B8E1F44210283368FC16
+
+09/08/2016 11:36:57     First SigNature：5a61184eaff298fa3faea192a1e0291593629643
+
+09/08/2016 11:36:57     Request Url：http://localhost:28055/Activity/Activity?Id=54&fromShareUserId=3,
+
+09/08/2016 11:41:03     tsSen：6
+
+09/08/2016 11:41:03     Session Token：xxk2xWPDDWdGx4g4s7MiBxub0ihO1IgA0ByEeuJbsnHs7JRnUyOqdpDGNKS-ih-_IEKHaJzN4o1JK2VghyKXZAgRnpSNV_Q1WmM0FAWGRnkjZjiY90O8-Nn3mzzM0Mz0JFPlCJABXH
+
+09/08/2016 11:41:03     Session Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziFJdbArSSn4b6AmwylqCrn6UZqjOiSXQczFGOeOVN6bMQ
+
+09/08/2016 11:41:03     Session TimeStamp：1470713818
+
+09/08/2016 11:41:03     Session NonceStr：7750CA3559E5B8E1F44210283368FC16
+
+09/08/2016 11:41:03     Session SigNature：073ae362c0d9c4a094e06b124831200110a802cd
+
+8/9/2016 4:30:21 PM     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziE6mistKt8vmapEiMDbgXJmyKC3GVUOsr3O_2-GBvaowQ
+
+8/9/2016 4:30:21 PM     First TimeStamp：1470731422
+
+8/9/2016 4:30:21 PM     First NonceStr：556F391937DFD4398CBAC35E050A2177
+
+8/9/2016 4:30:21 PM     First SigNature：d1885dae8309b3b4c098e38e935a92249cc5fd34
+
+8/9/2016 4:30:21 PM     Request Url：http://localhost:8006/Activity/Activity?Id=54
+

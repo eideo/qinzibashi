@@ -1,0 +1,14 @@
+﻿2016/6/5 16:56:48     ============ 单次支付开始 ===============
+
+2016/6/5 16:56:48     传递支付参数：OrderSN=、Body=、TotalFee=、Attach=、UserOpenId=
+
+2016/6/5 16:56:48     WeiPay 页面  sign：323775C7F796940CEC8E12A35C8A597F
+
+2016/6/5 16:56:48     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://zousky.com/WXPay/Notify.aspx]]></notify_url><body><![CDATA[]]></body><appid><![CDATA[XXXXXXXXXXXXXXXXX]]></appid><total_fee><![CDATA[]]></total_fee><nonce_str><![CDATA[4e0928de075538c593fbdabb0c5ef2c3]]></nonce_str><out_trade_no><![CDATA[]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[XXXXXXXXXXXXXXXXX]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[323775C7F796940CEC8E12A35C8A597F]]></sign></xml>
+
+2016/6/5 16:56:48     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[appid参数长度有误]]></return_msg>
+</xml>
+
+2016/6/5 16:56:48     WeiPay 页面  paySign：C09D489D1DE57D83B1D57DC9B460FA6F
+

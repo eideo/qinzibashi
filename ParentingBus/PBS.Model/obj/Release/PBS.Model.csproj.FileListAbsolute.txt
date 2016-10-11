@@ -1,0 +1,62 @@
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\PBS.Model.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\PBS.Model.pdb
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\Utility.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NLog.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NPOI.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NServiceKit.Interfaces.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NServiceKit.Redis.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\Memcached.ClientLibrary.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\Newtonsoft.Json.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NServiceKit.Common.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NServiceKit.Text.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\Utility.pdb
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NLog.xml
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NServiceKit.Interfaces.xml
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NServiceKit.Redis.xml
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NServiceKit.Common.xml
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\NServiceKit.Text.xml
+C:\My\My object\pbs\ParentingBus\PBS.Model\obj\Release\PBS.Model.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\PBS.Model\obj\Release\PBS.Model.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\obj\Release\PBS.Model.pdb
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\PBS.Model.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\PBS.Model.pdb
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\Utility.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NLog.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NPOI.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NServiceKit.Interfaces.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NServiceKit.Redis.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\Memcached.ClientLibrary.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\Newtonsoft.Json.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NServiceKit.Common.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NServiceKit.Text.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\Utility.pdb
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NLog.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NServiceKit.Interfaces.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NServiceKit.Redis.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NServiceKit.Common.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Model\bin\Release\NServiceKit.Text.xml
+D:\项目\ParentingBus\ParentingBus\PBS.Model\obj\Release\PBS.Model.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus\PBS.Model\obj\Release\PBS.Model.dll
+D:\项目\ParentingBus\ParentingBus\PBS.Model\obj\Release\PBS.Model.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\PBS.Model.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\PBS.Model.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\Utility.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NLog.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NPOI.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NServiceKit.Interfaces.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NServiceKit.Redis.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\Memcached.ClientLibrary.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\Newtonsoft.Json.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NServiceKit.Common.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NServiceKit.Text.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\Utility.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NLog.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NServiceKit.Interfaces.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NServiceKit.Redis.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NServiceKit.Common.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\bin\Release\NServiceKit.Text.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\obj\Release\PBS.Model.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\obj\Release\PBS.Model.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBS.Model\obj\Release\PBS.Model.pdb
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\DocumentFormat.OpenXml.dll
+C:\My\My object\pbs\ParentingBus\PBS.Model\bin\Release\DocumentFormat.OpenXml.xml

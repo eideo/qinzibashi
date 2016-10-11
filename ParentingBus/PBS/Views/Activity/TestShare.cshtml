@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "TestShare";
+}
+
+<h2>TestShare</h2>
+<script src="~/js/jquery.1.7.2.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        history.back();
+    }
+</script>
+<script>
+    wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: '@ViewData["AppId"]', // 必填，公众号的唯一标识
+        timestamp: '@ViewData["Timestamp"]', // 必填，生成签名的时间戳
+        nonceStr: '@ViewData["NonceStr"]', // 必填，生成签名的随机串
+        signature: '@ViewData["Signature"]',// 必填，签名
+        jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage'
+        ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2。详见：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+    });
+
+    wx.error(function (res) {
+        console.log(res);
+        alert('wx.error: ' + JSON.stringify(res));
+    });
+
+    var link = "http://www.qinzibashi.com/Activity/Activity?Id=1";
+    var imgUrl = "http://admin.qinzibashi.cn/upload/image/20160607100230.png";
+
+    wx.ready(function () {
+
+        wx.onMenuShareTimeline({
+            title: '亲子巴士测试分享',
+            link: link,
+            imgUrl: imgUrl,
+            success: function () {
+                alert('分享成功！');
+            },
+            cancel: function () {
+                alert('分享失败！');
+            }
+        });
+
+        wx.onMenuShareAppMessage({
+            title: '亲子巴士测试分享',
+            desc: '亲子巴士活动转发给朋友送积分',
+            link: link,
+            imgUrl: imgUrl,
+            success: function () {
+                alert('分享成功！');
+            },
+            cancel: function () {
+                alert('分享失败！');
+            }
+        });
+
+    });
+
+
+</script>
+

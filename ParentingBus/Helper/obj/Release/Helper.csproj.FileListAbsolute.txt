@@ -1,0 +1,9 @@
+D:\otherProgram\YDT20150525\YDT\Helper\bin\Release\Helper.dll
+D:\otherProgram\YDT20150525\YDT\Helper\bin\Release\Helper.pdb
+D:\otherProgram\YDT20150525\YDT\Helper\obj\Release\Helper.dll
+D:\otherProgram\YDT20150525\YDT\Helper\obj\Release\Helper.pdb
+C:\My\My object\pbs\ParentingBus\Helper\bin\Release\Helper.dll
+C:\My\My object\pbs\ParentingBus\Helper\bin\Release\Helper.pdb
+C:\My\My object\pbs\ParentingBus\Helper\obj\Release\Helper.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\Helper\obj\Release\Helper.dll
+C:\My\My object\pbs\ParentingBus\Helper\obj\Release\Helper.pdb

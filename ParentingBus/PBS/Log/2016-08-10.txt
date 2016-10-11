@@ -1,0 +1,342 @@
+﻿8/10/2016 10:43:14 AM     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziEqkboC9wUGZ6270WsyHSGywsz3YMop7cmKrKsM-2HvCg
+
+8/10/2016 10:43:14 AM     First TimeStamp：1470796994
+
+8/10/2016 10:43:14 AM     First NonceStr：EAE27D77CA20DB309E056E3D2DCD7D69
+
+8/10/2016 10:43:14 AM     First SigNature：e5c6443fa06349f0ca94bf9fbe956857d38b21cb
+
+8/10/2016 10:43:14 AM     Request Url：http://localhost:8006/Activity/Activity?Id=54
+
+8/10/2016 10:45:03 AM     ============ 单次支付开始 ===============
+
+8/10/2016 10:45:03 AM     传递支付参数：OrderSN=83、Body=1、TotalFee=1、Attach=、UserOpenId=
+
+8/10/2016 10:45:03 AM     WeiPay 页面  sign：2FE4258B28655D793FD3E343EBA78990
+
+8/10/2016 10:45:03 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee>1</total_fee><out_trade_no><![CDATA[83]]></out_trade_no><nonce_str><![CDATA[6f4922f45568161a8cdf4ad2299f6d23]]></nonce_str><sign><![CDATA[2FE4258B28655D793FD3E343EBA78990]]></sign><body>1</body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 10:45:06 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 10:45:06 AM     WeiPay 页面  paySign：6AE54C1E051927257BFF21E6150F21C9
+
+8/10/2016 10:45:17 AM     ============ 单次支付开始 ===============
+
+8/10/2016 10:45:17 AM     传递支付参数：OrderSN=83、Body=1、TotalFee=1、Attach=、UserOpenId=
+
+8/10/2016 10:45:17 AM     WeiPay 页面  sign：C8229DA61292189DC1093555DA3E4915
+
+8/10/2016 10:45:17 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee>1</total_fee><out_trade_no><![CDATA[83]]></out_trade_no><nonce_str><![CDATA[0d7de1aca9299fe63f3e0041f02638a3]]></nonce_str><sign><![CDATA[C8229DA61292189DC1093555DA3E4915]]></sign><body>1</body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 10:45:19 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 10:45:19 AM     WeiPay 页面  paySign：906D8F89C29BED328C29D66D81597713
+
+8/10/2016 10:45:21 AM     ============ 单次支付开始 ===============
+
+8/10/2016 10:45:21 AM     传递支付参数：OrderSN=83、Body=1、TotalFee=1、Attach=、UserOpenId=
+
+8/10/2016 10:45:21 AM     WeiPay 页面  sign：79E4A2CE29DC7D5895C40939879F5D52
+
+8/10/2016 10:45:21 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee>1</total_fee><out_trade_no><![CDATA[83]]></out_trade_no><nonce_str><![CDATA[42e77b63637ab381e8be5f8318cc28a2]]></nonce_str><sign><![CDATA[79E4A2CE29DC7D5895C40939879F5D52]]></sign><body>1</body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 10:45:22 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 10:45:22 AM     WeiPay 页面  paySign：8B0631B6E41EFC68A044A27E79694895
+
+8/10/2016 10:45:24 AM     ============ 单次支付开始 ===============
+
+8/10/2016 10:45:24 AM     传递支付参数：OrderSN=83、Body=1、TotalFee=1、Attach=、UserOpenId=
+
+8/10/2016 10:45:24 AM     WeiPay 页面  sign：F5E07FEE43511F0CB8A0E636D9138CCC
+
+8/10/2016 10:45:24 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee>1</total_fee><out_trade_no><![CDATA[83]]></out_trade_no><nonce_str><![CDATA[3416a75f4cea9109507cacd8e2f2aefc]]></nonce_str><sign><![CDATA[F5E07FEE43511F0CB8A0E636D9138CCC]]></sign><body>1</body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 10:45:25 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 10:45:25 AM     WeiPay 页面  paySign：59C7C028D89F76228C488B56810AEBD4
+
+8/10/2016 10:45:27 AM     ============ 单次支付开始 ===============
+
+8/10/2016 10:45:27 AM     传递支付参数：OrderSN=83、Body=1、TotalFee=1、Attach=、UserOpenId=
+
+8/10/2016 10:45:27 AM     WeiPay 页面  sign：8719C59B27A3F8B318982E4792331320
+
+8/10/2016 10:45:27 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee>1</total_fee><out_trade_no><![CDATA[83]]></out_trade_no><nonce_str><![CDATA[e44fea3bec53bcea3b7513ccef5857ac]]></nonce_str><sign><![CDATA[8719C59B27A3F8B318982E4792331320]]></sign><body>1</body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 10:45:29 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 10:45:29 AM     WeiPay 页面  paySign：2DBCCCD26C67780A2D32918053D2E134
+
+8/10/2016 10:59:53 AM     ============ 单次支付开始 ===============
+
+8/10/2016 10:59:53 AM     传递支付参数：OrderSN=23、Body=、TotalFee=0、Attach=、UserOpenId=
+
+8/10/2016 10:59:53 AM     WeiPay 页面  sign：FE13EB740C28D8EAAB7B8AE74BD934CB
+
+8/10/2016 10:59:55 AM     ============ 单次支付开始 ===============
+
+8/10/2016 10:59:55 AM     传递支付参数：OrderSN=23、Body=、TotalFee=0、Attach=、UserOpenId=
+
+8/10/2016 10:59:55 AM     WeiPay 页面  sign：EC6EB91BF40A184876A132F0F398F674
+
+8/10/2016 11:01:51 AM     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziEqkboC9wUGZ6270WsyHSGywsz3YMop7cmKrKsM-2HvCg
+
+8/10/2016 11:01:51 AM     First TimeStamp：1470798111
+
+8/10/2016 11:01:51 AM     First NonceStr：49AE49A23F67C759BF4FC791BA842AA2
+
+8/10/2016 11:01:51 AM     First SigNature：484995d769954e66e97d30cb77d6c28e89dd83c1
+
+8/10/2016 11:01:51 AM     Request Url：http://localhost:8006/Activity/Activity?Id=54
+
+8/10/2016 11:02:05 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:02:05 AM     传递支付参数：OrderSN=86、Body=1、TotalFee=1、Attach=、UserOpenId=
+
+8/10/2016 11:02:05 AM     WeiPay 页面  sign：16882015719F09014DE70F166B989FBF
+
+8/10/2016 11:02:05 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee>1</total_fee><out_trade_no><![CDATA[86]]></out_trade_no><nonce_str><![CDATA[15de21c670ae7c3f6f3f1f37029303c9]]></nonce_str><sign><![CDATA[16882015719F09014DE70F166B989FBF]]></sign><body>1</body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 11:02:09 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 11:02:09 AM     WeiPay 页面  paySign：863A941091B29168544C522BABDAA5ED
+
+8/10/2016 11:25:46 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:25:46 AM     传递支付参数：OrderSN=23、Body=、TotalFee=-2000、Attach=、UserOpenId=
+
+8/10/2016 11:25:46 AM     WeiPay 页面  sign：8A305251D98C5E6672AB6760E1990A62
+
+8/10/2016 11:26:12 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:26:12 AM     传递支付参数：OrderSN=23、Body=、TotalFee=-2000、Attach=、UserOpenId=
+
+8/10/2016 11:26:12 AM     WeiPay 页面  sign：8AE4689A70D5AD64486735FB8B1A0B47
+
+8/10/2016 11:31:32 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:31:32 AM     传递支付参数：OrderSN=23、Body=、TotalFee=-2000、Attach=、UserOpenId=
+
+8/10/2016 11:31:32 AM     WeiPay 页面  sign：19A2C637C18C736B665BDC1E6AA2229F
+
+8/10/2016 11:33:08 AM     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziEqkboC9wUGZ6270WsyHSGywsz3YMop7cmKrKsM-2HvCg
+
+8/10/2016 11:33:08 AM     First TimeStamp：1470799988
+
+8/10/2016 11:33:08 AM     First NonceStr：05F971B5EC196B8C65B75D2EF8267331
+
+8/10/2016 11:33:08 AM     First SigNature：5c7391d01f772986b3e613be9eda275469d9f8c8
+
+8/10/2016 11:33:08 AM     Request Url：http://localhost:8006/Activity/Activity?Id=54
+
+8/10/2016 11:33:18 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:33:18 AM     传递支付参数：OrderSN=87、Body=1、TotalFee=-1999、Attach=、UserOpenId=
+
+8/10/2016 11:33:18 AM     WeiPay 页面  sign：9F134CF045715B810CC5DC03DF3E4BBB
+
+8/10/2016 11:33:18 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[-1999]]></total_fee><out_trade_no><![CDATA[87]]></out_trade_no><nonce_str><![CDATA[357a6fdf7642bf815a88822c447d9dc4]]></nonce_str><sign><![CDATA[9F134CF045715B810CC5DC03DF3E4BBB]]></sign><body>1</body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 11:33:23 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+8/10/2016 11:33:23 AM     WeiPay 页面  paySign：34F2F6C62E1B8CFC17A88DE8716D51B9
+
+8/10/2016 11:33:42 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:33:42 AM     传递支付参数：OrderSN=87、Body=1、TotalFee=-1999、Attach=、UserOpenId=
+
+8/10/2016 11:33:42 AM     WeiPay 页面  sign：6E3A37D26883447B6F11C0AFDC61CE44
+
+8/10/2016 11:33:42 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[-1999]]></total_fee><out_trade_no><![CDATA[87]]></out_trade_no><nonce_str><![CDATA[a597e50502f5ff68e3e25b9114205d4a]]></nonce_str><sign><![CDATA[6E3A37D26883447B6F11C0AFDC61CE44]]></sign><body>1</body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 11:40:01 AM     tsSen：53
+
+8/10/2016 11:40:01 AM     Session Token：vuhsYadmEPABSWrMwtmo6EZS6yBU7yO__pK2yY5yKpKdFtnih5xJb7vGG_-t3sjQS_UnGhIyA4v6KrOJRxJI_cfnEEoOZSaca9-2jtpUp8a48bkkapC-pFpBvSZUf2OyLHEdCHAFBY
+
+8/10/2016 11:40:01 AM     Session Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziEqkboC9wUGZ6270WsyHSGywsz3YMop7cmKrKsM-2HvCg
+
+8/10/2016 11:40:01 AM     Session TimeStamp：1470799988
+
+8/10/2016 11:40:01 AM     Session NonceStr：05F971B5EC196B8C65B75D2EF8267331
+
+8/10/2016 11:40:01 AM     Session SigNature：bc29be6d56192f92616ce08250218a3b3bd3a29f
+
+8/10/2016 11:40:14 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:40:14 AM     传递支付参数：OrderSN=88、Body=清华义卖公益活动、TotalFee=3000、Attach=、UserOpenId=
+
+8/10/2016 11:40:14 AM     WeiPay 页面  sign：4E0ED58625869CFCA6A9360CCE56C4F9
+
+8/10/2016 11:40:14 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[3000]]></total_fee><out_trade_no><![CDATA[88]]></out_trade_no><nonce_str><![CDATA[f9a40a4780f5e1306c46f1c8daecee3b]]></nonce_str><sign><![CDATA[4E0ED58625869CFCA6A9360CCE56C4F9]]></sign><body><![CDATA[清华义卖公益活动]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 11:40:15 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 11:40:15 AM     WeiPay 页面  paySign：E67E1F429E1C389C5C70391C1CFB21EF
+
+8/10/2016 11:40:18 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:40:18 AM     传递支付参数：OrderSN=88、Body=清华义卖公益活动、TotalFee=3000、Attach=、UserOpenId=
+
+8/10/2016 11:40:18 AM     WeiPay 页面  sign：5763F3EDE814BD305219E0065E87C3F0
+
+8/10/2016 11:40:18 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[3000]]></total_fee><out_trade_no><![CDATA[88]]></out_trade_no><nonce_str><![CDATA[1728efbda81692282ba642aafd57be3a]]></nonce_str><sign><![CDATA[5763F3EDE814BD305219E0065E87C3F0]]></sign><body><![CDATA[清华义卖公益活动]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 11:40:19 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 11:40:19 AM     WeiPay 页面  paySign：F76F4AB650F43872916AF2A336203C82
+
+8/10/2016 11:40:24 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:40:24 AM     传递支付参数：OrderSN=88、Body=清华义卖公益活动、TotalFee=4000、Attach=、UserOpenId=
+
+8/10/2016 11:40:24 AM     WeiPay 页面  sign：AD4870F1DA0763F28FF6BB07F4192A9C
+
+8/10/2016 11:40:24 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[4000]]></total_fee><out_trade_no><![CDATA[88]]></out_trade_no><nonce_str><![CDATA[3dd48ab31d016ffcbf3314df2b3cb9ce]]></nonce_str><sign><![CDATA[AD4870F1DA0763F28FF6BB07F4192A9C]]></sign><body><![CDATA[清华义卖公益活动]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 11:40:24 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 11:40:24 AM     WeiPay 页面  paySign：0D5861F09B4ECB51D85BCCC54A05475A
+
+8/10/2016 11:40:27 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:40:27 AM     传递支付参数：OrderSN=88、Body=清华义卖公益活动、TotalFee=3000、Attach=、UserOpenId=
+
+8/10/2016 11:40:27 AM     WeiPay 页面  sign：8EC8C10DCEA9447AB83DF75BFCB0F8C2
+
+8/10/2016 11:40:27 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[3000]]></total_fee><out_trade_no><![CDATA[88]]></out_trade_no><nonce_str><![CDATA[912d2b1c7b2826caf99687388d2e8f7c]]></nonce_str><sign><![CDATA[8EC8C10DCEA9447AB83DF75BFCB0F8C2]]></sign><body><![CDATA[清华义卖公益活动]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 11:40:28 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 11:40:28 AM     WeiPay 页面  paySign：4A819355D1FF3824699CADCAC9118AA5
+
+8/10/2016 11:41:06 AM     ============ 单次支付开始 ===============
+
+8/10/2016 11:41:06 AM     传递支付参数：OrderSN=88、Body=清华义卖公益活动、TotalFee=2000、Attach=、UserOpenId=
+
+8/10/2016 11:41:06 AM     WeiPay 页面  sign：D9D5F62029C1B2FCB49E58DE10D6E07C
+
+8/10/2016 11:41:06 AM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2000]]></total_fee><out_trade_no><![CDATA[88]]></out_trade_no><nonce_str><![CDATA[061412e4a03c02f9902576ec55ebbe77]]></nonce_str><sign><![CDATA[D9D5F62029C1B2FCB49E58DE10D6E07C]]></sign><body><![CDATA[清华义卖公益活动]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 11:41:07 AM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 11:41:07 AM     WeiPay 页面  paySign：E81E62CD3A55F4110B83B2AF4FE82E62
+
+8/10/2016 2:35:22 PM     ============ 单次支付开始 ===============
+
+8/10/2016 2:35:22 PM     传递支付参数：OrderSN=23、Body=、TotalFee=0、Attach=、UserOpenId=
+
+8/10/2016 2:35:22 PM     WeiPay 页面  sign：59811234288E76ACC9983D5F0C7351C7
+
+8/10/2016 2:36:23 PM     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziFq5fuiZUSiNthOtmL3GJweL4tnxqvSkZsuFmz5NCyENA
+
+8/10/2016 2:36:23 PM     First TimeStamp：1470810983
+
+8/10/2016 2:36:23 PM     First NonceStr：3C7781A36BCD6CF08C11A970FBE0E2A6
+
+8/10/2016 2:36:23 PM     First SigNature：451c54e9de77c1716fe5ea493421e4d7c5204577
+
+8/10/2016 2:36:23 PM     Request Url：http://localhost:8006/Activity/Activity?Id=55
+
+8/10/2016 2:36:37 PM     ============ 单次支付开始 ===============
+
+8/10/2016 2:36:37 PM     传递支付参数：OrderSN=89、Body=清华义卖公益活动、TotalFee=5000、Attach=、UserOpenId=
+
+8/10/2016 2:36:37 PM     WeiPay 页面  sign：E02F94F2F4A10A651DB7E4B69016BF39
+
+8/10/2016 2:36:37 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[5000]]></total_fee><out_trade_no><![CDATA[89]]></out_trade_no><nonce_str><![CDATA[00ac8ed3b4327bdd4ebbebcb2ba10a00]]></nonce_str><sign><![CDATA[E02F94F2F4A10A651DB7E4B69016BF39]]></sign><body><![CDATA[清华义卖公益活动]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 2:36:39 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 2:36:39 PM     WeiPay 页面  paySign：ED8EBAA2D90AC5E892F3DD3CEF9AFD16
+
+8/10/2016 2:36:51 PM     ============ 单次支付开始 ===============
+
+8/10/2016 2:36:51 PM     传递支付参数：OrderSN=89、Body=清华义卖公益活动、TotalFee=2000、Attach=、UserOpenId=
+
+8/10/2016 2:36:51 PM     WeiPay 页面  sign：18B465EC9D91660F8D4D030AF69BF771
+
+8/10/2016 2:36:51 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2000]]></total_fee><out_trade_no><![CDATA[89]]></out_trade_no><nonce_str><![CDATA[1ecfb463472ec9115b10c292ef8bc986]]></nonce_str><sign><![CDATA[18B465EC9D91660F8D4D030AF69BF771]]></sign><body><![CDATA[清华义卖公益活动]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 2:36:53 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 2:36:53 PM     WeiPay 页面  paySign：9B56EEBAB38E3D92444A21DDD96B8601
+
+8/10/2016 2:48:47 PM     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziFq5fuiZUSiNthOtmL3GJweL4tnxqvSkZsuFmz5NCyENA
+
+8/10/2016 2:48:47 PM     First TimeStamp：1470811728
+
+8/10/2016 2:48:47 PM     First NonceStr：D9FC5B73A8D78FAD3D6DFFE419384E70
+
+8/10/2016 2:48:47 PM     First SigNature：41ac6d115ed2eda01c4cfd0815397a5fc8464826
+
+8/10/2016 2:48:47 PM     Request Url：http://localhost:8006/Activity/Activity?Id=55
+
+8/10/2016 2:49:00 PM     ============ 单次支付开始 ===============
+
+8/10/2016 2:49:00 PM     传递支付参数：OrderSN=90、Body=清华义卖公益活动、TotalFee=5000、Attach=、UserOpenId=
+
+8/10/2016 2:49:00 PM     WeiPay 页面  sign：93401BC567707E7FC187916395A8F70F
+
+8/10/2016 2:49:00 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[5000]]></total_fee><out_trade_no><![CDATA[90]]></out_trade_no><nonce_str><![CDATA[e7b24b112a44fdd9ee93bdf998c6ca0e]]></nonce_str><sign><![CDATA[93401BC567707E7FC187916395A8F70F]]></sign><body><![CDATA[清华义卖公益活动]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 2:49:02 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 2:49:02 PM     WeiPay 页面  paySign：AF3DAE4FEA5AB4A7EE4C2F4DBD3820E6
+
+8/10/2016 2:49:13 PM     ============ 单次支付开始 ===============
+
+8/10/2016 2:49:13 PM     传递支付参数：OrderSN=90、Body=清华义卖公益活动、TotalFee=2000、Attach=、UserOpenId=
+
+8/10/2016 2:49:13 PM     WeiPay 页面  sign：CDB21B55C6F0F7FD59D4B9AE8729F255
+
+8/10/2016 2:49:13 PM     WeiPay 页面  package（XML）：<xml><trade_type><![CDATA[JSAPI]]></trade_type><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><total_fee><![CDATA[2000]]></total_fee><out_trade_no><![CDATA[90]]></out_trade_no><nonce_str><![CDATA[e57c6b956a6521b28495f2886ca0977a]]></nonce_str><sign><![CDATA[CDB21B55C6F0F7FD59D4B9AE8729F255]]></sign><body><![CDATA[清华义卖公益活动]]></body><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><appid><![CDATA[wxb0244acf0af8d688]]></appid></xml>
+
+8/10/2016 2:49:15 PM     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+8/10/2016 2:49:15 PM     WeiPay 页面  paySign：AC118B053744F261608846F51DA0441E
+
+8/10/2016 2:52:59 PM     tsSen：12
+
+8/10/2016 2:52:59 PM     Session Token：pabkieTJbAxpKpseLEpBPQzbwiqizUyKJrW4fh9UmVQ8w35Yxj7AHfbjrF3MvtrdmWBAA3qU6vcRMcgZNb0TzBJLfmg3HLsxGIL3qbsafatkveJU4xgRZJnaFVXEvb6qHUTiCAASFE
+
+8/10/2016 2:52:59 PM     Session Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziFq5fuiZUSiNthOtmL3GJweL4tnxqvSkZsuFmz5NCyENA
+
+8/10/2016 2:52:59 PM     Session TimeStamp：1470811728
+
+8/10/2016 2:52:59 PM     Session NonceStr：D9FC5B73A8D78FAD3D6DFFE419384E70
+
+8/10/2016 2:52:59 PM     Session SigNature：41ac6d115ed2eda01c4cfd0815397a5fc8464826
+

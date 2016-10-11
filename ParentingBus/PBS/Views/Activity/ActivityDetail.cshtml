@@ -1,0 +1,82 @@
+﻿@using PBS.Model;
+@{
+    ViewBag.Title = "商品详情";
+    Layout = "../Shared/_ActivityDetail.cshtml";
+    pbs_basic_Goods goods = (pbs_basic_Goods)ViewData["Goods"];
+    List<pbs_basic_CommentView> listComment = (List<pbs_basic_CommentView>)ViewData["ListComment"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+}
+<div class="field-main ui-tab" style="margin-top: 45px">
+    <ul class="ui-tiled field-menu ui-tab-nav">
+        <li class="current">详情</li>
+        <li>评论</li>
+        <li>客服</li>
+    </ul>
+    <div class="field-conts ui-tab-content" style="width: 300%">
+        <div class="field-item field-list">
+            <div class="field-detail">
+                @Html.Raw(goods.GoodsDesc)
+            </div>
+        </div>
+        <div class="field-item">
+            <div class="field-detail">
+                @if (listComment != null && listComment.Count > 0)
+                {
+                    <ul>
+                        @foreach (var item in listComment)
+                        {
+                            var imgSrc = picSourceHostUrl + item.Url1;
+                            <li style="padding:1em">
+                                <p>评分：@item.Score</p>
+                                <p>内容：@item.CommentContent</p>
+                                <p>图片：<img src="@imgSrc" /></p>
+                            </li>
+                        }
+                    </ul>
+
+                }
+                else
+                {
+                    <div style="text-align: center; margin-top: 5em">
+                        <img alt="" src="~/image/pj_icon.png" />
+                    </div>
+                    <p style="text-align: center; margin-top: 1em;color: #aaa">亲爱的，赏个评价吧</p>
+                }
+            </div>
+        </div>
+        <div class="field-item">
+            <div class="field-detail">
+                <div style="text-align: center; margin-top: 2em">
+                    <img alt="" src="~/image/qrcode.png" />
+                </div>
+                <p style="text-align: center; margin-top: 1em; color: #aaa">扫一扫上方的二维码，咨询客服</p>
+                <p style="text-align: center; margin-top: 1em;color: #aaa">客服电话：400-820-8820</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mod-box footer_bottom">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            <li>
+                <div class="list_content content_Padding" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <span class="sellPrice">@goods.SellingPrice 元</span>
+                            <span class="marketPrice">@goods.MarketPrice 元</span>
+                        </div>
+                    </div>
+                    <div class="m_right" style="line-height:inherit">
+                        <a href="/Activity/Order?Id=@goods.GoodsId" class="buy_btn">
+                            我要买
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="~/js/lib/zepto.min.js"></script>
+<script src="~/js/frozen.js"></script>
+<script src="~/js/app.js"></script>
+

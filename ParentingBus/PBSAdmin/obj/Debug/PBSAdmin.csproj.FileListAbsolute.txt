@@ -1,0 +1,153 @@
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\PBSAdmin.dll.config
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\PBSAdmin.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\PBSAdmin.pdb
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Helpers.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Mvc.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Razor.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Deployment.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Webpages.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Razor.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Razor.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Webpages.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Deployment.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Razor.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Helpers.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\System.Web.Mvc.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Webpages.resources.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Webpages.Deployment.resources.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Webpages.Razor.resources.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Helpers.resources.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\obj\Debug\PBSAdmin.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\obj\Debug\PBSAdmin.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\obj\Debug\PBSAdmin.pdb
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\Common.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\Newtonsoft.Json.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\PBS.Model.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\PBS.Server.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\Utility.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\PBS.Dao.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NLog.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NServiceKit.Redis.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NServiceKit.Interfaces.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NPOI.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\Memcached.ClientLibrary.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\Helper.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NServiceKit.Common.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NServiceKit.Text.dll
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\Common.pdb
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\PBS.Model.pdb
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\PBS.Server.pdb
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\Utility.pdb
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\Newtonsoft.Json.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\PBS.Dao.pdb
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NLog.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NServiceKit.Redis.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NServiceKit.Interfaces.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\Helper.pdb
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NServiceKit.Common.xml
+D:\项目\ParentingBus\ParentingBus\PBSAdmin\bin\NServiceKit.Text.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\PBSAdmin.dll.config
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\PBSAdmin.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\PBSAdmin.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\Common.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\Newtonsoft.Json.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\PBS.Model.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\PBS.Server.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Helpers.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Mvc.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Razor.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Deployment.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Webpages.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Razor.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\Utility.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\PBS.Dao.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NLog.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NPOI.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NServiceKit.Interfaces.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NServiceKit.Redis.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\Memcached.ClientLibrary.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\Helper.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NServiceKit.Common.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NServiceKit.Text.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\Common.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\PBS.Model.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\PBS.Server.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\Utility.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\Newtonsoft.Json.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Razor.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Webpages.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Deployment.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Razor.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Helpers.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\System.Web.Mvc.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\PBS.Dao.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NLog.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NServiceKit.Interfaces.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NServiceKit.Redis.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\Helper.pdb
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NServiceKit.Common.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\NServiceKit.Text.xml
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Webpages.resources.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Webpages.Deployment.resources.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Webpages.Razor.resources.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Helpers.resources.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\obj\Debug\PBSAdmin.csprojResolveAssemblyReference.cache
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\obj\Debug\PBSAdmin.dll
+D:\项目\ParentingBus\ParentingBus20160727\ParentingBus\PBSAdmin\obj\Debug\PBSAdmin.pdb
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\PBSAdmin.dll.config
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\PBSAdmin.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\PBSAdmin.pdb
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Common.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Microsoft.Web.Infrastructure.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Newtonsoft.Json.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\PBS.Model.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\PBS.Server.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Helpers.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Mvc.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Razor.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Deployment.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Webpages.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Razor.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Utility.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\PBS.Dao.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NLog.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NPOI.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NServiceKit.Interfaces.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NServiceKit.Redis.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Memcached.ClientLibrary.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Helper.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NServiceKit.Common.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NServiceKit.Text.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Common.pdb
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\PBS.Model.pdb
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\PBS.Server.pdb
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Utility.pdb
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Newtonsoft.Json.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Razor.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Webpages.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Deployment.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Webpages.Razor.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Helpers.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\System.Web.Mvc.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\PBS.Dao.pdb
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NLog.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NServiceKit.Interfaces.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NServiceKit.Redis.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\Helper.pdb
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NServiceKit.Common.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\NServiceKit.Text.xml
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Webpages.resources.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Webpages.Deployment.resources.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Webpages.Razor.resources.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\obj\Debug\PBSAdmin.csprojResolveAssemblyReference.cache
+C:\My\My object\pbs\ParentingBus\PBSAdmin\obj\Debug\PBSAdmin.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\obj\Debug\PBSAdmin.pdb
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\DocumentFormat.OpenXml.dll
+C:\My\My object\pbs\ParentingBus\PBSAdmin\bin\DocumentFormat.OpenXml.xml

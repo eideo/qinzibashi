@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{258DC3A9-0C08-46E8-AFA9-2B57ED1012F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PBS.Dao</RootNamespace>
+    <AssemblyName>PBS.Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="pbs_basic_ActivityClassDao.cs" />
+    <Compile Include="pbs_basic_AgeRangeDao.cs" />
+    <Compile Include="pbs_basic_CommentDao.cs" />
+    <Compile Include="pbs_basic_CommonSearchDao.cs" />
+    <Compile Include="pbs_basic_DistributionChannelsDao.cs" />
+    <Compile Include="pbs_basic_GoodsClassDao.cs" />
+    <Compile Include="pbs_basic_GoodsDao.cs" />
+    <Compile Include="pbs_basic_GoodsPackageDao.cs" />
+    <Compile Include="pbs_basic_GoodsTypeDao.cs" />
+    <Compile Include="pbs_basic_HomePictureDao.cs" />
+    <Compile Include="pbs_basic_MembersDao.cs" />
+    <Compile Include="pbs_basic_MyCollectionDao.cs" />
+    <Compile Include="pbs_basic_MyShareProfitDao.cs" />
+    <Compile Include="pbs_basic_MyVoucherDao.cs" />
+    <Compile Include="pbs_basic_NavigationDao.cs" />
+    <Compile Include="pbs_basic_OrderDao.cs" />
+    <Compile Include="pbs_basic_OrderMemberDao.cs" />
+    <Compile Include="pbs_basic_OrderRefundDao.cs" />
+    <Compile Include="pbs_basic_RegionDao.cs" />
+    <Compile Include="pbs_basic_ReviewHistoryDao.cs" />
+    <Compile Include="pbs_basic_SearchHistoryDao.cs" />
+    <Compile Include="pbs_basic_UsersDao.cs" />
+    <Compile Include="pbs_basic_VoucherDao.cs" />
+    <Compile Include="pbs_sys_PermissionsDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pbs_sys_MenuDao.cs" />
+    <Compile Include="pbs_sys_usersDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{cc6eb475-b7c1-48ae-81a0-736e8b08e138}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PBS.Model\PBS.Model.csproj">
+      <Project>{6a75fd8c-8e58-4f8b-a9d3-29882122fdc5}</Project>
+      <Name>PBS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{e7ae50f1-b391-4cda-a3a5-0f4e359a44ac}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

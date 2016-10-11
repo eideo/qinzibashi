@@ -1,0 +1,134 @@
+﻿@using PBS.Model;
+@{
+    Layout = "../Shared/_Activity.cshtml";
+    ViewBag.Title = "个人中心";
+    pbs_basic_Users users = (pbs_basic_Users)ViewData["Users"];
+    string picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PhotoPicSourceHostUrl"].ToString();
+    string userPhoto = "../../image/default_photo.png";
+    if (users != null && !string.IsNullOrWhiteSpace(users.PhotoUrl))
+    {
+        userPhoto = picSourceHostUrl + users.PhotoUrl;
+    }
+}
+<div class="header_top">
+    <a href="/" class="left" style="position:absolute;z-index:9999"></a>
+    <div class="header_title">个人中心</div>
+    <div class="myPhoto">
+        <img class="myPhotoPng" alt="" src="@userPhoto" onclick="choseMyPhoto()" />
+    </div>
+</div>
+
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one" style="padding: 0">
+            <li>
+                <section class="ui-placehold-img">
+                    <span style="background-image: url('../../image/UserCenterBg.jpg'); "></span>
+                </section>
+            </li>
+            <li style="border-bottom: 1px solid #ccc;overflow:hidden">
+                <div class="myOrderli" style="border-right:1px solid #ccc;width:49%">
+                    <a href="/User/MyOrder"><img alt="" src="~/image/mySell.png" />待付款</a>
+                </div>
+                <div class="myOrderli">
+                    <a href="/User/MyCollection"><img alt="" src="~/image/myCollect.png" />收藏</a>
+                </div>
+            </li>
+            <li onclick="window.location.href = '/User/MyOrder'">
+                <div class="list_content content_Padding border_bottem height_15">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <i class="myOrder_icon"></i>
+                            <span>我的订单</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <a href="javascript:void(0)">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li onclick="window.location.href = '/User/MyVoucher'">
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <i class="myVoucher_icon"></i>
+                            <span>我的优惠券</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <a href="javascript:void(0)">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li onclick="window.location.href = '/User/MyGrowthProcess'">
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <i class="myGrowth_icon"></i>
+                            <span>成长历程</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <a href="javascript:void(0)">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li onclick="window.location.href = '/User/MyMembers'">
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <i class="myMember_icon"></i>
+                            <span>常用成员信息</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <a href="javascript:void(0)">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li onclick="window.location.href = '/User/MyShareProfit'">
+                <div class="list_content content_Padding border_bottem height_15" style="height: 1.5em">
+                    <div class="m_left">
+                        <div class="m_left_content">
+                            <i class="mShare_icon"></i>
+                            <span>我的分享收益</span>
+                        </div>
+                    </div>
+                    <div class="m_right height_15">
+                        <a href="javascript:void(0)">
+                            <div>
+                                <img src="/image/next_icon.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p style="text-align: center;padding: 1em 0;">
+    <a href="/Activity/UserNotice" style="color: #aaa">《用户须知》</a>
+</p>
+
+<script type="text/javascript">
+    function choseMyPhoto() {
+        window.location.href = "/User/UserCenter";
+    }
+</script>

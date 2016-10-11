@@ -1,0 +1,38 @@
+﻿28/09/2016 09:40:53     First Ticket：kgt8ON7yVITDhtdwci0qeXtdjy6glOjGjm0mStUaziEWMTXxuJu-Bqu6FLd0zUlKRzrM51d5hPLsmp9w-Crkjw
+
+28/09/2016 09:40:53     First TimeStamp：1475026854
+
+28/09/2016 09:40:53     First NonceStr：846C260D715E5B854FFAD5F70A516C88
+
+28/09/2016 09:40:53     First SigNature：dc33bce3a46328d6df3ad63cf2f426b03ade4168
+
+28/09/2016 09:40:53     Request Url：http://localhost:28055/Activity/Activity?Id=54
+
+28/09/2016 09:41:35     ============ 单次支付开始 ===============
+
+28/09/2016 09:41:35     传递支付参数：OrderSN=103、Body=1、TotalFee=100、Attach=、UserOpenId=
+
+28/09/2016 09:41:35     WeiPay 页面  sign：561FCC1C19FCAE9BE4A7306DA1AA929B
+
+28/09/2016 09:41:35     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><body>1</body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee><![CDATA[100]]></total_fee><nonce_str><![CDATA[cd00692c3bfe59267d5ecfac5310286c]]></nonce_str><out_trade_no><![CDATA[103]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[561FCC1C19FCAE9BE4A7306DA1AA929B]]></sign></xml>
+
+28/09/2016 09:41:36     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid spbill_create_ip]]></return_msg>
+</xml>
+
+28/09/2016 09:41:36     WeiPay 页面  paySign：85C3793BD3746F535C1FFC8849710518
+
+28/09/2016 09:41:44     ============ 单次支付开始 ===============
+
+28/09/2016 09:41:44     传递支付参数：OrderSN=103、Body=1、TotalFee=0、Attach=、UserOpenId=
+
+28/09/2016 09:41:44     WeiPay 页面  sign：6F0826B72506075AB5411E84D24DBC48
+
+28/09/2016 09:41:44     WeiPay 页面  package（XML）：<xml><spbill_create_ip><![CDATA[::1]]></spbill_create_ip><notify_url><![CDATA[http://www.qinzibashi.com/WeiPay/Notify.aspx/]]></notify_url><body>1</body><appid><![CDATA[wxb0244acf0af8d688]]></appid><total_fee>0</total_fee><nonce_str><![CDATA[d93ed5b6db83be78efb0d05ae420158e]]></nonce_str><out_trade_no><![CDATA[103]]></out_trade_no><openid><![CDATA[]]></openid><mch_id><![CDATA[1315283801]]></mch_id><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[6F0826B72506075AB5411E84D24DBC48]]></sign></xml>
+
+28/09/2016 09:41:44     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+28/09/2016 09:41:44     WeiPay 页面  paySign：3EB31A0C5992C4BF1089F3785141D294
+

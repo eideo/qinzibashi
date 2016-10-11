@@ -1,0 +1,121 @@
+﻿@using PBS.Model;
+@{
+    Layout = "../Shared/_CommenHome.cshtml";
+    ViewBag.Title = "本周活动";
+    List<pbs_basic_GoodsView> benzhoulist = (List<pbs_basic_GoodsView>)ViewData["BenzhouList"];
+    var picSourceHostUrl = System.Configuration.ConfigurationManager.AppSettings["PicSourceHostUrl"];
+}
+<div class="mod-box">
+    <div class="mod-bd">
+        <ul class="ui-one">
+            @if (benzhoulist != null && benzhoulist.Count > 0)
+            {
+                bool allFlag = false;
+                foreach (pbs_basic_GoodsView bz in benzhoulist)
+                {
+                    var picurl = picSourceHostUrl + bz.GoodsMainImgUrl;
+                    string[] datetime = { bz.VisitTime1, bz.VisitTime2, bz.VisitTime3, bz.VisitTime4, bz.VisitTime5 };
+                    bool flag = false;
+                    for (int i = 0; i < 5; i++)
+                    {
+                        if (!string.IsNullOrEmpty(datetime[i]) && Utility.Util.ParseHelper.ToDatetime(datetime[i]) > DateTime.Now)
+                        {
+                            flag = true;
+                            allFlag = true;
+                        }
+                    }
+                    if (flag)
+                    {
+                        <li>
+                            <a href="/Activity/Activity?Id=@bz.GoodsId">
+                                <section class="ui-placehold-img">
+                                    <span style="background-image:url(@picurl)"></span>
+                                </section>
+                                <div class="list_content">
+                                    <div class="m_left">
+                                        <div class="m_left_title">@bz.GoodsName</div>
+                                        <div class="m_left_content">
+                                            <i></i><span>@bz.Remark</span>
+                                            @{
+                                                string minTime = "";
+                                                string maxTime = "";
+                                                for (int i = 0; i < 5; i++)
+                                                {
+                                                    if (string.IsNullOrEmpty(minTime))
+                                                    {
+                                                        minTime = datetime[i];
+                                                    }
+                                                    if (string.IsNullOrEmpty(maxTime))
+                                                    {
+                                                        maxTime = datetime[i];
+                                                    }
+                                                    if (Utility.Util.ParseHelper.ToDatetime(datetime[i]) > DateTime.Now)
+                                                    {
+
+                                                        if (minTime != datetime[i] && Utility.Util.ParseHelper.ToDatetime(datetime[i]) < Utility.Util.ParseHelper.ToDatetime(minTime) && !string.IsNullOrEmpty(datetime[i]))
+                                                        {
+                                                            minTime = datetime[i];
+                                                        }
+                                                    }
+
+                                                    if (string.IsNullOrEmpty(minTime))
+                                                    {
+
+                                                        if (maxTime != datetime[i] && Utility.Util.ParseHelper.ToDatetime(datetime[i]) > Utility.Util.ParseHelper.ToDatetime(maxTime))
+                                                        {
+                                                            maxTime = datetime[i];
+                                                        }
+                                                    }
+                                                }
+                                                if (string.IsNullOrEmpty(minTime))
+                                                {
+                                                    <span>@Utility.Util.ParseHelper.ToDatetime(minTime).ToString("yyyy-MM-dd")</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>@Utility.Util.ParseHelper.ToDatetime(maxTime).ToString("yyyy-MM-dd")</span>
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="m_right">
+                                        <span class="marketPrice">￥@bz.MarketPrice</span>
+                                        <span class="sellPrice">￥@bz.SellingPrice</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    }
+                }
+                if (!allFlag)
+                {
+                    <li>
+                        <br />
+                        <br />
+                        <h2 style="text-align:center"><img alt="" src="~/image/pj_icon.png" style="width:50%;height:50%" /></h2>
+                        <br />
+                        <h2 style="text-align:center">暂时还没有活动</h2>
+                    </li>
+                }
+            }
+            else
+            {
+                <li>
+                    <br />
+                    <br />
+                    <h2 style="text-align:center"><img alt="" src="~/image/pj_icon.png" style="width:50%;height:50%" /></h2>
+                    <br />
+                    <h2 style="text-align:center">暂时还没有活动</h2>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+<script src="~/js/lib/zepto.min.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        window.location.href = "/";
+    }
+</script>
+
+

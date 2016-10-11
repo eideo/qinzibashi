@@ -1,0 +1,87 @@
+﻿@model PBS.Model.pbsBasicRegionListResult
+@{
+    ViewBag.Title = "活动地址列表";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i>活动地址列表</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>活动地址列表</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <table id="example" class="table table-bordered data-table">
+                        <thead>
+                            <tr>
+                                <th>地址编号</th>
+                                <th>地址名称</th>
+                                <th>父地址编号</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.List.Count > 0)
+                            {
+                                foreach (var item in Model.List)
+                                {
+                                    <tr>
+                                        <td>@item.RegionId</td>
+                                        <td>@item.RegionName</td>
+                                        <td>@item.ParentRegionId</td>
+                                        <td><a href="/Activity/ActivityAddressAdd?regionId=@item.RegionId">编辑</a></td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-main-container-part-->
+@*<script type="text/javascript">
+
+
+        function deleteGoods(obj, goodsClassId) {
+            $(obj).scojs_confirm({
+                content: "您确定要删除吗?",
+                action: function (e) {
+                    $.ajax({
+                        type: "POST",
+                        async: false,
+                        url: "/Goods/GoodsDelete",
+                        data: { goodsClassId: goodsClassId },
+                        success: function (data) {
+                            if (data.Status === 0) {
+                                //成功
+                                $.scojs_message(data.Message, $.scojs_message.TYPE_OK);
+                            } else {
+                                //失败
+                                $.scojs_message(data.Message, $.scojs_message.TYPE_ERROR);
+                                return false;
+                            }
+                            return false;
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            //失败
+                            $.scojs_message(errorThrown, $.scojs_message.TYPE_ERROR);
+                        }
+                    });
+                }
+            });
+        }
+    </script>*@

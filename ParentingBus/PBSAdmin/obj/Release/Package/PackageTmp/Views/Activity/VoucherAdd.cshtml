@@ -1,0 +1,108 @@
+﻿@model PBS.Model.pbs_basic_Voucher
+@{
+    ViewBag.Title = ViewBag.PageTitle;
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<!--top-Header-menu-->
+@RenderPage("~/Views/Shared/_Header.cshtml")
+<!--close-top-Header-menu-->
+<!--main-container-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="javascript:void(0)"><i class="icon-home"></i> @ViewBag.PageTitle</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid normal-size" style="margin: 0px">
+            <div class="widget-box">
+                <div class="widget-content tab-content">
+                    <div class="widget-box">
+                        <div class="widget-content nopadding">
+                            <form action="#" method="get" class="form-horizontal">
+                                <div class="control-group">
+                                    <label class="control-label">优惠券类别：</label>
+                                    <div class="controls">
+                                        <select id="VoucherType">
+                                            <option value="1" title="1">满减</option>
+                                            <option value="2" title="2">扣减</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">优惠券使用规则：</label>
+                                    <div class="controls">
+                                        <input id="UseRole" type="text" class="span11" placeholder="优惠券使用规则" value="@Model.UseRole">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">使用开始时间 :</label>
+                                    <div class="controls">
+                                        <input id="UseStartTime" class="span11" readonly type="text" placeholder="使用开始时间" value=""/>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">使用结束时间 :</label>
+                                    <div class="controls">
+                                        <input id="UseEndTime" class="span11" readonly type="text" placeholder="使用结束时间" value=""/>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">是否启用：</label>
+                                    <div class="controls">
+                                        <select id="VoucherStatus">
+                                            <option value="0" title="0">是</option>
+                                            <option value="1" title="1">否</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">数量：</label>
+                                    <div class="controls">
+                                        <input id="VoucherCount" type="text" class="span11" placeholder="数量" value="@Model.VoucherCount">
+                                    </div>
+                                </div>
+                                <div class="form-actions text-center">
+                                    <button id="saveBtn" type="button" class="btn btn-success">保存</button>
+                                    <a class="btn" href="/Activity/VoucherList">返回</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript">
+    $("#UseStartTime,#UseEndTime").datetimepicker({
+        format: 'yyyy-mm-dd hh:ii',
+        weekStart: 1,
+        autoclose: true,
+        startView: 2,
+        minView: 0,
+        forceParse: false,
+        language: 'zh-CN'
+    });
+</script>
+<script type="text/javascript">
+    var voucherId = "@Model.VoucherId";
+    var createTime = "@Model.CreateTime";
+    var updateTime = "@Model.UpdateTime";
+    var creatorId = "@Model.CreatorId";
+    var remark = "@Model.Remark";
+    var voucherPrice = "@Model.VoucherPrice";
+    var useRole = "@Model.UseRole";
+    var useStartTime = "@Model.UseStartTime";
+    var useEndTime = "@Model.UseEndTime";
+    var voucherStatus = "@Model.VoucherStatus";
+    var voucherType = "@Model.VoucherType";
+    var sRPrice = "@Model.SRPrice";
+    var voucherCount = "@Model.VoucherCount";
+
+</script>
+<script src="~/js/Activity/VoucherAdd.js"></script>
+<!--end-main-container-part-->
+

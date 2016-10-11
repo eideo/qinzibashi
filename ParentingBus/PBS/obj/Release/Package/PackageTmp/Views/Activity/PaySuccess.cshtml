@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "../Shared/_CommenHome.cshtml";
+    ViewBag.Title = "支付成功";
+}
+<br/>
+<br />
+<h2 style="text-align:center"><img alt="" src="~/image/chose_icon.png" /> 恭喜你,支付成功</h2>
+<br />
+<h2 style="text-align:center">支付金额：@ViewData["OrderPrice"] 元</h2>
+@*<br />
+<h2 style="text-align:center"><a href="javascript:void(0)">点击右上角分享链接还将获得更多的收益</a></h2>*@
+<br />
+<p style="text-align:center"><a href="/" style="background-color:#FFBA25;color:#ffffff;padding:5px;border-radius:3px">返回首页</a></p>
+<script src="~/js/jquery.1.7.2.min.js"></script>
+<script type="text/javascript">
+    function goBack() {
+        history.back();
+    }
+</script>
+
